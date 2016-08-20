@@ -19,5 +19,5 @@ module.exports = function (app) {
     .delete(paintings.delete);
 
   // Finish by binding the painting middleware
-  app.param('paintingId', paintings.paintingID);
+  app.param('paintingId', paintings.paintingByID);
 };
