@@ -15,6 +15,13 @@
       roles: ['*']
     });
 
+    //     menuService.addMenuItem('topbar2', {
+    //   title: 'Paintings',
+    //   state: 'articles',
+    //   type: 'dropdown',
+    //   roles: ['*']
+    // });
+
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'articles', {
       title: 'List Articles',

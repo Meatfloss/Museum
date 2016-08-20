@@ -1,0 +1,18 @@
+<section>
+  <div class="page-header">
+    <h1>Paintings</h1>
+  </div>
+  <div class="list-group">
+    <a ng-repeat="painting in vm.paintings" ui-sref="paintings.view({ paingintId: painting._id })" class="list-group-item">
+      <small class="list-group-item-text">
+        Posted on
+        <span ng-bind="painting.created | date:'mediumDate'"></span>
+        by list
+        <span ng-if="painting.user" ng-bind="painting.user.displayName"></span>
+        <span ng-if="!painting.user">Deleted User</span>
+      </small>
+      <h4 class="list-group-item-heading" ng-bind="painting.title"></h4>
+      <p class="list-group-item-text" ng-bind="painting.content"></p>
+    </a>
+  </div>
+</section>
