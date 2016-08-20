@@ -10,6 +10,6 @@
   function PaintingsListController(PaintingsService) {
     var vm = this;
 
-    vm.Paintings = PaintingsService.query();
+    vm.paintings = PaintingsService.query();
   }
 }());

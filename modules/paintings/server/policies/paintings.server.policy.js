@@ -18,7 +18,7 @@ exports.invokeRolesPolicies = function () {
       resources: '/api/paintings',
       permissions: '*'
     }, {
-      resources: '/api/paintings/:paintId',
+      resources: '/api/paintings/:paintingId',
       permissions: '*'
     }]
   }, {
@@ -27,7 +27,7 @@ exports.invokeRolesPolicies = function () {
       resources: '/api/paintings',
       permissions: ['get']
     }, {
-      resources: '/api/paintings/:paintId',
+      resources: '/api/paintings/:paintingId',
       permissions: ['get']
     }]
   }, {
@@ -36,7 +36,7 @@ exports.invokeRolesPolicies = function () {
       resources: '/api/paintings',
       permissions: ['get']
     }, {
-      resources: '/api/paintings/:paintId',
+      resources: '/api/paintings/:paintingId',
       permissions: ['get']
     }]
   }]);
