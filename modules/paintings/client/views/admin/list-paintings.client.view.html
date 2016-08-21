@@ -1,0 +1,26 @@
+﻿<section>
+  <div class="page-header">
+    <h1>
+      Paintings
+      <a class="btn btn-primary pull-right" data-ui-sref="admin.paintings.create">
+        <i class="glyphicon glyphicon-plus"></i>
+      </a>
+    </h1>
+  </div>
+  <div class="list-group">
+    <a data-ng-repeat="painting in vm.paintings" data-ui-sref="admin.paintings.edit({paintingId: painting._id})" class="list-group-item">
+      <small class="list-group-item-text">
+        Posted on
+        <span data-ng-bind="painting.created | date:'mediumDate'"></span>
+        by
+        <span ng-if="painting.user" ng-bind="painting.user.displayName"></span>
+        <span ng-if="!painting.user">Deleted User</span>
+      </small>
+      <h4 class="list-group-item-heading" data-ng-bind="painting.title"></h4>
+      <p class="list-group-item-text" data-ng-bind="painting.content"></p>
+    </a>
+  </div>
+  <div class="alert alert-warning text-center" data-ng-if="paintings.$resolved && !paintings.length">
+    No paintings yet, why don't you <a data-ui-sref="admin.paintings.create">create one</a>?
+  </div>
+</section>
