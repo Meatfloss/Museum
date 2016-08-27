@@ -44,7 +44,8 @@
           roles: ['admin']
         },
         resolve: {
-          paintingResolve: getPainting
+          paintingResolve: getPainting,
+          authorsResolve: getAuthors
         }
       });
   }
@@ -57,9 +58,15 @@
     }).$promise;
   }
 
+  getAuthors.$inject = ['$stateParams', 'AuthorsService'];
+
+  function getAuthors($stateParams, AuthorsService) {
+    return AuthorsService.query().$promise;
+  }
+
   newPainting.$inject = ['PaintingsService'];
 
   function newPainting(PaintingsService) {
     return new PaintingsService();
   }
-}());
+} ());

@@ -29,7 +29,8 @@
         controller: 'PaintingsController',
         controllerAs: 'vm',
         resolve: {
-          paintingResolve: getPainting
+          paintingResolve: getPainting,
+          authorsResolve: getAuthors
         },
         data: {
           pageTitle: 'Painting {{ paintingResolve.title }}'
@@ -42,6 +43,14 @@
   function getPainting($stateParams, PaintingsService) {
     return PaintingsService.get({
       paintingId: $stateParams.paintingId
+    }).$promise;
+  }
+
+  getAuthors.$inject = ['$stateParams', 'AuthorsService'];
+
+  function getAuthors($stateParams, AuthorsService) {
+    return AuthorsService.get({
+      AuthorId: $stateParams.authorId
     }).$promise;
   }
 }());

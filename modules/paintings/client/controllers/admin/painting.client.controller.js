@@ -5,13 +5,15 @@
     .module('paintings.admin')
     .controller('PaintingsController', PaintingsController);
 
-  PaintingsController.$inject = ['$scope', '$state', '$window', 'paintingResolve', 'Authentication'];
+  PaintingsController.$inject = ['$scope', '$state', '$window', 'paintingResolve', 'authorsResolve','Authentication'];
 
-  function PaintingsController($scope, $state, $window, painting, Authentication) {
+  function PaintingsController($scope, $state, $window, painting, authors, Authentication) {
     var vm = this;
 
     vm.painting = painting;
     vm.authentication = Authentication;
+    vm.authors =  authors;
+
     vm.error = null;
     vm.form = {};
     vm.remove = remove;
