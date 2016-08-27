@@ -19,7 +19,7 @@
         </div>
         <div class="form-group">
           <label class="control-label" for="author">Author</label>
-          <select name="author" id="author" class="form-control" ng-model="vm.apinting.author" ng-options="author for dynasty in vm.authors"></select>
+          <select name="author" id="author" class="form-control" ng-model="vm.painting.author" ng-options="author.name for author in vm.authors"></select>
         </div>
         <div class="form-group">
           <label class="control-label" for="content">Content</label>

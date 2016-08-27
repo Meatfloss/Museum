@@ -10,11 +10,8 @@
   <div class="list-group">
     <a data-ng-repeat="painting in vm.paintings" data-ui-sref="admin.paintings.edit({paintingId: painting._id})" class="list-group-item">
       <small class="list-group-item-text">
-        Posted on
-        <span data-ng-bind="painting.created | date:'mediumDate'"></span>
-        by
-        <span ng-if="painting.user" ng-bind="painting.user.displayName"></span>
-        <span ng-if="!painting.user">Deleted User</span>
+        Author:
+        <span ng-if="painting.author" ng-bind="painting.author.name"></span>
       </small>
       <h4 class="list-group-item-heading" data-ng-bind="painting.title"></h4>
       <p class="list-group-item-text" data-ng-bind="painting.content"></p>
