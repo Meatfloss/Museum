@@ -9,6 +9,7 @@ var mongoose = require('mongoose'),
 /**
  * Painting Schema
  */
+
 var PaintingSchema = new Schema({
   created: {
     type: Date,
@@ -28,6 +29,10 @@ var PaintingSchema = new Schema({
   user: {
     type: Schema.ObjectId,
     ref: 'User'
+  },
+  author: {
+    type: Schema.ObjectId,
+    ref: 'Author'
   }
 });
 

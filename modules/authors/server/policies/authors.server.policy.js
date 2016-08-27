@@ -9,47 +9,29 @@ var acl = require('acl');
 acl = new acl(new acl.memoryBackend());
 
 /**
- * Invoke Paintings Permissions
+ * Invoke Authors Permissions
  */
 exports.invokeRolesPolicies = function () {
   acl.allow([{
     roles: ['admin'],
     allows: [{
-      resources: '/api/paintings',
+      resources: '/api/authors',
       permissions: '*'
     }, {
-      resources: '/api/paintings/:paintingId',
+      resources: '/api/authors/:authorId',
       permissions: '*'
-    }]
-  }, {
-    roles: ['user'],
-    allows: [{
-      resources: '/api/paintings',
-      permissions: ['get']
-    }, {
-      resources: '/api/paintings/:paintingId',
-      permissions: ['get']
-    }]
-  }, {
-    roles: ['guest'],
-    allows: [{
-      resources: '/api/paintings',
-      permissions: ['get']
-    }, {
-      resources: '/api/paintings/:paintingId',
-      permissions: ['get']
     }]
   }]);
 };
 
 /**
- * Check If Paintings Policy Allows
+ * Check If Author Policy Allows
  */
 exports.isAllowed = function (req, res, next) {
   var roles = (req.user) ? req.user.roles : ['guest'];
 
-  // If an paint is being processed and the current user created it then allow any manipulation
-  if (req.painting && req.user && req.painting.user && req.painting.user.id === req.user.id) {
+  // If an author is being processed and the current user created it then allow any manipulation
+  if (req.author && req.user && req.author.user && req.author.user.id === req.user.id) {
     return next();
   }
 
