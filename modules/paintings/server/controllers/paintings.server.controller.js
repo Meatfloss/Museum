@@ -48,7 +48,7 @@ exports.update = function (req, res) {
 
   painting.title = req.body.title;
   painting.content = req.body.content;
-
+  painting.author = req.body.author;
   painting.save(function (err) {
     if (err) {
       return res.status(400).send({
@@ -81,7 +81,7 @@ exports.delete = function (req, res) {
  * List of Paintings
  */
 exports.list = function (req, res) {
-  Painting.find().sort('-created').populate('user', 'displayName').exec(function (err, paintings) {
+  Painting.find().sort('-created').populate('user', 'displayName').populate('author', 'name').exec(function (err, paintings) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
@@ -103,7 +103,7 @@ exports.paintingByID = function (req, res, next, id) {
     });
   }
 
-  Painting.findById(id).populate('user', 'displayName').exec(function (err, painting) {
+  Painting.findById(id).populate('user', 'displayName').populate('author', 'name').exec(function (err, painting) {
     if (err) {
       return next(err);
     } else if (!painting) {

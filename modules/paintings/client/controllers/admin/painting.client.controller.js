@@ -13,11 +13,27 @@
     vm.painting = painting;
     vm.authentication = Authentication;
     vm.authors =  authors;
+    vm.painting.author = vm.painting.author && chooseDropDown(vm.painting.author, authors, 'name');
 
     vm.error = null;
     vm.form = {};
     vm.remove = remove;
     vm.save = save;
+
+    //select for dropdownlist
+    function chooseDropDown(item, list, field)
+    {
+      if(list && list.length > 0)
+      {
+        for(var i=0; i<list.length; i++)
+        {
+          if(list[i][field] === item[field])
+          {
+            return list[i];
+          }
+        }
+      }    
+    }
 
     // Remove existing Painting
     function remove() {
