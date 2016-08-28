@@ -14,6 +14,7 @@
     vm.authentication = Authentication;
     vm.authors =  authors;
     vm.painting.author = vm.painting.author && chooseDropDown(vm.painting.author, authors, 'name');
+    vm.types = ["Album, Ink on Paper", "Hanging Scroll, Ink and Color on Paper"]
 
     vm.error = null;
     vm.form = {};

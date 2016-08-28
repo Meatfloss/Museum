@@ -49,6 +49,10 @@ exports.update = function (req, res) {
   painting.name = req.body.name;
   painting.description = req.body.description;
   painting.author = req.body.author;
+  painting.type = req.body.type;
+  painting.width = req.body.width;
+  painting.length = req.body.length;
+  
   painting.save(function (err) {
     if (err) {
       return res.status(400).send({

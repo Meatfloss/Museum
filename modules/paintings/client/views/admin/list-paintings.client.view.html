@@ -14,6 +14,11 @@
         <span ng-if="painting.author" ng-bind="painting.author.name"></span>
       </small>
       <h4 class="list-group-item-heading" data-ng-bind="painting.name"></h4>
+      Length:
+      <span ng-if="painting.length" ng-bind="painting.length"></span> Inches,
+      Width:
+      <span ng-if="painting.width" ng-bind="painting.width"></span> Inches
+      
       <p class="list-group-item-text" data-ng-bind="painting.description"></p>
     </a>
   </div>

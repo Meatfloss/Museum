@@ -21,6 +21,19 @@ var PaintingSchema = new Schema({
     trim: true,
     required: 'Name cannot be blank'
   },
+  type: {
+    type: String,
+    default: '',
+    trim: true 
+  },
+  length: {
+    type: Number,
+    trim: true
+  },
+  width: {
+    type: Number,
+    trim: true
+  },
   description: {
     type: String,
     default: '',
