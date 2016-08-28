@@ -11,10 +11,10 @@
     <form name="vm.form.paintingForm" class="form-horizontal" ng-submit="vm.save(vm.form.paintingForm.$valid)" novalidate>
       <fieldset>
         <div class="form-group" show-errors>
-          <label class="control-label" for="title">Title</label>
-          <input name="title" type="text" ng-model="vm.painting.title" id="title" class="form-control" placeholder="Title" required>
-          <div ng-messages="vm.form.paintingForm.title.$error" role="alert">
-            <p class="help-block error-text" ng-message="required">Painting title is required.</p>
+          <label class="control-label" for="name">Name</label>
+          <input name="name" type="text" ng-model="vm.painting.name" id="name" class="form-control" placeholder="Name" required>
+          <div ng-messages="vm.form.paintingForm.name.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Painting name is required.</p>
           </div>
         </div>
         <div class="form-group">
@@ -22,8 +22,8 @@
           <select name="author" id="author" class="form-control" ng-model="vm.painting.author" ng-options="author.name for author in vm.authors"></select>
         </div>
         <div class="form-group">
-          <label class="control-label" for="content">Content</label>
-          <textarea name="content" data-ng-model="vm.painting.content" id="content" class="form-control" cols="30" rows="10" placeholder="Content"></textarea>
+          <label class="control-label" for="description">Description</label>
+          <textarea name="description" data-ng-model="vm.painting.description" id="description" class="form-control" cols="30" rows="10" placeholder="Description"></textarea>
         </div>
         <div class="form-group">
           <button type="submit" class="btn btn-default">{{vm.painting._id ? 'Update' : 'Create'}}</button>

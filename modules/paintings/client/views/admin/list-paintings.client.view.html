@@ -13,8 +13,8 @@
         Author:
         <span ng-if="painting.author" ng-bind="painting.author.name"></span>
       </small>
-      <h4 class="list-group-item-heading" data-ng-bind="painting.title"></h4>
-      <p class="list-group-item-text" data-ng-bind="painting.content"></p>
+      <h4 class="list-group-item-heading" data-ng-bind="painting.name"></h4>
+      <p class="list-group-item-text" data-ng-bind="painting.description"></p>
     </a>
   </div>
   <div class="alert alert-warning text-center" data-ng-if="paintings.$resolved && !paintings.length">

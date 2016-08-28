@@ -46,8 +46,8 @@ exports.read = function (req, res) {
 exports.update = function (req, res) {
   var painting = req.painting;
 
-  painting.title = req.body.title;
-  painting.content = req.body.content;
+  painting.name = req.body.name;
+  painting.description = req.body.description;
   painting.author = req.body.author;
   painting.save(function (err) {
     if (err) {
