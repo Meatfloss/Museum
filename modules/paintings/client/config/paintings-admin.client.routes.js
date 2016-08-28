@@ -32,7 +32,8 @@
           roles: ['admin']
         },
         resolve: {
-          paintingResolve: newPainting
+          paintingResolve: newPainting,
+          authorsResolve: getAuthors
         }
       })
       .state('admin.paintings.edit', {
