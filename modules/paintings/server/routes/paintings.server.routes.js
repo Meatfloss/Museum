@@ -20,4 +20,7 @@ module.exports = function (app) {
 
   // Finish by binding the painting middleware
   app.param('paintingId', paintings.paintingByID);
+
+  app.route('/api/painting/picture')
+  .post(paintings.changePicture);
 };

@@ -39,6 +39,10 @@ var PaintingSchema = new Schema({
     default: '',
     trim: true
   },
+  imageURL: {
+    type: String,
+    default: 'modules/users/client/img/profile/default.png'
+  },
   user: {
     type: Schema.ObjectId,
     ref: 'User'

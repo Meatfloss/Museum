@@ -30,7 +30,7 @@ module.exports = {
   // Lusca config
   csrf: {
     csrf: false,
-    csp: { /* Content Security Policy object */},
+    csp: { /* Content Security Policy object */ },
     xframe: 'SAMEORIGIN',
     p3p: 'ABCDEF',
     xssProtection: true
@@ -41,7 +41,13 @@ module.exports = {
     profileUpload: {
       dest: './modules/users/client/img/profile/uploads/', // Profile upload destination path
       limits: {
-        fileSize: 1 * 1024 * 1024 // Max file size in bytes (1 MB)
+        fileSize: 8 * 1024 * 1024 // Max file size in bytes (1 MB)
+      }
+    },
+    paintingImageUpload: {
+      dest: './modules/paintings/client/img/uploads/', // Profile upload destination path
+      limits: {
+        fileSize: 8 * 1024 * 1024 // Max file size in bytes (1 MB)
       }
     }
   }

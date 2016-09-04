@@ -4,10 +4,12 @@
  * Module dependencies
  */
 var path = require('path'),
+  fs = require('fs'),
+  errorHandler = require(path.resolve('./modules/core/server/controllers/errors.server.controller')),
   mongoose = require('mongoose'),
-  Painting = mongoose.model('Painting'),
-  errorHandler = require(path.resolve('./modules/core/server/controllers/errors.server.controller'));
-
+  multer = require('multer'),
+  config = require(path.resolve('./config/config')),
+  Painting = mongoose.model('Painting');
 /**
  * Create an painting
  */
@@ -52,7 +54,7 @@ exports.update = function (req, res) {
   painting.type = req.body.type;
   painting.width = req.body.width;
   painting.length = req.body.length;
-  
+
   painting.save(function (err) {
     if (err) {
       return res.status(400).send({
@@ -118,4 +120,62 @@ exports.paintingByID = function (req, res, next, id) {
     req.painting = painting;
     next();
   });
+};
+
+/**
+ * Update picture
+ */
+exports.changePicture = function (req, res) {
+  var user = req.user;
+
+  //Todo: change painting image location.
+  //var upload = multer(config.uploads.paintingImageUpload).single('newPicture');
+  var upload = multer(config.uploads.profileUpload).single('newPicture');
+  
+
+  var profileUploadFileFilter = require(path.resolve('./config/lib/multer')).profileUploadFileFilter;
+
+  // Filtering to upload only images
+  upload.fileFilter = profileUploadFileFilter;
+  if (user) {
+    upload(req, res, function (uploadError) {
+      if (uploadError) {
+        return res.status(400).send({
+          message: 'Error occurred while uploading profile picture'
+        });
+      } else {
+
+        Painting.findById(req.body.paintingId).exec(function (err, painting) {
+          if (!painting) {
+            return res.status(404).send({
+              message: 'No painting with that identifier has been found'
+            });
+          }
+
+          painting.imageURL = config.uploads.profileUpload.dest + req.file.filename;
+          painting.save(function (saveError) {
+            if (saveError) {
+              return res.status(400).send({
+                message: errorHandler.getErrorMessage(saveError)
+              });
+            } else {
+              req.login(user, function (err) {
+                if (err) {
+                  res.status(400).send(err);
+                } else {
+
+                  res.json(user);
+                }
+              });
+            }
+          });
+        });
+
+      }
+    });
+  } else {
+    res.status(400).send({
+      message: 'User is not signed in'
+    });
+  }
 };
