@@ -11,7 +11,8 @@
     // Set top bar menu items
     menuService.addMenuItem('topbar', {
       title: 'About',
-      state: 'about'
+      state: 'about',
+      roles: ['*']
     });
   }
 }());

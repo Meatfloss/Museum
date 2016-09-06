@@ -69,3 +69,14 @@ a:hover .header-profile-image {
   margin-top: 100px;
 }
 
+section{
+  margin-top: 40px;
+}
+
+.statement p{
+  font-size: 18px;
+}
+
+.statement h2{
+  margin-bottom: 30px;
+}

@@ -15,7 +15,6 @@
         controller: 'AboutController',
         controllerAs: 'vm',
         data: {
-          roles: ['user', 'admin'],
           pageTitle: 'About'
         }
       });
