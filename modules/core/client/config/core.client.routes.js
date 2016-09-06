@@ -29,9 +29,19 @@
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: 'modules/core/client/views/home.client.view.html',
-        controller: 'HomeController',
-        controllerAs: 'vm'
+        views: {
+          'homeHeader': {
+            templateUrl: 'modules/core/client/views/homeHeader.client.view.html',
+            controller: 'HomeController',
+            controllerAs: 'vm'
+          },
+          '': {
+            templateUrl: 'modules/core/client/views/home.client.view.html',
+            controller: 'HomeController',
+            controllerAs: 'vm'
+          }
+        },
+
       })
       .state('not-found', {
         url: '/not-found',
@@ -58,4 +68,4 @@
         }
       });
   }
-}());
+} ());
