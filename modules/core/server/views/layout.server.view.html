@@ -37,7 +37,8 @@
 
 <body class="ng-cloak">
   <header ng-include="'/modules/core/client/views/header.client.view.html'" class="navbar navbar-fixed-top navbar-inverse"></header>
-  <section class="content">
+  <section ng-include="'/modules/core/client/views/homeHeader.client.view.html'"></section> 
+  <section class="content container">
       {% block content %}{% endblock %}
   </section>
   <footer ng-include="'/modules/core/client/views/footer.client.view.html'"></footer>
