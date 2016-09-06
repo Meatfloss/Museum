@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('about')
+    .module('exhibitions')
     .run(menuConfig);
 
   menuConfig.$inject = ['menuService'];
@@ -10,10 +10,10 @@
   function menuConfig(menuService) {
     // Set top bar menu items
     menuService.addMenuItem('topbar', {
-      title: 'About',
-      state: 'about',
+      title: 'Exhibitions',
+      state: 'exhibitions',
       roles: ['*'],
-      position: 1
+      position: 2
     });
   }
 }());

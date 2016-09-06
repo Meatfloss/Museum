@@ -12,7 +12,8 @@
       title: 'Paintings',
       state: 'paintings',
       type: 'dropdown',
-      roles: ['*']
+      roles: ['*'],
+      position: 3
     });
 
     // Add the dropdown list item
