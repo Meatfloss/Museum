@@ -1,9 +1,7 @@
-.about-img img{
-    height: 559px;
-    width: 410px;
-    margin-bottom: 35px;
+.main-address{
+    font-weight: bold;
 }
 
-.about-section p{
-    font-size: 18px;
+.secondary-address{
+    font-size: 10px;
 }
