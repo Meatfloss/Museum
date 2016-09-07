@@ -5,13 +5,14 @@
     .module('paintings')
     .controller('PaintingsController', PaintingsController);
 
-  PaintingsController.$inject = ['$scope', 'paintingResolve', 'Authentication'];
+  PaintingsController.$inject = ['$scope', 'paintingResolve', 'authorsResolve', 'Authentication'];
 
-  function PaintingsController($scope, painting, Authentication) {
+  function PaintingsController($scope, painting, authors, Authentication) {
     var vm = this;
 
     vm.painting = painting;
     vm.authentication = Authentication;
+    vm.authors = authors;
     vm.error = null;
 
   }

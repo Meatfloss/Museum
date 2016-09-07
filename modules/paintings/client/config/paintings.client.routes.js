@@ -46,11 +46,10 @@
     }).$promise;
   }
 
+
   getAuthors.$inject = ['$stateParams', 'AuthorsService'];
 
   function getAuthors($stateParams, AuthorsService) {
-    return AuthorsService.get({
-      AuthorId: $stateParams.authorId
-    }).$promise;
+    return AuthorsService.query().$promise;
   }
-}());
+} ());
