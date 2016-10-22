@@ -107,3 +107,16 @@ section{
   opacity: 1;
   transform: scale(1.05);
 }
+
+.list-image{
+    position:relative;
+    overflow:hidden;
+    padding-bottom:100%;
+}
+.list-image img{
+    position:absolute;
+}
+
+.grid-view .list-group-item {
+  margin-bottom: 20px;
+}

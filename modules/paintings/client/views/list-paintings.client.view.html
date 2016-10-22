@@ -1,4 +1,4 @@
-<section>
+<section class="grid-view">
 	<div class="page-header">
 		<h2>
 			Paintings
@@ -9,10 +9,13 @@
 	</div>
 	<div class="row">
 		<div class="col-md-2 col-sm-4 col-xs-6" data-ng-repeat="painting in vm.paintings">
-			<a data-ui-sref="admin.paintings.edit({paintingId: painting._id})" class="list-group-item thumbnail">
-				<img ng-src="{{painting.imageURL}}" class="img-rounded" />
+			<a data-ui-sref="admin.paintings.edit({paintingId: painting._id})" class="list-group-item">
+        <div class="list-image img-responsive">
+          <img ng-src="{{painting.imageURL}}" class="img-thumbnail"/>
+        </div>
+				
 				<strong>
-					<span class="list-group-item-heading" data-ng-bind="painting.name"></span>
+					<span data-ng-bind="painting.name"></span>
 				</strong>
 				<small class="list-group-item-text">
           <span ng-if="painting.author" ng-bind="painting.author.name"></span>
