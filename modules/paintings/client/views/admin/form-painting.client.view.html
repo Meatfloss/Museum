@@ -1,17 +1,16 @@
-<section>
+<section class="item-view">
   <div class="page-header">
-    <h1>{{vm.painting._id ? 'Edit Painting' : 'New Painting'}}</h1>
-  </div>
-  <div class="pull-right">
-    <a class="btn btn-primary" ng-click="vm.remove()">
+    <h1>{{vm.painting._id ? 'Edit Painting' : 'New Painting'}}
+          <a class="btn btn-primary pull-right" ng-click="vm.remove()">
       <i class="glyphicon glyphicon-trash"></i>
     </a>
+    </h1>
   </div>
   <div class="col-md-12">
     <form name="vm.form.paintingForm" class="form-horizontal" ng-submit="vm.save(vm.form.paintingForm.$valid)" novalidate>
       <fieldset>
         <div class="form-group text-center">
-          <img ng-src="{{vm.imageURL}}" alt="{{vm.user.displayName}}" class="img-thumbnail user-profile-picture">
+          <img ng-src="{{vm.imageURL}}" alt="{{vm.user.displayName}}" class="img-responsive">
         </div>
         <div class="text-center form-group" ng-hide="vm.uploader.queue.length">
           <span class="btn btn-default btn-file">
