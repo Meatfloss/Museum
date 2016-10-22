@@ -87,7 +87,7 @@ exports.delete = function (req, res) {
  * List of Paintings
  */
 exports.list = function (req, res) {
-  Painting.find().sort('-created').populate('user', 'displayName').populate('author', 'name').exec(function (err, paintings) {
+  Painting.find().sort('-created').populate('user', 'displayName').populate('author').exec(function (err, paintings) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)

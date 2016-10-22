@@ -1,18 +1,51 @@
 <section>
-  <div class="page-header">
-    <h1>Paintings</h1>
-  </div>
-  <div class="list-group">
-    <a ng-repeat="painting in vm.paintings" ui-sref="paintings.view({ paintingId: painting._id })" class="list-group-item">
-      <small class="list-group-item-text">
-        Posted on
-        <span ng-bind="painting.created | date:'mediumDate'"></span>
-        by list
-        <span ng-if="painting.user" ng-bind="painting.user.displayName"></span>
-        <span ng-if="!painting.user">Deleted User</span>
+	<div class="page-header">
+		<h2>
+			Paintings
+			<a class="btn btn-primary pull-right" data-ui-sref="admin.paintings.create">
+				<i class="glyphicon glyphicon-plus"></i>
+			</a>
+		</h2>
+	</div>
+	<div class="row">
+		<div class="col-md-3" data-ng-repeat="painting in vm.paintings">
+			<a data-ui-sref="admin.paintings.edit({paintingId: painting._id})" class="list-group-item thumbnail">
+				<img ng-src="{{painting.imageURL}}" class="img-rounded" />
+				<strong>
+					<span class="list-group-item-heading" data-ng-bind="painting.name"></span>
+				</strong>
+				<small class="list-group-item-text">
+          <span ng-if="painting.author" ng-bind="painting.author.name"></span>
+          (
+          <span ng-if="painting.author" ng-bind="painting.author.dynasty"></span>
+          )
+        </small>
+
+
+				<!--Length:
+				<span ng-if="painting.length" ng-bind="painting.length"></span> Inches, Width:
+				<span ng-if="painting.width" ng-bind="painting.width"></span> Inches-->
+
+
+			</a>
+		</div>
+	</div>
+	<div class="list-group">
+		<a data-ng-repeat="painting in vm.paintings" data-ui-sref="admin.paintings.edit({paintingId: painting._id})" class="list-group-item">
+			<small class="list-group-item-text">
+        Author:
+        <span ng-if="painting.author" ng-bind="painting.author.name"></span>
       </small>
-      <h4 class="list-group-item-heading" ng-bind="painting.name"></h4>
-      <p class="list-group-item-text" ng-bind="painting.description"></p>
-    </a>
-  </div>
+			<h4 class="list-group-item-heading" data-ng-bind="painting.name"></h4>
+			Length:
+			<span ng-if="painting.length" ng-bind="painting.length"></span> Inches, Width:
+			<span ng-if="painting.width" ng-bind="painting.width"></span> Inches
+
+			<p class="list-group-item-text" data-ng-bind="painting.description"></p>
+
+		</a>
+	</div>
+	<div class="alert alert-warning text-center" data-ng-if="paintings.$resolved && !paintings.length">
+		No paintings yet, why don't you <a data-ui-sref="admin.paintings.create">create one</a>?
+	</div>
 </section>
