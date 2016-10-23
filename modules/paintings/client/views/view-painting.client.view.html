@@ -1,18 +1,47 @@
-<section>
-  <div class="page-header">
-    <h1 ng-bind="vm.painting.name"></h1>
-  </div>
-  <div class="row text-center">
-    <img class="col-xs-12" src="{{vm.imageURL}}" alt="{{vm.painting.name}}">
-  </div>
-  <small>
-    <em class="text-muted">
-      Posted on
-      <span ng-bind="vm.painting.created | date:'mediumDate'"></span>
-      by view
-      <span ng-if="vm.painting.user" ng-bind="vm.painting.user.displayName"></span>
-      <span ng-if="!vm.painting.user">Deleted User</span>
-    </em>
-  </small>
-  <p class="lead" ng-bind="vm.painting.description"></p>
+<section class="item-view">
+	<div class="page-header">
+		<h1 ng-bind="vm.painting.name"></h1>
+	</div>
+	<div class="text-center">
+		<img class="img-responsive" src="{{vm.imageURL}}" alt="{{vm.painting.name}}">
+	</div>
+	<div class="img-responsive row lead">
+		<div class="col-xs-4">
+			<strong>Name:</strong>
+		</div>
+    <div class="col-xs-8"> 
+			<span ng-bind="vm.painting.name"></span>
+		</div>
+		<div class="col-xs-4">
+			<strong>Author:</strong>
+		</div>
+    <div class="col-xs-8"> 
+			<span ng-bind="vm.painting.author.name"></span>
+		</div>
+		<div class="col-xs-4">
+			<strong>Type:</strong>
+		</div>
+    <div class="col-xs-8"> 
+			<span ng-bind="vm.painting.type"></span>
+		</div>
+		<div class="col-xs-4">
+			<strong>Length:</strong>
+		</div>
+    <div class="col-xs-8"> 
+			<span ng-bind="vm.painting.length"></span>&nbsp;in.
+		</div>
+		<div class="col-xs-4">
+			<strong>Width:</strong>
+		</div>
+    <div class="col-xs-8"> 
+			<span ng-bind="vm.painting.width"></span>&nbsp;in.
+		</div>
+		<div class="col-xs-4">
+			<strong>Description:</strong>
+		</div>
+    <div class="col-xs-8"> 
+			<span ng-bind="vm.painting.description"></span>
+		</div>
+	</div>
+
 </section>

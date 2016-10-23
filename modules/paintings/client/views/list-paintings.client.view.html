@@ -2,14 +2,11 @@
 	<div class="page-header">
 		<h2>
 			Paintings
-			<a class="btn btn-primary pull-right" data-ui-sref="admin.paintings.create">
-				<i class="glyphicon glyphicon-plus"></i>
-			</a>
 		</h2>
 	</div>
 	<div class="row">
 		<div class="col-md-2 col-sm-4 col-xs-6" data-ng-repeat="painting in vm.paintings">
-			<a data-ui-sref="admin.paintings.edit({paintingId: painting._id})" class="list-group-item">
+			<a data-ui-sref="paintings.view({paintingId: painting._id})" class="list-group-item">
         <div class="list-image img-responsive">
           <img ng-src="{{painting.imageURL}}" class="img-thumbnail"/>
         </div>
@@ -20,32 +17,11 @@
 				<small class="list-group-item-text">
           <span ng-if="painting.author" ng-bind="painting.author.name"></span>
         </small>
-
-
-				<!--Length:
-				<span ng-if="painting.length" ng-bind="painting.length"></span> Inches, Width:
-				<span ng-if="painting.width" ng-bind="painting.width"></span> Inches-->
-
-
 			</a>
 		</div>
 	</div>
-	<div class="list-group">
-		<a data-ng-repeat="painting in vm.paintings" data-ui-sref="admin.paintings.edit({paintingId: painting._id})" class="list-group-item">
-			<small class="list-group-item-text">
-        Author:
-        <span ng-if="painting.author" ng-bind="painting.author.name"></span>
-      </small>
-			<h4 class="list-group-item-heading" data-ng-bind="painting.name"></h4>
-			Length:
-			<span ng-if="painting.length" ng-bind="painting.length"></span> Inches, Width:
-			<span ng-if="painting.width" ng-bind="painting.width"></span> Inches
 
-			<p class="list-group-item-text" data-ng-bind="painting.description"></p>
-
-		</a>
-	</div>
 	<div class="alert alert-warning text-center" data-ng-if="paintings.$resolved && !paintings.length">
-		No paintings yet, why don't you <a data-ui-sref="admin.paintings.create">create one</a>?
+		No painting found, please try to other filters.
 	</div>
 </section>

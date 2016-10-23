@@ -10,7 +10,7 @@
     <form name="vm.form.paintingForm" class="form-horizontal" ng-submit="vm.save(vm.form.paintingForm.$valid)" novalidate>
       <fieldset>
         <div class="form-group text-center">
-          <img ng-src="{{vm.imageURL}}" alt="{{vm.user.displayName}}" class="img-responsive">
+          <img ng-src="{{vm.imageURL}}" alt="{{vm.painting.name}}" class="img-responsive">
         </div>
         <div class="text-center form-group" ng-hide="vm.uploader.queue.length">
           <span class="btn btn-default btn-file">

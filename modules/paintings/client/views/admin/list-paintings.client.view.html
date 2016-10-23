@@ -1,28 +1,56 @@
-﻿<section>
-  <div class="page-header">
-    <h1>
-      Paintings
-      <a class="btn btn-primary pull-right" data-ui-sref="admin.paintings.create">
-        <i class="glyphicon glyphicon-plus"></i>
-      </a>
-    </h1>
-  </div>
-  <div class="list-group">
-    <a data-ng-repeat="painting in vm.paintings" data-ui-sref="admin.paintings.edit({paintingId: painting._id})" class="list-group-item">
-      <small class="list-group-item-text">
-        Author:
-        <span ng-if="painting.author" ng-bind="painting.author.name"></span>
-      </small>
-      <h4 class="list-group-item-heading" data-ng-bind="painting.name"></h4>
-      Length:
-      <span ng-if="painting.length" ng-bind="painting.length"></span> Inches,
-      Width:
-      <span ng-if="painting.width" ng-bind="painting.width"></span> Inches
-      
-      <p class="list-group-item-text" data-ng-bind="painting.description"></p>
-    </a>
-  </div>
-  <div class="alert alert-warning text-center" data-ng-if="paintings.$resolved && !paintings.length">
-    No paintings yet, why don't you <a data-ui-sref="admin.paintings.create">create one</a>?
-  </div>
+﻿<section class="grid-view">
+	<div class="page-header">
+		<h2>
+			Paintings
+			<a class="btn btn-primary pull-right" data-ui-sref="admin.paintings.create">
+				<i class="glyphicon glyphicon-plus"></i>
+			</a>
+		</h2>
+
+	</div>
+	<div class="row page-header">
+		<div class="col-sm-4 col-xs-12">
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="Search for...">
+				<span class="input-group-btn">
+        <button class="btn btn-secondary" type="button">Search</button>
+      </span>
+			</div>
+		</div>
+		<div class="col-sm-4 col-xs-12">
+			<div class="input-group">
+				<span class="input-group-addon">Dynasty</span>
+				<select class="form-control">
+          <option>1</option>
+        </select>
+			</div>
+		</div>
+		<div class="col-sm-4 col-xs-12">
+			<div class="input-group">
+				<span class="input-group-addon">Author</span>
+				<input type="text" class="form-control" placeholder="Product name">
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-2 col-sm-4 col-xs-6" data-ng-repeat="painting in vm.paintings">
+			<a data-ui-sref="admin.paintings.edit({paintingId: painting._id})" class="list-group-item">
+				<div class="list-image img-responsive">
+					<img ng-src="{{painting.imageURL}}" class="img-thumbnail" />
+				</div>
+
+				<strong>
+					<span data-ng-bind="painting.name"></span>
+				</strong>
+				<small class="list-group-item-text">
+          <span ng-if="painting.author" ng-bind="painting.author.name"></span>
+        </small>
+			</a>
+		</div>
+	</div>
+
+	<div class="alert alert-warning text-center" data-ng-if="paintings.$resolved && !paintings.length">
+		No painting found, please try to other filters.
+	</div>
 </section>
