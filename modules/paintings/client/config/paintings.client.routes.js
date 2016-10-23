@@ -21,6 +21,9 @@
         controllerAs: 'vm',
         data: {
           pageTitle: 'Paintings List'
+        },
+        resolve: {
+          authorsResolve: getAuthors
         }
       })
       .state('paintings.view', {

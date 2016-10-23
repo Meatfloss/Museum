@@ -21,6 +21,9 @@
         controllerAs: 'vm',
         data: {
           roles: ['admin']
+        },
+       resolve: {
+          authorsResolve: getAuthors
         }
       })
       .state('admin.paintings.create', {

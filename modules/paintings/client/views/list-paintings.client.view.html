@@ -4,6 +4,28 @@
 			Paintings
 		</h2>
 	</div>
+	<div class="row filter">
+		<div class="col-sm-4 col-xs-12">
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="Search for...">
+				<span class="input-group-btn">
+        <button class="btn btn-secondary" type="button">Search</button>
+      </span>
+			</div>
+		</div>
+    <div class="col-sm-4 col-xs-12">
+			<div class="input-group">
+				<span class="input-group-addon">Dynasty</span>
+				<select class="form-control" ng-model="vm.selectedDynasty" ng-options="x for x in vm.dynastyList"></select>
+			</div>
+		</div>
+		<div class="col-sm-4 col-xs-12">
+			<div class="input-group">
+				<span class="input-group-addon">Author</span>
+				<select id="author" class="form-control" ng-model="vm.selectedAuthor" ng-options="x for x in vm.authorList"></select>
+			</div>
+		</div>
+	</div>
 	<div class="row">
 		<div class="col-md-2 col-sm-4 col-xs-6" data-ng-repeat="painting in vm.paintings">
 			<a data-ui-sref="paintings.view({paintingId: painting._id})" class="list-group-item">

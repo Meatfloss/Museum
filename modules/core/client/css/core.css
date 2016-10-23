@@ -127,3 +127,11 @@ section{
     height: auto;
 }
 
+.grid-view .filter{
+  margin-bottom: 25px;
+}
+
+.grid-view .filter .input-group{
+  margin-bottom: 10px;
+}
+
