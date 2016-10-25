@@ -9,7 +9,6 @@
 
   function PaintingsListController($filter, PaintingsService, authors) {
     var vm = this;
-
     vm.buildPager = buildPager;
     vm.figureOutItemsToDisplay = figureOutItemsToDisplay;
     vm.pageChanged = pageChanged;
