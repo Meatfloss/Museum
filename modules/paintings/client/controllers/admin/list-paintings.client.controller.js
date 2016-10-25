@@ -5,7 +5,7 @@
     .module('paintings.admin')
     .controller('PaintingsListController', PaintingsListController);
 
-  PaintingsListController.$inject = ['$filter','PaintingsService', 'authorsResolve'];
+  PaintingsListController.$inject = ['$filter', 'PaintingsService', 'authorsResolve'];
 
   function PaintingsListController($filter, PaintingsService, authors) {
     var vm = this;
@@ -21,15 +21,19 @@
 
     function buildPager() {
       vm.pagedItems = [];
-      vm.itemsPerPage = 10;
+      vm.itemsPerPage = 12;
       vm.currentPage = 1;
       vm.figureOutItemsToDisplay();
     }
 
     function figureOutItemsToDisplay() {
-      vm.filteredItems = $filter('filter')(vm.paintings, {
-        $: vm.search
-      });
+      vm.filteredItems = $filter('filter')(vm.paintings, { $: vm.search });
+      if (vm.selectedDynasty && vm.selectedDynasty !== "All") {
+        vm.filteredItems = _.filter(vm.filteredItems, { author: { dynasty: vm.selectedDynasty } });
+      }
+      if (vm.selectedAuthor && vm.selectedAuthor !== "All") {
+        vm.filteredItems = _.filter(vm.filteredItems, { author: { name: vm.selectedAuthor } });
+      }
       vm.filterLength = vm.filteredItems.length;
       var begin = ((vm.currentPage - 1) * vm.itemsPerPage);
       var end = begin + vm.itemsPerPage;
@@ -57,12 +61,12 @@
       vm.authorList = _.map(filteredAuthors, 'name');
       vm.authorList.unshift("All");
       vm.selectedAuthor = "All";
-
-      
+      //update list
+      vm.figureOutItemsToDisplay();
     }
 
     vm.updateForAuthor = function () {
-      
+      vm.figureOutItemsToDisplay();
     }
 
   }
