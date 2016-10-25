@@ -5,26 +5,65 @@
     .module('paintings.admin')
     .controller('PaintingsListController', PaintingsListController);
 
-  PaintingsListController.$inject = ['PaintingsService', 'authorsResolve'];
+  PaintingsListController.$inject = ['$filter','PaintingsService', 'authorsResolve'];
 
-  function PaintingsListController(PaintingsService, authors) {
+  function PaintingsListController($filter, PaintingsService, authors) {
     var vm = this;
 
-    vm.paintings = PaintingsService.query();
+    vm.buildPager = buildPager;
+    vm.figureOutItemsToDisplay = figureOutItemsToDisplay;
+    vm.pageChanged = pageChanged;
+
+    PaintingsService.query(function (data) {
+      vm.paintings = data;
+      vm.buildPager();
+    });
+
+    function buildPager() {
+      vm.pagedItems = [];
+      vm.itemsPerPage = 10;
+      vm.currentPage = 1;
+      vm.figureOutItemsToDisplay();
+    }
+
+    function figureOutItemsToDisplay() {
+      vm.filteredItems = $filter('filter')(vm.paintings, {
+        $: vm.search
+      });
+      vm.filterLength = vm.filteredItems.length;
+      var begin = ((vm.currentPage - 1) * vm.itemsPerPage);
+      var end = begin + vm.itemsPerPage;
+      vm.pagedItems = vm.filteredItems.slice(begin, end);
+    }
+
+    function pageChanged() {
+      vm.figureOutItemsToDisplay();
+    }
+
+
+
+    //update dropdown list
     vm.authors = authors;
-    
     vm.authorList = _.map(authors, 'name');
     vm.dynastyList = _.map(_.uniqBy(authors, 'dynasty'), 'dynasty');
-    
     vm.authorList.unshift("All");
     vm.dynastyList.unshift("All");
     vm.selectedDynasty = "All";
     vm.selectedAuthor = "All";
 
-    vm.updateForDynasty = function(){
-      var filteredAuthors = vm.selectedDynasty === "All" ? authors : _.filter(authors, {dynasty:vm.selectedDynasty});
+
+    vm.updateForDynasty = function () {
+      var filteredAuthors = vm.selectedDynasty === "All" ? authors : _.filter(authors, { dynasty: vm.selectedDynasty });
       vm.authorList = _.map(filteredAuthors, 'name');
+      vm.authorList.unshift("All");
+      vm.selectedAuthor = "All";
+
+      
     }
-    
+
+    vm.updateForAuthor = function () {
+      
+    }
+
   }
 } ());

@@ -10,29 +10,24 @@
 	</div>
 	<div class="row filter">
 		<div class="col-sm-4 col-xs-12">
-			<div class="input-group">
-				<input type="text" class="form-control" placeholder="Search for...">
-				<span class="input-group-btn">
-        <button class="btn btn-secondary" type="button">Search</button>
-      </span>
-			</div>
+			<input type="text" class="form-control" placeholder="Search name..." ng-model="vm.search" ng-change="vm.figureOutItemsToDisplay()">
 		</div>
-    <div class="col-sm-4 col-xs-12">
+		<div class="col-sm-4 col-xs-12">
 			<div class="input-group">
 				<span class="input-group-addon">Dynasty</span>
-				<select class="form-control" ng-model="vm.selectedDynasty" ng-change="updateForDynasty" ng-options="x for x in vm.dynastyList"></select>
+				<select class="form-control" ng-model="vm.selectedDynasty" ng-change="vm.updateForDynasty()" ng-options="x for x in vm.dynastyList"></select>
 			</div>
 		</div>
 		<div class="col-sm-4 col-xs-12">
 			<div class="input-group">
 				<span class="input-group-addon">Author</span>
-				<select id="author" class="form-control" ng-model="vm.selectedAuthor" ng-change="updateForAuthor" ng-options="x for x in vm.authorList"></select>
+				<select id="author" class="form-control" ng-model="vm.selectedAuthor" ng-change="vm.updateForAuthor()" ng-options="x for x in vm.authorList"></select>
 			</div>
 		</div>
 	</div>
 
 	<div class="row">
-		<div class="col-md-2 col-sm-4 col-xs-6" data-ng-repeat="painting in vm.paintings">
+		<div class="col-md-2 col-sm-4 col-xs-6" data-ng-repeat="painting in vm.pagedItems">
 			<a data-ui-sref="admin.paintings.edit({paintingId: painting._id})" class="list-group-item">
 				<div class="list-image img-responsive">
 					<img ng-src="{{painting.imageURL}}" class="img-thumbnail" />
@@ -51,4 +46,6 @@
 	<div class="alert alert-warning text-center" data-ng-if="paintings.$resolved && !paintings.length">
 		No painting found, please try to other filters.
 	</div>
+	<uib-pagination boundary-links="true" max-size="8" items-per-page="vm.itemsPerPage" total-items="vm.filterLength" ng-model="vm.currentPage"
+		ng-change="vm.pageChanged()"></uib-pagination>
 </section>
