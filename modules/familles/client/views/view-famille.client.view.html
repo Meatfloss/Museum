@@ -1,0 +1,53 @@
+<section class="item-view">
+	<div class="page-header">
+		<h1 ng-bind="vm.famille.name"></h1>
+	</div>
+	<div class="text-center">
+		<img class="img-responsive" src="{{vm.imageURL}}" alt="{{vm.famille.name}}">
+	</div>
+	<div class="img-responsive row lead">
+		<div class="col-xs-4">
+			<strong>Name:</strong>
+		</div>
+    <div class="col-xs-8">
+			<span ng-bind="vm.famille.name"></span>
+		</div>
+		<div class="col-xs-4">
+			<strong>Dynasty:</strong>
+		</div>
+    <div class="col-xs-8">
+			<span ng-bind="vm.famille.dynasty"></span>
+		</div>
+		<div class="col-xs-4">
+			<strong>Type:</strong>
+		</div>
+    <div class="col-xs-8">
+			<span ng-bind="vm.famille.type"></span>
+		</div>
+		<div class="col-xs-4">
+			<strong>Length:</strong>
+		</div>
+    <div class="col-xs-8">
+			<span ng-bind="vm.famille.length"></span>&nbsp;in.
+		</div>
+		<div class="col-xs-4">
+			<strong>Width:</strong>
+		</div>
+    <div class="col-xs-8">
+			<span ng-bind="vm.famille.width"></span>&nbsp;in.
+		</div>
+				<div class="col-xs-4">
+			<strong>Height:</strong>
+		</div>
+    <div class="col-xs-8">
+			<span ng-bind="vm.famille.height"></span>&nbsp;in.
+		</div>
+		<div class="col-xs-4">
+			<strong>Description:</strong>
+		</div>
+    <div class="col-xs-8">
+			<span ng-bind="vm.famille.description"></span>
+		</div>
+	</div>
+
+</section>
