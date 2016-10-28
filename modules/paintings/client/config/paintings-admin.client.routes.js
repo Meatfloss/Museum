@@ -22,7 +22,7 @@
         data: {
           roles: ['admin']
         },
-       resolve: {
+        resolve: {
           authorsResolve: getAuthors
         }
       })
@@ -73,4 +73,4 @@
   function newPainting(PaintingsService) {
     return new PaintingsService();
   }
-} ());
+}());

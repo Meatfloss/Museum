@@ -40,8 +40,7 @@
             controller: 'HomeController',
             controllerAs: 'vm'
           }
-        },
-
+        }
       })
       .state('not-found', {
         url: '/not-found',
@@ -68,4 +67,4 @@
         }
       });
   }
-} ());
+}());

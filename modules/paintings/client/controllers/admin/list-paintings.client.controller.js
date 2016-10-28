@@ -27,10 +27,10 @@
 
     function figureOutItemsToDisplay() {
       vm.filteredItems = $filter('filter')(vm.paintings, { $: vm.search });
-      if (vm.selectedDynasty && vm.selectedDynasty !== "All") {
+      if (vm.selectedDynasty && vm.selectedDynasty !== 'All') {
         vm.filteredItems = _.filter(vm.filteredItems, { author: { dynasty: vm.selectedDynasty } });
       }
-      if (vm.selectedAuthor && vm.selectedAuthor !== "All") {
+      if (vm.selectedAuthor && vm.selectedAuthor !== 'All') {
         vm.filteredItems = _.filter(vm.filteredItems, { author: { name: vm.selectedAuthor } });
       }
       vm.filterLength = vm.filteredItems.length;
@@ -43,30 +43,28 @@
       vm.figureOutItemsToDisplay();
     }
 
-
-
-    //update dropdown list
+    // update dropdown list
     vm.authors = authors;
     vm.authorList = _.map(authors, 'name');
     vm.dynastyList = _.map(_.uniqBy(authors, 'dynasty'), 'dynasty');
-    vm.authorList.unshift("All");
-    vm.dynastyList.unshift("All");
-    vm.selectedDynasty = "All";
-    vm.selectedAuthor = "All";
+    vm.authorList.unshift('All');
+    vm.dynastyList.unshift('All');
+    vm.selectedDynasty = 'All';
+    vm.selectedAuthor = 'All';
 
 
     vm.updateForDynasty = function () {
-      var filteredAuthors = vm.selectedDynasty === "All" ? authors : _.filter(authors, { dynasty: vm.selectedDynasty });
+      var filteredAuthors = vm.selectedDynasty === 'All' ? authors : _.filter(authors, { dynasty: vm.selectedDynasty });
       vm.authorList = _.map(filteredAuthors, 'name');
-      vm.authorList.unshift("All");
-      vm.selectedAuthor = "All";
-      //update list
+      vm.authorList.unshift('All');
+      vm.selectedAuthor = 'All';
+      // update list
       vm.figureOutItemsToDisplay();
-    }
+    };
 
     vm.updateForAuthor = function () {
       vm.figureOutItemsToDisplay();
-    }
+    };
 
   }
-} ());
+}());

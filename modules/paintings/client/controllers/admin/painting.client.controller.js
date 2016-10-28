@@ -14,7 +14,7 @@
     vm.authentication = Authentication;
     vm.authors = authors;
     vm.painting.author = vm.painting.author && chooseDropDown(vm.painting.author, authors, 'name');
-    vm.types = ["Album, Ink on Paper", "Hanging Scroll, Ink and Color on Paper"]
+    vm.types = ['Album, Ink on Paper', 'Hanging Scroll, Ink and Color on Paper'];
 
     vm.error = null;
     vm.form = {};
@@ -32,10 +32,9 @@
       onAfterAddingFile: onAfterAddingFile,
       onSuccessItem: onSuccessItem,
       onErrorItem: onErrorItem
-      
     });
 
-    vm.uploader.onBeforeUploadItem =  onBeforeUploadItem;
+    vm.uploader.onBeforeUploadItem = onBeforeUploadItem;
     // Set file uploader image filter
     vm.uploader.filters.push({
       name: 'imageFilter',
@@ -45,10 +44,10 @@
       }
     });
 
-    //add painting data
+    // add painting data
     function onBeforeUploadItem(item) {
-      item.formData.push({ paintingId: vm.painting._id});
-      //console.log(item);
+      item.formData.push({ paintingId: vm.painting._id });
+      // console.log(item);
     }
     // Called after the user selected a new picture file
     function onAfterAddingFile(fileItem) {
@@ -100,14 +99,7 @@
       vm.imageURL = vm.painting.imageURL;
     }
 
-
-
-
-
-
-
-
-    //select for dropdownlist
+    // select for dropdownlist
     function chooseDropDown(item, list, field) {
       if (list && list.length > 0) {
         for (var i = 0; i < list.length; i++) {
@@ -146,4 +138,4 @@
       }
     }
   }
-} ());
+}());

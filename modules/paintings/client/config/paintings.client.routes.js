@@ -55,4 +55,4 @@
   function getAuthors($stateParams, AuthorsService) {
     return AuthorsService.query().$promise;
   }
-} ());
+}());

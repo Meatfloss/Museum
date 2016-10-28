@@ -24,7 +24,7 @@ var PaintingSchema = new Schema({
   type: {
     type: String,
     default: '',
-    trim: true 
+    trim: true
   },
   length: {
     type: Number,
@@ -52,5 +52,4 @@ var PaintingSchema = new Schema({
     ref: 'Author'
   }
 });
-
 mongoose.model('Painting', PaintingSchema);

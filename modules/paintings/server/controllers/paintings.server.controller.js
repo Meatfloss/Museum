@@ -128,11 +128,9 @@ exports.paintingByID = function (req, res, next, id) {
 exports.changePicture = function (req, res) {
   var user = req.user;
 
-  //Todo: change painting image location.
-  //var upload = multer(config.uploads.paintingImageUpload).single('newPicture');
+  // Todo: change painting image location.
+  // var upload = multer(config.uploads.paintingImageUpload).single('newPicture');
   var upload = multer(config.uploads.profileUpload).single('newPicture');
-  
-
   var profileUploadFileFilter = require(path.resolve('./config/lib/multer')).profileUploadFileFilter;
 
   // Filtering to upload only images
