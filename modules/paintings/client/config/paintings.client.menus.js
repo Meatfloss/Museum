@@ -23,46 +23,46 @@
       roles: ['*']
     });
 
-        // Add the dropdown list item
+    // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'paintings', {
       title: 'List Bronzes',
       state: 'bronzes.list',
       roles: ['*']
     });
 
-        // Add the dropdown list item
+    // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'paintings', {
       title: 'List Zisha Teapot',
-      state: 'paintings.list',
+      state: 'teapots.list',
       roles: ['*']
     });
 
-        // Add the dropdown list item
+    // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'paintings', {
       title: 'List Famille Rose',
-      state: 'paintings.list',
+      state: 'familles.list',
       roles: ['*']
     });
 
-        // Add the dropdown list item
+    // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'paintings', {
       title: 'List Enamel',
-      state: 'paintings.list',
+      state: 'enamels.list',
       roles: ['*']
     });
 
-            // Add the dropdown list item
+    // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'paintings', {
       title: 'List Statues',
       state: 'paintings.list',
       roles: ['*']
     });
 
-            // Add the dropdown list item
+    // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'paintings', {
       title: 'Others',
       state: 'paintings.list',
       roles: ['*']
     });
   }
-}());
+} ());

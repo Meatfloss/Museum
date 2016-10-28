@@ -1,0 +1,53 @@
+<section class="item-view">
+	<div class="page-header">
+		<h1 ng-bind="vm.teapot.name"></h1>
+	</div>
+	<div class="text-center">
+		<img class="img-responsive" src="{{vm.imageURL}}" alt="{{vm.teapot.name}}">
+	</div>
+	<div class="img-responsive row lead">
+		<div class="col-xs-4">
+			<strong>Name:</strong>
+		</div>
+    <div class="col-xs-8">
+			<span ng-bind="vm.teapot.name"></span>
+		</div>
+		<div class="col-xs-4">
+			<strong>Dynasty:</strong>
+		</div>
+    <div class="col-xs-8">
+			<span ng-bind="vm.teapot.dynasty"></span>
+		</div>
+		<div class="col-xs-4">
+			<strong>Type:</strong>
+		</div>
+    <div class="col-xs-8">
+			<span ng-bind="vm.teapot.type"></span>
+		</div>
+		<div class="col-xs-4">
+			<strong>Length:</strong>
+		</div>
+    <div class="col-xs-8">
+			<span ng-bind="vm.teapot.length"></span>&nbsp;in.
+		</div>
+		<div class="col-xs-4">
+			<strong>Width:</strong>
+		</div>
+    <div class="col-xs-8">
+			<span ng-bind="vm.teapot.width"></span>&nbsp;in.
+		</div>
+				<div class="col-xs-4">
+			<strong>Height:</strong>
+		</div>
+    <div class="col-xs-8">
+			<span ng-bind="vm.teapot.height"></span>&nbsp;in.
+		</div>
+		<div class="col-xs-4">
+			<strong>Description:</strong>
+		</div>
+    <div class="col-xs-8">
+			<span ng-bind="vm.teapot.description"></span>
+		</div>
+	</div>
+
+</section>
