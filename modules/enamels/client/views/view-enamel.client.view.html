@@ -1,0 +1,53 @@
+<section class="item-view">
+	<div class="page-header">
+		<h1 ng-bind="vm.enamel.name"></h1>
+	</div>
+	<div class="text-center">
+		<img class="img-responsive" src="{{vm.imageURL}}" alt="{{vm.enamel.name}}">
+	</div>
+	<div class="img-responsive row lead">
+		<div class="col-xs-4">
+			<strong>Name:</strong>
+		</div>
+    <div class="col-xs-8">
+			<span ng-bind="vm.enamel.name"></span>
+		</div>
+		<div class="col-xs-4">
+			<strong>Dynasty:</strong>
+		</div>
+    <div class="col-xs-8">
+			<span ng-bind="vm.enamel.dynasty"></span>
+		</div>
+		<div class="col-xs-4">
+			<strong>Type:</strong>
+		</div>
+    <div class="col-xs-8">
+			<span ng-bind="vm.enamel.type"></span>
+		</div>
+		<div class="col-xs-4">
+			<strong>Length:</strong>
+		</div>
+    <div class="col-xs-8">
+			<span ng-bind="vm.enamel.length"></span>&nbsp;in.
+		</div>
+		<div class="col-xs-4">
+			<strong>Width:</strong>
+		</div>
+    <div class="col-xs-8">
+			<span ng-bind="vm.enamel.width"></span>&nbsp;in.
+		</div>
+				<div class="col-xs-4">
+			<strong>Height:</strong>
+		</div>
+    <div class="col-xs-8">
+			<span ng-bind="vm.enamel.height"></span>&nbsp;in.
+		</div>
+		<div class="col-xs-4">
+			<strong>Description:</strong>
+		</div>
+    <div class="col-xs-8">
+			<span ng-bind="vm.enamel.description"></span>
+		</div>
+	</div>
+
+</section>

@@ -61246,3 +61246,833 @@ Error: Cannot find module '../policies/teapots.server.policy'
 
 2016-10-28T03:57:47.671Z - info: [0mGET /api/familles [32m200 [0m7.626 ms - 319[0m
 
+2016-10-28T03:58:47.888Z - error: uncaughtException: Cannot overwrite `Famille` model once compiled. date=Thu Oct 27 2016 23:58:47 GMT-0400 (EDT), pid=14926, uid=501, gid=20, cwd=/Users/stream/Documents/Works/Jianguan, execPath=/usr/local/bin/node, version=v5.5.0, argv=[/usr/local/bin/node, /Users/stream/Documents/Works/Jianguan/server.js], rss=66445312, heapTotal=39477536, heapUsed=27418960, loadavg=[2.42724609375, 1.97216796875, 1.92724609375], uptime=141611
+OverwriteModelError: Cannot overwrite `Famille` model once compiled.
+    at Mongoose.model (/Users/stream/Documents/Works/Jianguan/node_modules/mongoose/lib/index.js:360:13)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/modules/familles/server/models/famille.server.model.js:60:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at /Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:15:5
+    at Array.forEach (native)
+    at Object.module.exports.loadModels (/Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:14:30)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/config/lib/app.js:20:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/server.js:8:11)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+2016-10-28T03:59:04.150Z - error: uncaughtException: Cannot overwrite `Famille` model once compiled. date=Thu Oct 27 2016 23:59:04 GMT-0400 (EDT), pid=14974, uid=501, gid=20, cwd=/Users/stream/Documents/Works/Jianguan, execPath=/usr/local/bin/node, version=v5.5.0, argv=[/usr/local/bin/node, /Users/stream/Documents/Works/Jianguan/server.js], rss=66551808, heapTotal=39477536, heapUsed=27414104, loadavg=[2.1904296875, 1.9404296875, 1.916015625], uptime=141628
+OverwriteModelError: Cannot overwrite `Famille` model once compiled.
+    at Mongoose.model (/Users/stream/Documents/Works/Jianguan/node_modules/mongoose/lib/index.js:360:13)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/modules/familles/server/models/famille.server.model.js:60:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at /Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:15:5
+    at Array.forEach (native)
+    at Object.module.exports.loadModels (/Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:14:30)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/config/lib/app.js:20:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/server.js:8:11)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+2016-10-28T03:59:26.385Z - error: uncaughtException: Cannot overwrite `Famille` model once compiled. date=Thu Oct 27 2016 23:59:26 GMT-0400 (EDT), pid=14997, uid=501, gid=20, cwd=/Users/stream/Documents/Works/Jianguan, execPath=/usr/local/bin/node, version=v5.5.0, argv=[/usr/local/bin/node, /Users/stream/Documents/Works/Jianguan/server.js], rss=66764800, heapTotal=39477536, heapUsed=27424888, loadavg=[1.99365234375, 1.9111328125, 1.90576171875], uptime=141650
+OverwriteModelError: Cannot overwrite `Famille` model once compiled.
+    at Mongoose.model (/Users/stream/Documents/Works/Jianguan/node_modules/mongoose/lib/index.js:360:13)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/modules/familles/server/models/famille.server.model.js:60:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at /Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:15:5
+    at Array.forEach (native)
+    at Object.module.exports.loadModels (/Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:14:30)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/config/lib/app.js:20:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/server.js:8:11)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+2016-10-28T03:59:34.394Z - error: uncaughtException: Cannot overwrite `Famille` model once compiled. date=Thu Oct 27 2016 23:59:34 GMT-0400 (EDT), pid=15018, uid=501, gid=20, cwd=/Users/stream/Documents/Works/Jianguan, execPath=/usr/local/bin/node, version=v5.5.0, argv=[/usr/local/bin/node, /Users/stream/Documents/Works/Jianguan/server.js], rss=66514944, heapTotal=39477536, heapUsed=27409224, loadavg=[1.9140625, 1.89697265625, 1.90087890625], uptime=141658
+OverwriteModelError: Cannot overwrite `Famille` model once compiled.
+    at Mongoose.model (/Users/stream/Documents/Works/Jianguan/node_modules/mongoose/lib/index.js:360:13)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/modules/familles/server/models/famille.server.model.js:60:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at /Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:15:5
+    at Array.forEach (native)
+    at Object.module.exports.loadModels (/Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:14:30)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/config/lib/app.js:20:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/server.js:8:11)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+2016-10-28T03:59:39.712Z - error: uncaughtException: Cannot overwrite `Famille` model once compiled. date=Thu Oct 27 2016 23:59:39 GMT-0400 (EDT), pid=15037, uid=501, gid=20, cwd=/Users/stream/Documents/Works/Jianguan, execPath=/usr/local/bin/node, version=v5.5.0, argv=[/usr/local/bin/node, /Users/stream/Documents/Works/Jianguan/server.js], rss=66674688, heapTotal=39477536, heapUsed=27413440, loadavg=[1.7607421875, 1.865234375, 1.8896484375], uptime=141663
+OverwriteModelError: Cannot overwrite `Famille` model once compiled.
+    at Mongoose.model (/Users/stream/Documents/Works/Jianguan/node_modules/mongoose/lib/index.js:360:13)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/modules/familles/server/models/famille.server.model.js:60:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at /Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:15:5
+    at Array.forEach (native)
+    at Object.module.exports.loadModels (/Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:14:30)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/config/lib/app.js:20:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/server.js:8:11)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+2016-10-28T03:59:46.712Z - error: uncaughtException: Cannot overwrite `Famille` model once compiled. date=Thu Oct 27 2016 23:59:46 GMT-0400 (EDT), pid=15038, uid=501, gid=20, cwd=/Users/stream/Documents/Works/Jianguan, execPath=/usr/local/bin/node, version=v5.5.0, argv=[/usr/local/bin/node, /Users/stream/Documents/Works/Jianguan/server.js], rss=66838528, heapTotal=39477536, heapUsed=27427056, loadavg=[1.69970703125, 1.8505859375, 1.88427734375], uptime=141670
+OverwriteModelError: Cannot overwrite `Famille` model once compiled.
+    at Mongoose.model (/Users/stream/Documents/Works/Jianguan/node_modules/mongoose/lib/index.js:360:13)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/modules/familles/server/models/famille.server.model.js:60:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at /Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:15:5
+    at Array.forEach (native)
+    at Object.module.exports.loadModels (/Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:14:30)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/config/lib/app.js:20:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/server.js:8:11)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+2016-10-28T04:01:20.077Z - error: uncaughtException: Cannot overwrite `Famille` model once compiled. date=Fri Oct 28 2016 00:01:20 GMT-0400 (EDT), pid=15217, uid=501, gid=20, cwd=/Users/stream/Documents/Works/Jianguan, execPath=/usr/local/bin/node, version=v5.5.0, argv=[/usr/local/bin/node, /Users/stream/Documents/Works/Jianguan/server.js], rss=66666496, heapTotal=39477536, heapUsed=27437416, loadavg=[1.4677734375, 1.72900390625, 1.830078125], uptime=141764
+OverwriteModelError: Cannot overwrite `Famille` model once compiled.
+    at Mongoose.model (/Users/stream/Documents/Works/Jianguan/node_modules/mongoose/lib/index.js:360:13)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/modules/familles/server/models/famille.server.model.js:60:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at /Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:15:5
+    at Array.forEach (native)
+    at Object.module.exports.loadModels (/Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:14:30)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/config/lib/app.js:20:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/server.js:8:11)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+2016-10-28T04:01:21.694Z - error: uncaughtException: Cannot overwrite `Famille` model once compiled. date=Fri Oct 28 2016 00:01:21 GMT-0400 (EDT), pid=15226, uid=501, gid=20, cwd=/Users/stream/Documents/Works/Jianguan, execPath=/usr/local/bin/node, version=v5.5.0, argv=[/usr/local/bin/node, /Users/stream/Documents/Works/Jianguan/server.js], rss=66707456, heapTotal=39477536, heapUsed=27410936, loadavg=[1.4677734375, 1.72900390625, 1.830078125], uptime=141765
+OverwriteModelError: Cannot overwrite `Famille` model once compiled.
+    at Mongoose.model (/Users/stream/Documents/Works/Jianguan/node_modules/mongoose/lib/index.js:360:13)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/modules/familles/server/models/famille.server.model.js:60:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at /Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:15:5
+    at Array.forEach (native)
+    at Object.module.exports.loadModels (/Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:14:30)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/config/lib/app.js:20:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/server.js:8:11)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+2016-10-28T04:01:27.008Z - error: uncaughtException: Cannot overwrite `Famille` model once compiled. date=Fri Oct 28 2016 00:01:27 GMT-0400 (EDT), pid=15227, uid=501, gid=20, cwd=/Users/stream/Documents/Works/Jianguan, execPath=/usr/local/bin/node, version=v5.5.0, argv=[/usr/local/bin/node, /Users/stream/Documents/Works/Jianguan/server.js], rss=66654208, heapTotal=39477536, heapUsed=27410912, loadavg=[1.43017578125, 1.716796875, 1.8251953125], uptime=141771
+OverwriteModelError: Cannot overwrite `Famille` model once compiled.
+    at Mongoose.model (/Users/stream/Documents/Works/Jianguan/node_modules/mongoose/lib/index.js:360:13)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/modules/familles/server/models/famille.server.model.js:60:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at /Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:15:5
+    at Array.forEach (native)
+    at Object.module.exports.loadModels (/Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:14:30)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/config/lib/app.js:20:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/server.js:8:11)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+2016-10-28T04:01:31.248Z - error: uncaughtException: Cannot overwrite `Famille` model once compiled. date=Fri Oct 28 2016 00:01:31 GMT-0400 (EDT), pid=15244, uid=501, gid=20, cwd=/Users/stream/Documents/Works/Jianguan, execPath=/usr/local/bin/node, version=v5.5.0, argv=[/usr/local/bin/node, /Users/stream/Documents/Works/Jianguan/server.js], rss=66707456, heapTotal=39477536, heapUsed=27420280, loadavg=[1.3955078125, 1.70458984375, 1.8203125], uptime=141775
+OverwriteModelError: Cannot overwrite `Famille` model once compiled.
+    at Mongoose.model (/Users/stream/Documents/Works/Jianguan/node_modules/mongoose/lib/index.js:360:13)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/modules/familles/server/models/famille.server.model.js:60:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at /Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:15:5
+    at Array.forEach (native)
+    at Object.module.exports.loadModels (/Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:14:30)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/config/lib/app.js:20:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/server.js:8:11)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+2016-10-28T04:01:35.418Z - error: uncaughtException: Cannot overwrite `Famille` model once compiled. date=Fri Oct 28 2016 00:01:35 GMT-0400 (EDT), pid=15245, uid=501, gid=20, cwd=/Users/stream/Documents/Works/Jianguan, execPath=/usr/local/bin/node, version=v5.5.0, argv=[/usr/local/bin/node, /Users/stream/Documents/Works/Jianguan/server.js], rss=66535424, heapTotal=39477536, heapUsed=27416968, loadavg=[1.44384765625, 1.70947265625, 1.8212890625], uptime=141779
+OverwriteModelError: Cannot overwrite `Famille` model once compiled.
+    at Mongoose.model (/Users/stream/Documents/Works/Jianguan/node_modules/mongoose/lib/index.js:360:13)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/modules/familles/server/models/famille.server.model.js:60:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at /Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:15:5
+    at Array.forEach (native)
+    at Object.module.exports.loadModels (/Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:14:30)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/config/lib/app.js:20:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/server.js:8:11)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+2016-10-28T04:01:53.955Z - error: uncaughtException: Cannot overwrite `Famille` model once compiled. date=Fri Oct 28 2016 00:01:53 GMT-0400 (EDT), pid=15264, uid=501, gid=20, cwd=/Users/stream/Documents/Works/Jianguan, execPath=/usr/local/bin/node, version=v5.5.0, argv=[/usr/local/bin/node, /Users/stream/Documents/Works/Jianguan/server.js], rss=66424832, heapTotal=39477536, heapUsed=27414032, loadavg=[1.486328125, 1.7060546875, 1.818359375], uptime=141797
+OverwriteModelError: Cannot overwrite `Famille` model once compiled.
+    at Mongoose.model (/Users/stream/Documents/Works/Jianguan/node_modules/mongoose/lib/index.js:360:13)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/modules/familles/server/models/famille.server.model.js:60:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at /Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:15:5
+    at Array.forEach (native)
+    at Object.module.exports.loadModels (/Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:14:30)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/config/lib/app.js:20:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/server.js:8:11)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+2016-10-28T04:02:00.906Z - error: uncaughtException: Cannot overwrite `Famille` model once compiled. date=Fri Oct 28 2016 00:02:00 GMT-0400 (EDT), pid=15283, uid=501, gid=20, cwd=/Users/stream/Documents/Works/Jianguan, execPath=/usr/local/bin/node, version=v5.5.0, argv=[/usr/local/bin/node, /Users/stream/Documents/Works/Jianguan/server.js], rss=66314240, heapTotal=39477536, heapUsed=26956224, loadavg=[1.4912109375, 1.69873046875, 1.814453125], uptime=141804
+OverwriteModelError: Cannot overwrite `Famille` model once compiled.
+    at Mongoose.model (/Users/stream/Documents/Works/Jianguan/node_modules/mongoose/lib/index.js:360:13)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/modules/familles/server/models/famille.server.model.js:60:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at /Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:15:5
+    at Array.forEach (native)
+    at Object.module.exports.loadModels (/Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:14:30)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/config/lib/app.js:20:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/server.js:8:11)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+2016-10-28T04:02:04.569Z - error: uncaughtException: Cannot overwrite `Famille` model once compiled. date=Fri Oct 28 2016 00:02:04 GMT-0400 (EDT), pid=15300, uid=501, gid=20, cwd=/Users/stream/Documents/Works/Jianguan, execPath=/usr/local/bin/node, version=v5.5.0, argv=[/usr/local/bin/node, /Users/stream/Documents/Works/Jianguan/server.js], rss=66543616, heapTotal=39477536, heapUsed=27416800, loadavg=[1.4912109375, 1.69873046875, 1.814453125], uptime=141808
+OverwriteModelError: Cannot overwrite `Famille` model once compiled.
+    at Mongoose.model (/Users/stream/Documents/Works/Jianguan/node_modules/mongoose/lib/index.js:360:13)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/modules/familles/server/models/famille.server.model.js:60:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at /Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:15:5
+    at Array.forEach (native)
+    at Object.module.exports.loadModels (/Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:14:30)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/config/lib/app.js:20:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/server.js:8:11)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+2016-10-28T04:02:07.735Z - error: uncaughtException: Cannot overwrite `Famille` model once compiled. date=Fri Oct 28 2016 00:02:07 GMT-0400 (EDT), pid=15305, uid=501, gid=20, cwd=/Users/stream/Documents/Works/Jianguan, execPath=/usr/local/bin/node, version=v5.5.0, argv=[/usr/local/bin/node, /Users/stream/Documents/Works/Jianguan/server.js], rss=66420736, heapTotal=39477536, heapUsed=27420096, loadavg=[1.69189453125, 1.73681640625, 1.8271484375], uptime=141811
+OverwriteModelError: Cannot overwrite `Famille` model once compiled.
+    at Mongoose.model (/Users/stream/Documents/Works/Jianguan/node_modules/mongoose/lib/index.js:360:13)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/modules/familles/server/models/famille.server.model.js:60:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at /Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:15:5
+    at Array.forEach (native)
+    at Object.module.exports.loadModels (/Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:14:30)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/config/lib/app.js:20:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/server.js:8:11)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+2016-10-28T04:02:49.968Z - error: uncaughtException: Cannot overwrite `Famille` model once compiled. date=Fri Oct 28 2016 00:02:49 GMT-0400 (EDT), pid=15391, uid=501, gid=20, cwd=/Users/stream/Documents/Works/Jianguan, execPath=/usr/local/bin/node, version=v5.5.0, argv=[/usr/local/bin/node, /Users/stream/Documents/Works/Jianguan/server.js], rss=66363392, heapTotal=39477536, heapUsed=27416624, loadavg=[1.6875, 1.73779296875, 1.82275390625], uptime=141853
+OverwriteModelError: Cannot overwrite `Famille` model once compiled.
+    at Mongoose.model (/Users/stream/Documents/Works/Jianguan/node_modules/mongoose/lib/index.js:360:13)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/modules/familles/server/models/famille.server.model.js:60:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at /Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:15:5
+    at Array.forEach (native)
+    at Object.module.exports.loadModels (/Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:14:30)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/config/lib/app.js:20:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/server.js:8:11)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+2016-10-28T04:02:55.874Z - error: uncaughtException: Cannot overwrite `Famille` model once compiled. date=Fri Oct 28 2016 00:02:55 GMT-0400 (EDT), pid=15424, uid=501, gid=20, cwd=/Users/stream/Documents/Works/Jianguan, execPath=/usr/local/bin/node, version=v5.5.0, argv=[/usr/local/bin/node, /Users/stream/Documents/Works/Jianguan/server.js], rss=66461696, heapTotal=39477536, heapUsed=27423824, loadavg=[1.63232421875, 1.72509765625, 1.81787109375], uptime=141859
+OverwriteModelError: Cannot overwrite `Famille` model once compiled.
+    at Mongoose.model (/Users/stream/Documents/Works/Jianguan/node_modules/mongoose/lib/index.js:360:13)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/modules/familles/server/models/famille.server.model.js:60:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at /Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:15:5
+    at Array.forEach (native)
+    at Object.module.exports.loadModels (/Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:14:30)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/config/lib/app.js:20:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/server.js:8:11)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+2016-10-28T04:02:59.261Z - error: uncaughtException: Cannot overwrite `Famille` model once compiled. date=Fri Oct 28 2016 00:02:59 GMT-0400 (EDT), pid=15428, uid=501, gid=20, cwd=/Users/stream/Documents/Works/Jianguan, execPath=/usr/local/bin/node, version=v5.5.0, argv=[/usr/local/bin/node, /Users/stream/Documents/Works/Jianguan/server.js], rss=66605056, heapTotal=39477536, heapUsed=27411016, loadavg=[1.63232421875, 1.72509765625, 1.81787109375], uptime=141863
+OverwriteModelError: Cannot overwrite `Famille` model once compiled.
+    at Mongoose.model (/Users/stream/Documents/Works/Jianguan/node_modules/mongoose/lib/index.js:360:13)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/modules/familles/server/models/famille.server.model.js:60:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at /Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:15:5
+    at Array.forEach (native)
+    at Object.module.exports.loadModels (/Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:14:30)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/config/lib/app.js:20:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/server.js:8:11)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+2016-10-28T04:03:12.648Z - error: uncaughtException: Cannot overwrite `Famille` model once compiled. date=Fri Oct 28 2016 00:03:12 GMT-0400 (EDT), pid=15448, uid=501, gid=20, cwd=/Users/stream/Documents/Works/Jianguan, execPath=/usr/local/bin/node, version=v5.5.0, argv=[/usr/local/bin/node, /Users/stream/Documents/Works/Jianguan/server.js], rss=66387968, heapTotal=39477536, heapUsed=27421736, loadavg=[1.73193359375, 1.73876953125, 1.82080078125], uptime=141876
+OverwriteModelError: Cannot overwrite `Famille` model once compiled.
+    at Mongoose.model (/Users/stream/Documents/Works/Jianguan/node_modules/mongoose/lib/index.js:360:13)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/modules/familles/server/models/famille.server.model.js:60:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at /Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:15:5
+    at Array.forEach (native)
+    at Object.module.exports.loadModels (/Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:14:30)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/config/lib/app.js:20:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/server.js:8:11)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+2016-10-28T04:03:15.240Z - error: uncaughtException: Cannot overwrite `Famille` model once compiled. date=Fri Oct 28 2016 00:03:15 GMT-0400 (EDT), pid=15468, uid=501, gid=20, cwd=/Users/stream/Documents/Works/Jianguan, execPath=/usr/local/bin/node, version=v5.5.0, argv=[/usr/local/bin/node, /Users/stream/Documents/Works/Jianguan/server.js], rss=66392064, heapTotal=39477536, heapUsed=27422840, loadavg=[2.0732421875, 1.80908203125, 1.84521484375], uptime=141879
+OverwriteModelError: Cannot overwrite `Famille` model once compiled.
+    at Mongoose.model (/Users/stream/Documents/Works/Jianguan/node_modules/mongoose/lib/index.js:360:13)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/modules/familles/server/models/famille.server.model.js:60:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at /Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:15:5
+    at Array.forEach (native)
+    at Object.module.exports.loadModels (/Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:14:30)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/config/lib/app.js:20:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/server.js:8:11)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+2016-10-28T04:03:21.179Z - error: uncaughtException: Cannot overwrite `Famille` model once compiled. date=Fri Oct 28 2016 00:03:21 GMT-0400 (EDT), pid=15473, uid=501, gid=20, cwd=/Users/stream/Documents/Works/Jianguan, execPath=/usr/local/bin/node, version=v5.5.0, argv=[/usr/local/bin/node, /Users/stream/Documents/Works/Jianguan/server.js], rss=66469888, heapTotal=39477536, heapUsed=27413304, loadavg=[2.14697265625, 1.82861328125, 1.8515625], uptime=141885
+OverwriteModelError: Cannot overwrite `Famille` model once compiled.
+    at Mongoose.model (/Users/stream/Documents/Works/Jianguan/node_modules/mongoose/lib/index.js:360:13)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/modules/familles/server/models/famille.server.model.js:60:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at /Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:15:5
+    at Array.forEach (native)
+    at Object.module.exports.loadModels (/Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:14:30)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/config/lib/app.js:20:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/server.js:8:11)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+2016-10-28T04:03:58.798Z - error: uncaughtException: Cannot overwrite `Famille` model once compiled. date=Fri Oct 28 2016 00:03:58 GMT-0400 (EDT), pid=15554, uid=501, gid=20, cwd=/Users/stream/Documents/Works/Jianguan, execPath=/usr/local/bin/node, version=v5.5.0, argv=[/usr/local/bin/node, /Users/stream/Documents/Works/Jianguan/server.js], rss=66387968, heapTotal=39477536, heapUsed=27421392, loadavg=[1.76220703125, 1.7666015625, 1.826171875], uptime=141922
+OverwriteModelError: Cannot overwrite `Famille` model once compiled.
+    at Mongoose.model (/Users/stream/Documents/Works/Jianguan/node_modules/mongoose/lib/index.js:360:13)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/modules/familles/server/models/famille.server.model.js:60:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at /Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:15:5
+    at Array.forEach (native)
+    at Object.module.exports.loadModels (/Users/stream/Documents/Works/Jianguan/config/lib/mongoose.js:14:30)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/config/lib/app.js:20:10)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.require (module.js:367:17)
+    at require (internal/module.js:16:19)
+    at Object.<anonymous> (/Users/stream/Documents/Works/Jianguan/server.js:8:11)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+2016-10-28T04:04:34.050Z - info: [0mGET /admin/familles [32m200 [0m108.498 ms - -[0m
+
+2016-10-28T04:04:34.162Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap.css [36m304 [0m14.160 ms - -[0m
+
+2016-10-28T04:04:34.164Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap-theme.css [36m304 [0m8.481 ms - -[0m
+
+2016-10-28T04:04:34.169Z - info: [0mGET /modules/about/client/css/about.css [36m304 [0m2.723 ms - -[0m
+
+2016-10-28T04:04:34.175Z - info: [0mGET /modules/chat/client/css/chat.css [36m304 [0m6.913 ms - -[0m
+
+2016-10-28T04:04:34.180Z - info: [0mGET /modules/contact/client/css/contact.css [36m304 [0m9.407 ms - -[0m
+
+2016-10-28T04:04:34.184Z - info: [0mGET /modules/core/client/css/core.css [36m304 [0m10.056 ms - -[0m
+
+2016-10-28T04:04:34.188Z - info: [0mGET /modules/users/client/css/users.css [36m304 [0m10.801 ms - -[0m
+
+2016-10-28T04:04:34.189Z - info: [0mGET /lib/angular/angular.js [36m304 [0m1.483 ms - -[0m
+
+2016-10-28T04:04:34.197Z - info: [0mGET /lib/angular-animate/angular-animate.js [36m304 [0m4.518 ms - -[0m
+
+2016-10-28T04:04:34.198Z - info: [0mGET /lib/angular-bootstrap/ui-bootstrap-tpls.js [36m304 [0m4.363 ms - -[0m
+
+2016-10-28T04:04:34.199Z - info: [0mGET /lib/angular-file-upload/dist/angular-file-upload.min.js [36m304 [0m2.532 ms - -[0m
+
+2016-10-28T04:04:34.202Z - info: [0mGET /lib/angular-messages/angular-messages.js [36m304 [0m1.780 ms - -[0m
+
+2016-10-28T04:04:34.203Z - info: [0mGET /lib/angular-mocks/angular-mocks.js [36m304 [0m1.617 ms - -[0m
+
+2016-10-28T04:04:34.205Z - info: [0mGET /lib/angular-resource/angular-resource.js [36m304 [0m0.736 ms - -[0m
+
+2016-10-28T04:04:34.210Z - info: [0mGET /lib/angular-ui-router/release/angular-ui-router.js [36m304 [0m1.020 ms - -[0m
+
+2016-10-28T04:04:34.217Z - info: [0mGET /lib/owasp-password-strength-test/owasp-password-strength-test.js [36m304 [0m6.111 ms - -[0m
+
+2016-10-28T04:04:34.220Z - info: [0mGET /lib/lodash/lodash.js [36m304 [0m6.484 ms - -[0m
+
+2016-10-28T04:04:34.223Z - info: [0mGET /modules/core/client/app/config.js [36m304 [0m1.541 ms - -[0m
+
+2016-10-28T04:04:34.227Z - info: [0mGET /modules/core/client/app/init.js [36m304 [0m1.563 ms - -[0m
+
+2016-10-28T04:04:34.238Z - info: [0mGET /modules/about/client/about.client.module.js [36m304 [0m7.511 ms - -[0m
+
+2016-10-28T04:04:34.249Z - info: [0mGET /modules/articles/client/articles.client.module.js [36m304 [0m1.720 ms - -[0m
+
+2016-10-28T04:04:34.261Z - info: [0mGET /modules/enamels/client/enamels.client.module.js [32m200 [0m6.310 ms - 466[0m
+
+2016-10-28T04:04:34.266Z - info: [0mGET /modules/authors/client/authors.client.module.js [36m304 [0m8.753 ms - -[0m
+
+2016-10-28T04:04:34.269Z - info: [0mGET /modules/bronzes/client/bronzes.client.module.js [36m304 [0m5.564 ms - -[0m
+
+2016-10-28T04:04:34.272Z - info: [0mGET /modules/chat/client/chat.client.module.js [36m304 [0m1.722 ms - -[0m
+
+2016-10-28T04:04:34.274Z - info: [0mGET /modules/contact/client/contact.client.module.js [36m304 [0m0.679 ms - -[0m
+
+2016-10-28T04:04:34.278Z - info: [0mGET /modules/core/client/core.client.module.js [36m304 [0m2.051 ms - -[0m
+
+2016-10-28T04:04:34.280Z - info: [0mGET /modules/exhibitions/client/exhibitions.client.module.js [36m304 [0m0.591 ms - -[0m
+
+2016-10-28T04:04:34.286Z - info: [0mGET /modules/familles/client/familles.client.module.js [36m304 [0m3.334 ms - -[0m
+
+2016-10-28T04:04:34.293Z - info: [0mGET /modules/paintings/client/paintings.client.module.js [36m304 [0m3.368 ms - -[0m
+
+2016-10-28T04:04:34.299Z - info: [0mGET /modules/teapots/client/teapots.client.module.js [36m304 [0m3.434 ms - -[0m
+
+2016-10-28T04:04:34.301Z - info: [0mGET /modules/users/client/users.client.module.js [36m304 [0m3.435 ms - -[0m
+
+2016-10-28T04:04:34.308Z - info: [0mGET /modules/about/client/config/about.client.menus.js [36m304 [0m3.543 ms - -[0m
+
+2016-10-28T04:04:34.314Z - info: [0mGET /modules/about/client/config/about.client.routes.js [36m304 [0m10.657 ms - -[0m
+
+2016-10-28T04:04:34.319Z - info: [0mGET /modules/about/client/controllers/about.client.controller.js [36m304 [0m6.181 ms - -[0m
+
+2016-10-28T04:04:34.323Z - info: [0mGET /modules/articles/client/config/articles-admin.client.config.js [36m304 [0m7.575 ms - -[0m
+
+2016-10-28T04:04:34.324Z - info: [0mGET /modules/articles/client/config/articles-admin.client.routes.js [36m304 [0m7.845 ms - -[0m
+
+2016-10-28T04:04:34.325Z - info: [0mGET /modules/articles/client/config/articles.client.menus.js [36m304 [0m6.805 ms - -[0m
+
+2016-10-28T04:04:34.326Z - info: [0mGET /modules/articles/client/config/articles.client.routes.js [36m304 [0m6.711 ms - -[0m
+
+2016-10-28T04:04:34.329Z - info: [0mGET /modules/articles/client/controllers/admin/article.client.controller.js [36m304 [0m6.299 ms - -[0m
+
+2016-10-28T04:04:34.336Z - info: [0mGET /modules/articles/client/controllers/admin/list-articles.client.controller.js [36m304 [0m7.733 ms - -[0m
+
+2016-10-28T04:04:34.343Z - info: [0mGET /modules/articles/client/controllers/articles.client.controller.js [36m304 [0m13.787 ms - -[0m
+
+2016-10-28T04:04:34.345Z - info: [0mGET /modules/articles/client/controllers/list-articles.client.controller.js [36m304 [0m11.364 ms - -[0m
+
+2016-10-28T04:04:34.350Z - info: [0mGET /modules/articles/client/services/articles.client.service.js [36m304 [0m11.451 ms - -[0m
+
+2016-10-28T04:04:34.351Z - info: [0mGET /modules/authors/client/config/authors-admin.client.config.js [36m304 [0m9.219 ms - -[0m
+
+2016-10-28T04:04:34.354Z - info: [0mGET /modules/authors/client/config/authors-admin.client.routes.js [36m304 [0m7.499 ms - -[0m
+
+2016-10-28T04:04:34.355Z - info: [0mGET /modules/authors/client/controllers/admin/author.client.controller.js [36m304 [0m6.315 ms - -[0m
+
+2016-10-28T04:04:34.357Z - info: [0mGET /modules/authors/client/controllers/admin/list-authors.client.controller.js [36m304 [0m3.538 ms - -[0m
+
+2016-10-28T04:04:34.367Z - info: [0mGET /modules/authors/client/services/authors.client.service.js [36m304 [0m10.965 ms - -[0m
+
+2016-10-28T04:04:34.376Z - info: [0mGET /modules/bronzes/client/config/bronzes-admin.client.config.js [36m304 [0m14.368 ms - -[0m
+
+2016-10-28T04:04:34.379Z - info: [0mGET /modules/bronzes/client/config/bronzes-admin.client.routes.js [36m304 [0m11.976 ms - -[0m
+
+2016-10-28T04:04:34.384Z - info: [0mGET /modules/bronzes/client/config/bronzes.client.menus.js [36m304 [0m15.538 ms - -[0m
+
+2016-10-28T04:04:34.385Z - info: [0mGET /modules/bronzes/client/config/bronzes.client.routes.js [36m304 [0m15.540 ms - -[0m
+
+2016-10-28T04:04:34.387Z - info: [0mGET /modules/bronzes/client/controllers/admin/bronze.client.controller.js [36m304 [0m4.143 ms - -[0m
+
+2016-10-28T04:04:34.388Z - info: [0mGET /modules/bronzes/client/controllers/admin/list-bronzes.client.controller.js [36m304 [0m4.303 ms - -[0m
+
+2016-10-28T04:04:34.390Z - info: [0mGET /modules/bronzes/client/controllers/bronzes.client.controller.js [36m304 [0m3.382 ms - -[0m
+
+2016-10-28T04:04:34.391Z - info: [0mGET /modules/bronzes/client/controllers/list-bronzes.client.controller.js [36m304 [0m3.568 ms - -[0m
+
+2016-10-28T04:04:34.397Z - info: [0mGET /modules/bronzes/client/services/bronzes.client.service.js [36m304 [0m3.162 ms - -[0m
+
+2016-10-28T04:04:34.398Z - info: [0mGET /modules/chat/client/config/chat.client.menus.js [36m304 [0m4.807 ms - -[0m
+
+2016-10-28T04:04:34.403Z - info: [0mGET /modules/chat/client/config/chat.client.routes.js [36m304 [0m7.504 ms - -[0m
+
+2016-10-28T04:04:34.409Z - info: [0mGET /modules/chat/client/controllers/chat.client.controller.js [36m304 [0m7.591 ms - -[0m
+
+2016-10-28T04:04:34.413Z - info: [0mGET /modules/contact/client/config/contact.client.menus.js [36m304 [0m8.601 ms - -[0m
+
+2016-10-28T04:04:34.414Z - info: [0mGET /modules/contact/client/config/contact.client.routes.js [36m304 [0m8.293 ms - -[0m
+
+2016-10-28T04:04:34.417Z - info: [0mGET /modules/contact/client/controllers/contact.client.controller.js [36m304 [0m9.127 ms - -[0m
+
+2016-10-28T04:04:34.420Z - info: [0mGET /modules/core/client/config/core-admin.client.menus.js [36m304 [0m7.324 ms - -[0m
+
+2016-10-28T04:04:34.421Z - info: [0mGET /modules/core/client/config/core-admin.client.routes.js [36m304 [0m8.289 ms - -[0m
+
+2016-10-28T04:04:34.423Z - info: [0mGET /modules/core/client/config/core.client.menus.js [36m304 [0m5.220 ms - -[0m
+
+2016-10-28T04:04:34.426Z - info: [0mGET /modules/core/client/config/core.client.route-filter.js [36m304 [0m3.169 ms - -[0m
+
+2016-10-28T04:04:34.428Z - info: [0mGET /modules/core/client/config/core.client.routes.js [36m304 [0m3.483 ms - -[0m
+
+2016-10-28T04:04:34.429Z - info: [0mGET /modules/core/client/controllers/header.client.controller.js [36m304 [0m3.454 ms - -[0m
+
+2016-10-28T04:04:34.432Z - info: [0mGET /modules/core/client/controllers/home.client.controller.js [36m304 [0m4.974 ms - -[0m
+
+2016-10-28T04:04:34.435Z - info: [0mGET /modules/core/client/directives/page-title.client.directive.js [36m304 [0m4.847 ms - -[0m
+
+2016-10-28T04:04:34.438Z - info: [0mGET /modules/core/client/directives/show-errors.client.directives.js [36m304 [0m3.961 ms - -[0m
+
+2016-10-28T04:04:34.439Z - info: [0mGET /modules/core/client/services/interceptors/auth-interceptor.client.service.js [36m304 [0m3.968 ms - -[0m
+
+2016-10-28T04:04:34.441Z - info: [0mGET /modules/core/client/services/menu.client.service.js [36m304 [0m3.675 ms - -[0m
+
+2016-10-28T04:04:34.450Z - info: [0mGET /modules/core/client/services/socket.io.client.service.js [36m304 [0m3.042 ms - -[0m
+
+2016-10-28T04:04:34.454Z - info: [0mGET /modules/enamels/client/config/enamels-admin.client.config.js [32m200 [0m14.261 ms - 341[0m
+
+2016-10-28T04:04:34.455Z - info: [0mGET /modules/enamels/client/config/enamels.client.menus.js [32m200 [0m10.180 ms - 177[0m
+
+2016-10-28T04:04:34.465Z - info: [0mGET /modules/enamels/client/config/enamels-admin.client.routes.js [32m200 [0m13.762 ms - -[0m
+
+2016-10-28T04:04:34.466Z - info: [0mGET /modules/enamels/client/config/enamels.client.routes.js [32m200 [0m8.782 ms - -[0m
+
+2016-10-28T04:04:34.471Z - info: [0mGET /modules/enamels/client/controllers/admin/enamel.client.controller.js [32m200 [0m12.416 ms - -[0m
+
+2016-10-28T04:04:34.474Z - info: [0mGET /modules/enamels/client/controllers/admin/list-enamels.client.controller.js [32m200 [0m15.819 ms - -[0m
+
+2016-10-28T04:04:34.475Z - info: [0mGET /modules/enamels/client/controllers/enamels.client.controller.js [32m200 [0m11.543 ms - 433[0m
+
+2016-10-28T04:04:34.479Z - info: [0mGET /modules/exhibitions/client/config/exhibitions.client.menus.js [36m304 [0m6.012 ms - -[0m
+
+2016-10-28T04:04:34.484Z - info: [0mGET /modules/exhibitions/client/config/exhibitions.client.routes.js [36m304 [0m6.046 ms - -[0m
+
+2016-10-28T04:04:34.486Z - info: [0mGET /modules/enamels/client/controllers/list-enamels.client.controller.js [32m200 [0m10.600 ms - -[0m
+
+2016-10-28T04:04:34.487Z - info: [0mGET /modules/exhibitions/client/controllers/exhibitions.client.controller.js [36m304 [0m6.340 ms - -[0m
+
+2016-10-28T04:04:34.490Z - info: [0mGET /modules/enamels/client/services/enamels.client.service.js [32m200 [0m11.222 ms - -[0m
+
+2016-10-28T04:04:34.491Z - info: [0mGET /modules/familles/client/config/familles-admin.client.config.js [36m304 [0m5.715 ms - -[0m
+
+2016-10-28T04:04:34.496Z - info: [0mGET /modules/familles/client/config/familles-admin.client.routes.js [36m304 [0m6.544 ms - -[0m
+
+2016-10-28T04:04:34.500Z - info: [0mGET /modules/familles/client/config/familles.client.menus.js [36m304 [0m5.812 ms - -[0m
+
+2016-10-28T04:04:34.501Z - info: [0mGET /modules/familles/client/config/familles.client.routes.js [36m304 [0m6.913 ms - -[0m
+
+2016-10-28T04:04:34.507Z - info: [0mGET /modules/familles/client/controllers/admin/famille.client.controller.js [36m304 [0m9.170 ms - -[0m
+
+2016-10-28T04:04:34.508Z - info: [0mGET /modules/familles/client/controllers/admin/list-familles.client.controller.js [36m304 [0m9.502 ms - -[0m
+
+2016-10-28T04:04:34.511Z - info: [0mGET /modules/familles/client/controllers/familles.client.controller.js [36m304 [0m6.344 ms - -[0m
+
+2016-10-28T04:04:34.512Z - info: [0mGET /modules/familles/client/controllers/list-familles.client.controller.js [36m304 [0m5.498 ms - -[0m
+
+2016-10-28T04:04:34.514Z - info: [0mGET /modules/familles/client/services/familles.client.service.js [36m304 [0m4.701 ms - -[0m
+
+2016-10-28T04:04:34.515Z - info: [0mGET /modules/paintings/client/config/paintings-admin.client.config.js [36m304 [0m4.994 ms - -[0m
+
+2016-10-28T04:04:34.521Z - info: [0mGET /modules/paintings/client/config/paintings-admin.client.routes.js [36m304 [0m4.371 ms - -[0m
+
+2016-10-28T04:04:34.526Z - info: [0mGET /modules/paintings/client/config/paintings.client.menus.js [36m304 [0m9.309 ms - -[0m
+
+2016-10-28T04:04:34.530Z - info: [0mGET /modules/paintings/client/config/paintings.client.routes.js [36m304 [0m6.342 ms - -[0m
+
+2016-10-28T04:04:34.531Z - info: [0mGET /modules/paintings/client/controllers/admin/list-paintings.client.controller.js [36m304 [0m6.012 ms - -[0m
+
+2016-10-28T04:04:34.536Z - info: [0mGET /modules/paintings/client/controllers/admin/painting.client.controller.js [36m304 [0m7.052 ms - -[0m
+
+2016-10-28T04:04:34.537Z - info: [0mGET /modules/paintings/client/controllers/list-paintings.client.controller.js [36m304 [0m7.852 ms - -[0m
+
+2016-10-28T04:04:34.539Z - info: [0mGET /modules/paintings/client/controllers/paintings.client.controller.js [36m304 [0m9.189 ms - -[0m
+
+2016-10-28T04:04:34.542Z - info: [0mGET /modules/paintings/client/services/paintings.client.service.js [36m304 [0m8.696 ms - -[0m
+
+2016-10-28T04:04:34.547Z - info: [0mGET /modules/teapots/client/config/teapots-admin.client.config.js [36m304 [0m6.315 ms - -[0m
+
+2016-10-28T04:04:34.551Z - info: [0mGET /modules/teapots/client/config/teapots-admin.client.routes.js [36m304 [0m7.128 ms - -[0m
+
+2016-10-28T04:04:34.552Z - info: [0mGET /modules/teapots/client/config/teapots.client.menus.js [36m304 [0m6.970 ms - -[0m
+
+2016-10-28T04:04:34.553Z - info: [0mGET /modules/teapots/client/config/teapots.client.routes.js [36m304 [0m6.641 ms - -[0m
+
+2016-10-28T04:04:34.561Z - info: [0mGET /modules/teapots/client/controllers/admin/list-teapots.client.controller.js [36m304 [0m11.000 ms - -[0m
+
+2016-10-28T04:04:34.563Z - info: [0mGET /modules/teapots/client/controllers/admin/teapot.client.controller.js [36m304 [0m12.463 ms - -[0m
+
+2016-10-28T04:04:34.567Z - info: [0mGET /modules/teapots/client/controllers/list-teapots.client.controller.js [36m304 [0m12.529 ms - -[0m
+
+2016-10-28T04:04:34.572Z - info: [0mGET /modules/teapots/client/controllers/teapots.client.controller.js [36m304 [0m7.593 ms - -[0m
+
+2016-10-28T04:04:34.572Z - info: [0mGET /modules/teapots/client/services/teapots.client.service.js [36m304 [0m7.143 ms - -[0m
+
+2016-10-28T04:04:34.574Z - info: [0mGET /modules/users/client/config/users-admin.client.menus.js [36m304 [0m7.822 ms - -[0m
+
+2016-10-28T04:04:34.577Z - info: [0mGET /modules/users/client/config/users-admin.client.routes.js [36m304 [0m5.963 ms - -[0m
+
+2016-10-28T04:04:34.577Z - info: [0mGET /modules/users/client/config/users.client.routes.js [36m304 [0m6.275 ms - -[0m
+
+2016-10-28T04:04:34.579Z - info: [0mGET /modules/users/client/controllers/admin/list-users.client.controller.js [36m304 [0m3.767 ms - -[0m
+
+2016-10-28T04:04:34.586Z - info: [0mGET /modules/users/client/controllers/admin/user.client.controller.js [36m304 [0m7.161 ms - -[0m
+
+2016-10-28T04:04:34.591Z - info: [0mGET /modules/users/client/controllers/authentication.client.controller.js [36m304 [0m7.902 ms - -[0m
+
+2016-10-28T04:04:34.593Z - info: [0mGET /modules/users/client/controllers/password.client.controller.js [36m304 [0m6.877 ms - -[0m
+
+2016-10-28T04:04:34.595Z - info: [0mGET /modules/users/client/controllers/settings/change-password.client.controller.js [36m304 [0m7.823 ms - -[0m
+
+2016-10-28T04:04:34.596Z - info: [0mGET /modules/users/client/controllers/settings/change-profile-picture.client.controller.js [36m304 [0m7.810 ms - -[0m
+
+2016-10-28T04:04:34.600Z - info: [0mGET /modules/users/client/controllers/settings/edit-profile.client.controller.js [36m304 [0m5.396 ms - -[0m
+
+2016-10-28T04:04:34.604Z - info: [0mGET /modules/users/client/controllers/settings/manage-social-accounts.client.controller.js [36m304 [0m6.286 ms - -[0m
+
+2016-10-28T04:04:34.604Z - info: [0mGET /modules/users/client/controllers/settings/settings.client.controller.js [36m304 [0m5.315 ms - -[0m
+
+2016-10-28T04:04:34.612Z - info: [0mGET /modules/users/client/directives/password-validator.client.directive.js [36m304 [0m10.425 ms - -[0m
+
+2016-10-28T04:04:34.636Z - info: [0mGET /modules/users/client/directives/password-verify.client.directive.js [36m304 [0m12.085 ms - -[0m
+
+2016-10-28T04:04:34.651Z - info: [0mGET /modules/users/client/directives/users.client.directive.js [36m304 [0m41.077 ms - -[0m
+
+2016-10-28T04:04:34.659Z - info: [0mGET /modules/users/client/services/authentication.client.service.js [36m304 [0m10.174 ms - -[0m
+
+2016-10-28T04:04:34.663Z - info: [0mGET /modules/users/client/services/password-validator.client.service.js [36m304 [0m14.362 ms - -[0m
+
+2016-10-28T04:04:34.664Z - info: [0mGET /modules/users/client/services/users.client.service.js [36m304 [0m15.491 ms - -[0m
+
+2016-10-28T04:04:34.841Z - info: [0mGET /modules/core/client/views/header.client.view.html [36m304 [0m1.228 ms - -[0m
+
+2016-10-28T04:04:34.842Z - info: [0mGET /modules/core/client/views/footer.client.view.html [36m304 [0m0.707 ms - -[0m
+
+2016-10-28T04:04:34.849Z - info: [0mGET /modules/familles/client/views/admin/list-familles.client.view.html [36m304 [0m1.710 ms - -[0m
+
+2016-10-28T04:04:34.899Z - info: [0mGET /modules/users/client/img/profile/uploads/03d757f01f03eb3c1e28cbf5270651a1 [36m304 [0m1.741 ms - -[0m
+
+2016-10-28T04:04:35.031Z - info: [0mGET /api/familles [36m304 [0m23.629 ms - -[0m
+
+2016-10-28T04:04:35.045Z - info: [0mGET /lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2 [36m304 [0m0.582 ms - -[0m
+
+2016-10-28T04:04:35.077Z - info: [0mGET /modules/users/client/img/profile/default.png [36m304 [0m0.695 ms - -[0m
+
+2016-10-28T04:04:37.458Z - info: [0mGET /modules/enamels/client/views/list-enamels.client.view.html [32m200 [0m9.301 ms - -[0m
+
+2016-10-28T04:04:37.488Z - info: [0mGET /api/enamels [32m200 [0m7.767 ms - 2[0m
+
+2016-10-28T04:04:45.483Z - info: [0mGET /modules/enamels/client/views/admin/list-enamels.client.view.html [32m200 [0m1.579 ms - -[0m
+
+2016-10-28T04:04:45.519Z - info: [0mGET /api/enamels [36m304 [0m7.759 ms - -[0m
+
+2016-10-28T04:04:47.084Z - info: [0mGET /modules/enamels/client/views/admin/form-enamel.client.view.html [32m200 [0m8.801 ms - -[0m
+
+2016-10-28T04:05:11.058Z - info: [0mPOST /api/enamels [32m200 [0m59.099 ms - 583[0m
+
+2016-10-28T04:05:11.101Z - info: [0mGET /api/enamels [32m200 [0m24.800 ms - 319[0m
+
+2016-10-28T04:05:30.548Z - info: [0mGET /api/enamels [36m304 [0m17.563 ms - -[0m
+
+2016-10-28T04:05:35.381Z - info: [0mGET /api/enamels/5812ce779f32d3df3c86be19 [32m200 [0m13.311 ms - 343[0m
+
+2016-10-28T04:05:35.388Z - info: [0mGET /modules/enamels/client/views/view-enamel.client.view.html [32m200 [0m1.550 ms - -[0m
+
