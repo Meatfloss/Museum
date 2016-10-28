@@ -29,7 +29,7 @@
         controller: 'BronzesController',
         controllerAs: 'vm',
         resolve: {
-          bronzeResolve: getPainting,
+          bronzeResolve: getPainting
         },
         data: {
           pageTitle: 'Painting {{ bronzeResolve.title }}'

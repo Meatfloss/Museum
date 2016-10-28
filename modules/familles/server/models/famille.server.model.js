@@ -34,11 +34,11 @@ var FamilleSchema = new Schema({
     type: Number,
     trim: true
   },
-  height:{
+  height: {
     type: Number,
     trim: true
   },
-  dynasty:{
+  dynasty: {
     type: String,
     default: '',
     trim: true

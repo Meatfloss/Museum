@@ -29,7 +29,7 @@
         controller: 'FamillesController',
         controllerAs: 'vm',
         resolve: {
-          familleResolve: getPainting,
+          familleResolve: getPainting
         },
         data: {
           pageTitle: 'Painting {{ familleResolve.title }}'

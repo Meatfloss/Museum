@@ -32,7 +32,7 @@
           roles: ['admin']
         },
         resolve: {
-          bronzeResolve: newPainting,
+          bronzeResolve: newPainting
         }
       })
       .state('admin.bronzes.edit', {
@@ -44,7 +44,7 @@
           roles: ['admin']
         },
         resolve: {
-          bronzeResolve: getPainting,
+          bronzeResolve: getPainting
         }
       });
   }

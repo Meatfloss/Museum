@@ -32,7 +32,7 @@
           roles: ['admin']
         },
         resolve: {
-          teapotResolve: newPainting,
+          teapotResolve: newPainting
         }
       })
       .state('admin.teapots.edit', {
@@ -44,7 +44,7 @@
           roles: ['admin']
         },
         resolve: {
-          teapotResolve: getPainting,
+          teapotResolve: getPainting
         }
       });
   }

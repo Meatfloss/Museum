@@ -32,7 +32,7 @@
           roles: ['admin']
         },
         resolve: {
-          enamelResolve: newPainting,
+          enamelResolve: newPainting
         }
       })
       .state('admin.enamels.edit', {
@@ -44,7 +44,7 @@
           roles: ['admin']
         },
         resolve: {
-          enamelResolve: getPainting,
+          enamelResolve: getPainting
         }
       });
   }

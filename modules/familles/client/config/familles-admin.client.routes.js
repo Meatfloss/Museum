@@ -32,7 +32,7 @@
           roles: ['admin']
         },
         resolve: {
-          familleResolve: newPainting,
+          familleResolve: newPainting
         }
       })
       .state('admin.familles.edit', {
@@ -44,7 +44,7 @@
           roles: ['admin']
         },
         resolve: {
-          familleResolve: getPainting,
+          familleResolve: getPainting
         }
       });
   }

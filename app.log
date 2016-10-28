@@ -62076,3 +62076,67 @@ OverwriteModelError: Cannot overwrite `Famille` model once compiled.
 
 2016-10-28T04:05:35.388Z - info: [0mGET /modules/enamels/client/views/view-enamel.client.view.html [32m200 [0m1.550 ms - -[0m
 
+2016-10-28T04:08:26.871Z - info: [0mGET /enamels/5812ce779f32d3df3c86be19 [32m200 [0m126.001 ms - -[0m
+
+2016-10-28T04:08:26.965Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap.css [36m304 [0m21.074 ms - -[0m
+
+2016-10-28T04:08:26.978Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap-theme.css [36m304 [0m9.497 ms - -[0m
+
+2016-10-28T04:08:26.983Z - info: [0mGET /modules/about/client/css/about.css [36m304 [0m13.865 ms - -[0m
+
+2016-10-28T04:08:26.984Z - info: [0mGET /modules/chat/client/css/chat.css [36m304 [0m13.933 ms - -[0m
+
+2016-10-28T04:08:26.985Z - info: [0mGET /modules/contact/client/css/contact.css [36m304 [0m14.096 ms - -[0m
+
+2016-10-28T04:08:26.991Z - info: [0mGET /modules/core/client/css/core.css [36m304 [0m9.072 ms - -[0m
+
+2016-10-28T04:08:27.030Z - info: [0mGET /modules/users/client/css/users.css [36m304 [0m1.902 ms - -[0m
+
+2016-10-28T04:08:27.040Z - info: [0mGET /lib/angular/angular.js [36m304 [0m1.125 ms - -[0m
+
+2016-10-28T04:08:27.041Z - info: [0mGET /lib/angular-animate/angular-animate.js [36m304 [0m1.282 ms - -[0m
+
+2016-10-28T04:08:27.042Z - info: [0mGET /lib/angular-bootstrap/ui-bootstrap-tpls.js [36m304 [0m0.635 ms - -[0m
+
+2016-10-28T04:08:27.045Z - info: [0mGET /lib/angular-file-upload/dist/angular-file-upload.min.js [36m304 [0m0.788 ms - -[0m
+
+2016-10-28T04:08:27.060Z - info: [0mGET /lib/angular-messages/angular-messages.js [36m304 [0m2.550 ms - -[0m
+
+2016-10-28T04:08:27.076Z - info: [0mGET /lib/angular-mocks/angular-mocks.js [36m304 [0m0.980 ms - -[0m
+
+2016-10-28T04:08:27.080Z - info: [0mGET /lib/angular-resource/angular-resource.js [36m304 [0m1.607 ms - -[0m
+
+2016-10-28T04:08:27.084Z - info: [0mGET /lib/angular-ui-router/release/angular-ui-router.js [36m304 [0m1.176 ms - -[0m
+
+2016-10-28T04:08:27.088Z - info: [0mGET /lib/owasp-password-strength-test/owasp-password-strength-test.js [36m304 [0m1.632 ms - -[0m
+
+2016-10-28T04:08:27.088Z - info: [0mGET /lib/lodash/lodash.js [36m304 [0m1.547 ms - -[0m
+
+2016-10-28T04:08:27.099Z - info: [0mGET /modules/core/client/app/config.js [36m304 [0m2.515 ms - -[0m
+
+2016-10-28T04:08:27.114Z - info: [0mGET /modules/core/client/app/init.js [36m304 [0m3.145 ms - -[0m
+
+2016-10-28T04:08:27.115Z - info: [0mGET /modules/about/client/about.client.module.js [36m304 [0m4.290 ms - -[0m
+
+2016-10-28T04:08:27.119Z - info: [0mGET /modules/articles/client/articles.client.module.js [36m304 [0m1.012 ms - -[0m
+
+2016-10-28T04:08:27.123Z - info: [0mGET /modules/authors/client/authors.client.module.js [36m304 [0m1.100 ms - -[0m
+
+2016-10-28T04:08:27.125Z - info: [0mGET /modules/bronzes/client/bronzes.client.module.js [36m304 [0m0.729 ms - -[0m
+
+2016-10-28T04:08:27.141Z - info: [0mGET /modules/chat/client/chat.client.module.js [36m304 [0m0.989 ms - -[0m
+
+2016-10-28T04:08:27.146Z - info: [0mGET /modules/contact/client/contact.client.module.js [36m304 [0m1.195 ms - -[0m
+
+2016-10-28T04:08:27.148Z - info: [0mGET /modules/core/client/core.client.module.js [36m304 [0m0.695 ms - -[0m
+
+2016-10-28T04:08:27.152Z - info: [0mGET /modules/enamels/client/enamels.client.module.js [36m304 [0m0.800 ms - -[0m
+
+2016-10-28T04:08:27.155Z - info: [0mGET /modules/exhibitions/client/exhibitions.client.module.js [36m304 [0m2.077 ms - -[0m
+
+2016-10-28T04:08:27.156Z - info: [0mGET /modules/familles/client/familles.client.module.js [36m304 [0m1.532 ms - -[0m
+
+2016-10-28T04:08:27.171Z - info: [0mGET /modules/paintings/client/paintings.client.module.js [36m304 [0m1.770 ms - -[0m
+
+2016-10-28T04:08:27.204Z - info: [0mGET /modules/teapots/client/teapots.client.module.js [36m304 [0m1.828 ms - -[0m
+

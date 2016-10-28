@@ -29,7 +29,7 @@
         controller: 'EnamelsController',
         controllerAs: 'vm',
         resolve: {
-          enamelResolve: getPainting,
+          enamelResolve: getPainting
         },
         data: {
           pageTitle: 'Painting {{ enamelResolve.title }}'

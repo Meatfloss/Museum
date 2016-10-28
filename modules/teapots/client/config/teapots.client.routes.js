@@ -29,7 +29,7 @@
         controller: 'TeapotsController',
         controllerAs: 'vm',
         resolve: {
-          teapotResolve: getPainting,
+          teapotResolve: getPainting
         },
         data: {
           pageTitle: 'Painting {{ teapotResolve.title }}'
