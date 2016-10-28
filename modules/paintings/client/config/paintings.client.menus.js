@@ -26,7 +26,7 @@
         // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'paintings', {
       title: 'List Bronzes',
-      state: 'paintings.list',
+      state: 'bronzes.list',
       roles: ['*']
     });
 
