@@ -50,9 +50,8 @@ exports.update = function (req, res) {
 
   famille.name = req.body.name;
   famille.description = req.body.description;
-  famille.type = req.body.type;
-  famille.width = req.body.width;
-  famille.length = req.body.length;
+  famille.topDiameter = req.body.topDiameter;
+  famille.botDiameter = req.body.botDiameter;
   famille.height = req.body.height;
   famille.dynasty = req.body.dynasty;
 

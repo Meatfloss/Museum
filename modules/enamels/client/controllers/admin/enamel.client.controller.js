@@ -12,7 +12,6 @@
 
     vm.enamel = enamel;
     vm.authentication = Authentication;
-    vm.types = ['Enamel Type 1', 'Enamel Type 2'];
     vm.dynasties = ['Xia', 'Shang', 'Zhou', 'Qin', 'Han', 'Three Kindoms', 'Sui', 'Tang', 'Yuan', 'Ming', 'Qing', 'Modern'];
 
     vm.error = null;

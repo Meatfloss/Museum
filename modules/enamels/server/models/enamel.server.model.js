@@ -21,16 +21,11 @@ var EnamelSchema = new Schema({
     trim: true,
     required: 'Name cannot be blank'
   },
-  type: {
-    type: String,
-    default: '',
-    trim: true
-  },
-  length: {
+  topDiameter: {
     type: Number,
     trim: true
   },
-  width: {
+  botDiameter: {
     type: Number,
     trim: true
   },

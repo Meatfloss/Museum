@@ -46,7 +46,7 @@
 
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'paintings', {
-      title: 'List Enamel',
+      title: 'List  Famille Rose Enamel',
       state: 'enamels.list',
       roles: ['*']
     });

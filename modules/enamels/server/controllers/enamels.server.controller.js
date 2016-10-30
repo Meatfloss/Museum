@@ -50,9 +50,8 @@ exports.update = function (req, res) {
 
   enamel.name = req.body.name;
   enamel.description = req.body.description;
-  enamel.type = req.body.type;
-  enamel.width = req.body.width;
-  enamel.length = req.body.length;
+  enamel.topDiameter = req.body.topDiameter;
+  enamel.botDiameter = req.body.botDiameter;
   enamel.height = req.body.height;
   enamel.dynasty = req.body.dynasty;
 

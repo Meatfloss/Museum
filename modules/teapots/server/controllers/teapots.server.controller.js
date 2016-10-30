@@ -50,9 +50,8 @@ exports.update = function (req, res) {
 
   teapot.name = req.body.name;
   teapot.description = req.body.description;
-  teapot.type = req.body.type;
-  teapot.width = req.body.width;
-  teapot.length = req.body.length;
+  teapot.author = req.body.author;
+  teapot.mark = req.body.mark;
   teapot.height = req.body.height;
   teapot.dynasty = req.body.dynasty;
 
