@@ -21,7 +21,7 @@ var TeapotSchema = new Schema({
     trim: true,
     required: 'Name cannot be blank'
   },
-  author:{
+  author: {
     type: String,
     default: '',
     trim: true
