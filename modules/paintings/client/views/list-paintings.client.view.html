@@ -27,9 +27,11 @@
         <div class="list-image img-responsive">
           <img ng-src="{{painting.imageURL}}" class="img-thumbnail"/>
         </div>
-				
+
 				<strong>
-					<span data-ng-bind="painting.name"></span>
+					<!--<span data-ng-bind="painting.name" ></span>-->
+					<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{painting.name}}" translate-value-namezh="{{painting.nameZH}}">></span>
+
 				</strong>
 				<small class="list-group-item-text">
           <span ng-if="painting.author" ng-bind="painting.author.name"></span>

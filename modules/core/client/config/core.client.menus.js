@@ -13,6 +13,7 @@
       HomePrefaceParagraph1: '"Shi Yang Tong" in New York for decades has been collectors known as the mysterious "overseas small Palace", now began to roll up the curtain of mysterious deep closed, the establishment of "Lin Ji Guang (World Yang Tong) Art Network Museum." Www.kwonglammuseumofart.org In the "Golden Age of China" is about to come, Xi can take the first after the Chinese nation\'s ancient culture and civilization, pass a brilliant chapter.',
       HomePrefaceParagraph2: '"World-yang Church" cross-boast two centuries (20-21) has sixty years of collection years, has been pursuing in the overseas Chinese living in the West, to high-priced acquisition and secret, if fortunate enough to show people To celebrate the revival of Chinese culture, this is my decades of volunteer and the "World Yang Tong," the purpose. For my motherland Chinese culture to make modest force, would not Le zai!',
       HomePrefaceParagraph3: 'Lin Ji-Guang Yu Shiyang book in the morning of 2015-4-27',
+      VARIABLE_REPLACEMENT: '{{name}}',
       BUTTON_LANG_ZH: 'Chinese',
       BUTTON_LANG_EN: 'English'
     };
@@ -36,6 +37,7 @@
       'Statues': '雕像',
       'Others': '其他',
       'Coming Soon':'待定',
+      VARIABLE_REPLACEMENT: '{{namezh}}',
       BUTTON_LANG_ZH: '中文',
       BUTTON_LANG_EN: '英文'
     };

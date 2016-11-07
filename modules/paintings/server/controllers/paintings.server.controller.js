@@ -49,6 +49,7 @@ exports.update = function (req, res) {
   var painting = req.painting;
 
   painting.name = req.body.name;
+  painting.nameZH = req.body.nameZH;
   painting.description = req.body.description;
   painting.author = req.body.author;
   painting.type = req.body.type;
