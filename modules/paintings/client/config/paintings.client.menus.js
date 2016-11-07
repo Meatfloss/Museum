@@ -18,42 +18,42 @@
 
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'paintings', {
-      title: 'List Paintings',
+      title: 'Paintings',
       state: 'paintings.list',
       roles: ['*']
     });
 
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'paintings', {
-      title: 'List Bronzes',
+      title: 'Bronzes',
       state: 'bronzes.list',
       roles: ['*']
     });
 
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'paintings', {
-      title: 'List Zisha Teapot',
+      title: 'Zisha Teapots',
       state: 'teapots.list',
       roles: ['*']
     });
 
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'paintings', {
-      title: 'List Famille Rose',
+      title: 'Famille Rose',
       state: 'familles.list',
       roles: ['*']
     });
 
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'paintings', {
-      title: 'List  Famille Rose Enamel',
+      title: 'Famille Rose Enamel',
       state: 'enamels.list',
       roles: ['*']
     });
 
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'paintings', {
-      title: 'List Statues',
+      title: 'Statues',
       state: 'paintings.list',
       roles: ['*']
     });

@@ -1,13 +1,11 @@
 (function () {
   'use strict';
 
-  angular
-    .module('core')
-    .controller('HeaderController', HeaderController);
+  angular.module('core').controller('HeaderController', HeaderController);
 
-  HeaderController.$inject = ['$scope', '$state', 'Authentication', 'menuService'];
+  HeaderController.$inject = ['$translate', '$scope', '$state', 'Authentication', 'menuService'];
 
-  function HeaderController($scope, $state, Authentication, menuService) {
+  function HeaderController($translate, $scope, $state, Authentication, menuService) {
     var vm = this;
 
     vm.accountMenu = menuService.getMenu('account').items[0];
@@ -21,5 +19,8 @@
       // Collapsing the menu after navigation
       vm.isCollapsed = false;
     }
+    $scope.changeLanguage = function (langKey) {
+      $translate.use(langKey);
+    };
   }
 }());
