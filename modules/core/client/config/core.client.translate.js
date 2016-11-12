@@ -60,9 +60,45 @@
       'Name': '名字',
       'Description': '描述',
       'Author': '作者',
-      'Mark':'题款',
-      'Top Diameter':'口径',
-      'Bottom Diameter':'足径',
+      'Mark': '题款',
+      'Top Diameter': '口径',
+      'Bottom Diameter': '足径',
+      'Xia': '夏',
+      'Shang': '商',
+      'Zhou': '周',
+      'Qin': '秦',
+      'Han': '汉',
+      'Three Kindoms': '三国',
+      'Sui': '隋',
+      'Tang': '唐',
+      'Yuan': '元',
+      'Ming': '明',
+      'Qing': '清',
+      'Modern': '现代',
+      'All': '全部',
+      'Sign in using your social accounts': '使用社交账户登录',
+      'Or with your account': '或者您自己的账户',
+      'Username': '用户名',
+      'Password': '密码',
+      'Username is required.': '请输入用户名',
+      'Password is required.': '请输入密码',
+      'or': '或',
+      'Forgot your password?': '忘记密码了？',
+      'Or sign up using your email': '或者用您的邮箱注册',
+      'First Name': '名字',
+      'First name is required.': '请输入名字',
+      'Last Name': '姓氏',
+      'Last name is required.': '请输入姓氏',
+      'Email': '邮件',
+      'Email address is required.': '请输入邮箱',
+      'Email address is invalid.': '邮箱地址不符合要求',
+      'Password Requirements': '密码要求',
+      'The password must be at least 10 characters long.': '密码长度至少10个字母',
+      'The password must contain at least one lowercase letter.': '密码至少包含一个小写字母',
+      'The password must contain at least one uppercase letter.': '密码至少包含一个大写字母',
+      'The password must contain at least one special character.': '密码至少包含一个特殊字符',
+      'The password must contain at least one number.': '密码至少包含一个数字',
+      'Please enter a passphrase or password with 10 or more characters, numbers, lowercase, uppercase, and special characters.': '请确保输入的密码长度在10个或以上，必须包含数字，大写字母，小写字母以及特殊字符',
       VARIABLE_REPLACEMENT: '{{namezh}}',
       BUTTON_LANG_ZH: '中文',
       BUTTON_LANG_EN: '英文'
@@ -73,3 +109,8 @@
     $translateProvider.fallbackLanguage('en');
   }]);
 }());
+
+
+
+
+

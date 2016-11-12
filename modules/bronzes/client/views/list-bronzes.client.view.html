@@ -1,7 +1,7 @@
 <section class="grid-view">
 	<div class="page-header">
 		<h2>
-			Bronzes
+			<h2 translate="Bronzes"></h2>
 		</h2>
 	</div>
 	<div class="row filter">
@@ -10,8 +10,8 @@
 		</div>
     <div class="col-sm-4 col-xs-12">
 			<div class="input-group">
-				<span class="input-group-addon">Dynasty</span>
-				<select class="form-control" ng-model="vm.selectedDynasty" ng-change="vm.updateForDynasty()" ng-options="x for x in vm.dynastyList"></select>
+				<span class="input-group-addon" translate="Dynasty"></span>
+				<select class="form-control" ng-model="vm.selectedDynasty" ng-change="vm.updateForDynasty()" ng-options="x | translate for x in vm.dynastyList"></select>
 			</div>
 		</div>
 	</div>
@@ -32,6 +32,6 @@
 	<div class="alert alert-warning text-center" data-ng-if="bronzes.$resolved && !bronzes.length">
 		No bronze found, please try to other filters.
 	</div>
-		<uib-pagination boundary-links="true" max-size="8" items-per-page="vm.itemsPerPage" total-items="vm.filterLength" ng-model="vm.currentPage"
+		<uib-pagination previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;" boundary-links="true" max-size="8" items-per-page="vm.itemsPerPage" total-items="vm.filterLength" ng-model="vm.currentPage"
 		ng-change="vm.pageChanged()"></uib-pagination>
 </section>
