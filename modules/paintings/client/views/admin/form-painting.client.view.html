@@ -70,7 +70,11 @@
 					<textarea name="description" data-ng-model="vm.painting.description" id="description" class="form-control" cols="30" rows="10"
 						placeholder="Description"></textarea>
 				</div>
-
+				<div class="form-group">
+					<label class="control-label" for="descriptionZH">Chinese Description</label>
+					<textarea name="descriptionZH" data-ng-model="vm.painting.descriptionZH" id="descriptionZH" class="form-control" cols="30" rows="10"
+						placeholder="Chinese Description"></textarea>
+				</div>
 				<div class="form-group">
 					<button type="submit" class="btn btn-default">{{vm.painting._id ? 'Update' : 'Create'}}</button>
 				</div>

@@ -49,7 +49,9 @@ exports.update = function (req, res) {
   var famille = req.famille;
 
   famille.name = req.body.name;
+  famille.nameZH = req.body.nameZH;
   famille.description = req.body.description;
+  famille.descriptionZH = req.body.descriptionZH;
   famille.topDiameter = req.body.topDiameter;
   famille.botDiameter = req.body.botDiameter;
   famille.height = req.body.height;

@@ -49,7 +49,9 @@ exports.update = function (req, res) {
   var bronze = req.bronze;
 
   bronze.name = req.body.name;
+  bronze.nameZH = req.body.nameZH;
   bronze.description = req.body.description;
+  bronze.descriptionZH = req.body.descriptionZH;
   bronze.type = req.body.type;
   bronze.width = req.body.width;
   bronze.length = req.body.length;

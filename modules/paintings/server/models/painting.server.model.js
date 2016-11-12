@@ -45,6 +45,11 @@ var PaintingSchema = new Schema({
     default: '',
     trim: true
   },
+  descriptionZH: {
+    type: String,
+    default: '',
+    trim: true
+  },
   imageURL: {
     type: String,
     default: 'modules/users/client/img/profile/default.png'

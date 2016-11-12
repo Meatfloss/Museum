@@ -36,6 +36,13 @@
             <p class="help-block error-text" ng-message="required">Bronze name is required.</p>
           </div>
         </div>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="name">Chinese Name</label>
+          <input name="nameZH" type="text" ng-model="vm.bronze.nameZH" id="name" class="form-control" placeholder="Chinese Name" required>
+          <div ng-messages="vm.form.bronzeForm.nameZH.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Bronze Chinese name is required.</p>
+          </div>
+        </div>
         <div class="form-group">
           <label class="control-label" for="type">Bronze Type</label>
           <select name="type" id="type" class="form-control" ng-model="vm.bronze.type" ng-options="type for type in vm.types"></select>
@@ -70,7 +77,11 @@
           <textarea name="description" data-ng-model="vm.bronze.description" id="description" class="form-control" cols="30" rows="10"
             placeholder="Description"></textarea>
         </div>
-
+        <div class="form-group">
+          <label class="control-label" for="descriptionZH">Chinese Description</label>
+          <textarea name="descriptionZH" data-ng-model="vm.bronze.descriptionZH" id="descriptionZH" class="form-control" cols="30" rows="10"
+            placeholder="Chinese Description"></textarea>
+        </div>
         <div class="form-group">
           <button type="submit" class="btn btn-default">{{vm.bronze._id ? 'Update' : 'Create'}}</button>
         </div>

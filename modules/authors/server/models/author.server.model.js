@@ -21,6 +21,12 @@ var AuthorSchema = new Schema({
     trim: true,
     required: 'Author name cannot be blank'
   },
+  nameZH: {
+    type: String,
+    default: '',
+    trim: true,
+    required: 'Author Chinese name cannot be blank'
+  },
   birthYear: {
     type: Number,
     trim: true

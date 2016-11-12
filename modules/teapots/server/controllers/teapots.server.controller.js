@@ -49,9 +49,13 @@ exports.update = function (req, res) {
   var teapot = req.teapot;
 
   teapot.name = req.body.name;
+  teapot.nameZH = req.body.nameZH;
   teapot.description = req.body.description;
+  teapot.descriptionZH = req.body.descriptionZH;
   teapot.author = req.body.author;
+  teapot.authorZH = req.body.authorZH;
   teapot.mark = req.body.mark;
+  teapot.markZH = req.body.markZH;
   teapot.height = req.body.height;
   teapot.dynasty = req.body.dynasty;
 

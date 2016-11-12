@@ -33,11 +33,11 @@
 		</ul>
 		<ul class="nav navbar-nav navbar-right" ng-hide="vm.authentication.user">
 			<li ui-sref-active="active">
-				<a ui-sref="authentication.signup">Sign Up</a>
+				<a ui-sref="authentication.signup" translate="Sign Up"></a>
 			</li>
 			<li class="divider-vertical"></li>
 			<li ui-sref-active="active">
-				<a ui-sref="authentication.signin">Sign In</a>
+				<a ui-sref="authentication.signin" translate="Sign In"></a>
 			</li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right" ng-show="vm.authentication.user">
@@ -49,11 +49,11 @@
 				</a>
 				<ul class="dropdown-menu" role="menu">
 					<li ui-sref-active="active" ng-repeat="item in vm.accountMenu.items">
-						<a ui-sref="{{item.state}}" ng-bind="item.title"></a>
+						<a ui-sref="{{item.state}}" translate="{{item.title}}"></a>
 					</li>
 					<li class="divider"></li>
 					<li>
-						<a href="/api/auth/signout" target="_self">Signout</a>
+						<a href="/api/auth/signout" target="_self" translate="Sign Out"></a>
 					</li>
 				</ul>
 			</li>
