@@ -114,7 +114,6 @@
       'Save Password': '保存密码',
       'Password Changed Successfully': '密码修改成功',
       'Settings': '账户设置',
-      'Manage Social Accounts': '社交账户管理',
       'Restore your password': '找回您的密码',
       'Enter your account username.': '请输入您的用户名',
       'Enter a username.': '请输入一个用户名',
@@ -136,8 +135,3 @@
     $translateProvider.fallbackLanguage('en');
   }]);
 }());
-
-
-
-
-
