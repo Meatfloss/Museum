@@ -1,6 +1,6 @@
-<section>
+
 	<div ng-controller="HomeController">
-		<div style="height: 305px">
+		<div style="max-height: 500px">
 			<div uib-carousel active="active" interval="vm.myInterval" no-wrap="vm.noWrapSlides">
 				<div uib-slide ng-repeat="slide in vm.slides track by slide.id" index="slide.id">
 					<img ng-src="{{slide.image}}" style="margin:auto;">
@@ -12,4 +12,3 @@
 			</div>
 		</div>
 	</div>
-</section>
