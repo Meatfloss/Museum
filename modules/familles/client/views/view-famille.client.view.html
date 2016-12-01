@@ -12,28 +12,28 @@
     <div class="col-xs-8">
 			<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.famille.name}}" translate-value-namezh="{{vm.famille.nameZH}}"></span>
 		</div>
-		<div class="col-xs-4">
+		<div class="col-xs-4" ng-if="vm.famille.dynasty">
 			<strong translate="Dynasty"></strong><strong>:</strong>
 		</div>
-    <div class="col-xs-8">
+    <div class="col-xs-8" ng-if="vm.famille.dynasty">
 			<span ng-bind="vm.famille.dynasty"></span>
 		</div>
-		<div class="col-xs-4">
+		<div class="col-xs-4" ng-if="vm.famille.topDiameter">
 			<strong translate="Top Diameter"></strong><strong>:</strong>
 		</div>
-    <div class="col-xs-8">
+    <div class="col-xs-8" ng-if="vm.famille.topDiameter">
 			<span ng-bind="vm.famille.topDiameter"></span>&nbsp;in.
 		</div>
-		<div class="col-xs-4">
+		<div class="col-xs-4" ng-if="vm.famille.botDiameter">
 			<strong translate="Bottom Diameter"></strong><strong>:</strong>
 		</div>
-    <div class="col-xs-8">
+    <div class="col-xs-8" ng-if="vm.famille.botDiameter">
 			<span ng-bind="vm.famille.botDiameter"></span>&nbsp;in.
 		</div>
-				<div class="col-xs-4">
+				<div class="col-xs-4" ng-if="vm.famille.height">
 			<strong translate="Height"></strong><strong>:</strong>
 		</div>
-    <div class="col-xs-8">
+    <div class="col-xs-8" ng-if="vm.famille.height">
 			<span ng-bind="vm.famille.height"></span>&nbsp;in.
 		</div>
 		<div class="col-xs-4">

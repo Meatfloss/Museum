@@ -12,34 +12,34 @@
     <div class="col-xs-8">
 			<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.bronze.name}}" translate-value-namezh="{{vm.bronze.nameZH}}"></span>
 		</div>
-		<div class="col-xs-4">
+		<div class="col-xs-4" ng-if="vm.bronze.dynasty">
 			<strong translate="Dynasty"></strong><strong>:</strong>
 		</div>
-    <div class="col-xs-8">
+    <div class="col-xs-8" ng-if="vm.bronze.dynasty">
 			<span ng-bind="vm.bronze.dynasty"></span>
 		</div>
-		<div class="col-xs-4">
+		<div class="col-xs-4" ng-if="vm.bronze.type">
 			<strong translate="Type"></strong><strong>:</strong>
 		</div>
-    <div class="col-xs-8">
+    <div class="col-xs-8" ng-if="vm.bronze.type">
 			<span ng-bind="vm.bronze.type"></span>
 		</div>
-		<div class="col-xs-4">
+		<div class="col-xs-4" ng-if="vm.bronze.length">
 			<strong translate="Length"></strong><strong>:</strong>
 		</div>
-    <div class="col-xs-8">
+    <div class="col-xs-8" ng-if="vm.bronze.length">
 			<span ng-bind="vm.bronze.length"></span>&nbsp;in.
 		</div>
-		<div class="col-xs-4">
+		<div class="col-xs-4" ng-if="vm.bronze.width">
 			<strong translate="Width"></strong><strong>:</strong>
 		</div>
-    <div class="col-xs-8">
+    <div class="col-xs-8" ng-if="vm.bronze.width">
 			<span ng-bind="vm.bronze.width"></span>&nbsp;in.
 		</div>
-				<div class="col-xs-4">
+				<div class="col-xs-4" ng-if="vm.bronze.height">
 			<strong translate="Height"></strong><strong>:</strong>
 		</div>
-    <div class="col-xs-8">
+    <div class="col-xs-8" ng-if="vm.bronze.height">
 			<span ng-bind="vm.bronze.height"></span>&nbsp;in.
 		</div>
 		<div class="col-xs-4">
