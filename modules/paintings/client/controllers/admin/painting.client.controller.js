@@ -17,7 +17,7 @@
     // vm.types = ['Album, Ink on Paper', 'Hanging Scroll, Ink and Color on Paper'];
     vm.colorTypes = ['Ink', 'Color', 'Ink and Color'];
     vm.materialTypes = ['Paper', 'Silk'];
-    vm.scrollTypes = ['Album','Hanging Scroll', 'Hand Scroll'];
+    vm.scrollTypes = ['Album', 'Hanging Scroll', 'Hand Scroll'];
 
     vm.error = null;
     vm.form = {};
