@@ -135,3 +135,8 @@ section{
   overflow:hidden;
   text-overflow:ellipsis;
 }
+
+.newline-display
+{
+  white-space:pre-wrap;
+}
