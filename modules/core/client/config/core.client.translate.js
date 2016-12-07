@@ -127,6 +127,9 @@
       'Reset your password': '重置您的密码',
       'Enter the password again to verify.': '请再次输入密码以确认',
       'Update Password': '修改密码',
+      'Hanging Scroll': '立轴',
+      'Ink and Color': '设色水墨',
+      'Paper': '纸本',
       VARIABLE_REPLACEMENT: '{{namezh}}',
       BUTTON_LANG_ZH: '中文',
       BUTTON_LANG_EN: '英文'
@@ -135,6 +138,6 @@
     $translateProvider.translations('zh', translationsZH);
     $translateProvider.preferredLanguage('en');
     $translateProvider.fallbackLanguage('en');
-    $translateProvider.useSanitizeValueStrategy('sanitize');
+    $translateProvider.useSanitizeValueStrategy('escapeParameters');
   }]);
 }());

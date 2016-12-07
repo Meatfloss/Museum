@@ -22,10 +22,7 @@
 			<strong translate="Type"></strong><strong>:</strong>
 		</div>
     <div class="col-xs-8">
-			<span ng-bind="vm.painting.scrollType"></span>,&nbsp;
-			<span ng-bind="vm.painting.colorType"></span> &nbsp;on&nbsp;
-			<span ng-bind="vm.painting.materialType"></span>
-
+			<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.painting.scrollType}}, {{vm.painting.colorType}} on {{vm.painting.materialType}}" translate-value-namezh="{{vm.painting.colorType | translate}}{{vm.painting.materialType | translate}}{{vm.painting.scrollType | translate}}"></span>
 		</div>
 		<div class="col-xs-4" ng-if="vm.painting.length">
 			<strong translate="Length"></strong><strong>:</strong>
