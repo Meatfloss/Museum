@@ -135,5 +135,6 @@
     $translateProvider.translations('zh', translationsZH);
     $translateProvider.preferredLanguage('en');
     $translateProvider.fallbackLanguage('en');
+    $translateProvider.useSanitizeValueStrategy('sanitize');
   }]);
 }());
