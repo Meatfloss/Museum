@@ -64,7 +64,5 @@
     vm.updateForAuthor = function () {
       vm.figureOutItemsToDisplay();
     };
-
-    vm.firstText = 'Firstt';
   }
 }());
