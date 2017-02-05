@@ -1,4 +1,23 @@
-<section class="grid-view">
+<section>
 	<h1>PaintingsLandingController</h1>
-	
+
+
+	<div class="panel-group" ng-repeat='a in vm.dynasties'>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a ng-click="vm.toggleAuthor(a.name)">{{a.name}}</a>
+        </h4>
+      </div>
+        <ul class="list-group" ng-show='a.show'>
+          <li ng-repeat='x in a.authors' class="list-group-item">{{x.name}}</li>
+        </ul>
+  </div>
+
+
+
+
+
+
+  </div>
 </section>

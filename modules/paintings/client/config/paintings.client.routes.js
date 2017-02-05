@@ -18,7 +18,13 @@
         url: '/landing',
         templateUrl: 'modules/paintings/client/views/landing-paintings.client.view.html',
         controller: 'PaintingsLandingController',
-        controllerAs: 'vm'
+        controllerAs: 'vm',
+        data: {
+          pageTitle: 'Paintings List for Authors'
+        },
+        resolve: {
+          authorsResolve: getAuthors
+        }
       })
       .state('paintings.list', {
         url: '',
