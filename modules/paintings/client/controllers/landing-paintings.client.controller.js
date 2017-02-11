@@ -20,7 +20,13 @@
       var temp = {};
       temp.name = indexName;
       temp.show = false;
-      temp.authors = _.filter(vm.authors, {dynasty: vm.dynastyList[i]});
+      temp.authors = _.filter(vm.authors, function(author){
+        if(!author.dynasty)
+        {
+          return !vm.dynastyList[i];
+        }
+        return vm.dynastyList[i] === author.dynasty;
+      });
       vm.dynasties.push(temp);
     }
 
