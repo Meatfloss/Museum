@@ -126,6 +126,22 @@ exports.paintingByID = function (req, res, next, id) {
   });
 };
 
+//Get Paintings by authorID
+exports.paintingByAuthorID = function (req, res) {
+  var ObjectId = require('mongodb').ObjectID
+  var authorId = req.params.authorId;
+  Painting.find({'author':authorId}).populate('user', 'displayName').populate('author', 'name').exec(function (err, paintings) {
+    if (err) {
+      return err;
+    } else if (!paintings) {
+      return res.status(404).send({
+        message: 'No painting with that identifier has been found'
+      });
+    }
+    res.json(paintings);
+  });
+};
+
 /**
  * Update picture
  */
