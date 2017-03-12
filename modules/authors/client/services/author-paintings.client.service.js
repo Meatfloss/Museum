@@ -3,18 +3,15 @@
 
   angular
     .module('authors.services')
-    .factory('AuthorsService', AuthorsService);
+    .factory('AuthorPaintingsService', AuthorPaintingsService);
 
-  AuthorsService.$inject = ['$resource'];
+  AuthorPaintingsService.$inject = ['$resource'];
 
-  function AuthorsService($resource) {
-    var Author = $resource('api/authors/:authorId', {
+  function AuthorPaintingsService($resource) {
+    var Author = $resource('api/paintings/byauthor/:authorId', {
       authorId: '@_id'
     }, {
-      query: {
-        method: 'Get',
-        isArray: true
-      }
+      'query':  {method:'GET', isArray:true}
     });
 
     angular.extend(Author.prototype, {
