@@ -7,13 +7,13 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a ng-click="vm.toggleAuthor(dynasty.name)">{{dynasty.name}}</a>
+          <a ng-click="vm.toggleAuthor(dynasty.name)">{{dynasty.name | translate}}</a>
         </h4>
       </div>
         <ul class="list-group" ng-show='dynasty.show'>
           <li ng-repeat='author in dynasty.authors' class="list-group-item">
 			      <a data-ui-sref="authors.view({authorId: author._id})">
-			        {{author.name}}
+              <span translate="VARIABLE_REPLACEMENT" translate-value-name="{{author.name}}" translate-value-namezh="{{author.nameZH}}"></span>
 			      </a>
 		  </li>
         </ul>

@@ -130,6 +130,7 @@
       'Hanging Scroll': '立轴',
       'Ink and Color': '设色水墨',
       'Paper': '纸本',
+      'Unknown': '未知',
       VARIABLE_REPLACEMENT: '{{namezh}}',
       BUTTON_LANG_ZH: '中文',
       BUTTON_LANG_EN: '英文'

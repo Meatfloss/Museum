@@ -1,7 +1,13 @@
 <section class='grid-view'>
   <div class="page-header">
-    <h1>{{vm.author.name}}</h1>
-    <div>{{vm.author.dynasty || "Unknown" }} ( {{vm.author.birthYear || "?"}} - {{vm.author.deadYear || "?"}} )</div>
+		<h1>
+			<h1 translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.author.name}}" translate-value-namezh="{{vm.author.nameZH}}"></h1>
+		</h1>
+    <div>
+			<!--<h1 translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.author.dynasty}}" translate-value-namezh="{{vm.author.nameZH}}" />-->
+
+			{{(vm.author.dynasty | translate) || ("Unknown" | translate) }} ( {{vm.author.birthYear || "?"}} - {{vm.author.deadYear || "?"}} )
+			</div>
   </div>
   <div class="col-md-12">
     <p class="lead" ng-bind="vm.author.description"></p>
@@ -20,7 +26,7 @@
 				</div>
 				<div class="oneline-text text-center">
 					<small class="list-group-item-text">
-          <span ng-if="painting.author" translate="VARIABLE_REPLACEMENT" translate-value-name="{{painting.author.name}}" translate-value-namezh="{{painting.author.nameZH}}"></span>
+          	<span ng-if="vm.author" translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.author.name}}" translate-value-namezh="{{vm.author.nameZH}}"></span>
         </small>
 				</div>
 			</a>

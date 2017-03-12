@@ -11,9 +11,8 @@
     var Author = $resource('api/authors/:authorId', {
       authorId: '@_id'
     }, {
-      query: {
-        method: 'Get',
-        isArray: true
+      update: {
+        method: 'PUT'
       }
     });
 

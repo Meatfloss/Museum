@@ -11,7 +11,7 @@
     var Author = $resource('api/paintings/byauthor/:authorId', {
       authorId: '@_id'
     }, {
-      'query':  {method:'GET', isArray:true}
+      query:  {method:'GET', isArray:true}
     });
 
     angular.extend(Author.prototype, {
