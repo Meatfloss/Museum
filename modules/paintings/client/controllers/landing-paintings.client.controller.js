@@ -36,5 +36,10 @@
         vm.dynasties[i].show = vm.dynasties[i].name === dynasty ? !vm.dynasties[i].show : false;
       }
     };
+
+    vm.getAuthorURL = function(authorName)
+    {
+      return '' + authorName;
+    }
   }
 }());

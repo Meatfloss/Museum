@@ -19,7 +19,7 @@
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'paintings', {
       title: 'Paintings',
-      state: 'paintings.list',
+      state: 'paintings.landing',
       roles: ['*']
     });
 

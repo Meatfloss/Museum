@@ -3,7 +3,6 @@
 		<h2 translate="Paintings"></h2>
 	</div>
 
-
 	<div class="panel-group" ng-repeat='dynasty in vm.dynasties'>
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -13,9 +12,9 @@
       </div>
         <ul class="list-group" ng-show='dynasty.show'>
           <li ng-repeat='author in dynasty.authors' class="list-group-item">
-			  <a>
-			  {{author.name}}
-			  </a>
+			      <a data-ui-sref="authors.view({authorId: author._id})">
+			        {{author.name}}
+			      </a>
 		  </li>
         </ul>
   </div>
