@@ -37,17 +37,9 @@
     }).$promise;
   }
 
-  //getPainting.$inject = ['$stateParams', 'PaintingsService'];
-
-  //function getPainting($stateParams, PaintingsService) {
-    //return PaintingsService.get({
-      //paintingId: $stateParams.paintingId
-    //}).$promise;
-  //}
-
-   getPaintings.$inject = ['$stateParams', 'AuthorPaintingsService'];
+  getPaintings.$inject = ['$stateParams', 'AuthorPaintingsService'];
 
   function getPaintings($stateParams, AuthorPaintingsService) {
-    return AuthorPaintingsService.query({authorId : $stateParams.authorId}).$promise;
+    return AuthorPaintingsService.query({ authorId: $stateParams.authorId }).$promise;
   }
 }());

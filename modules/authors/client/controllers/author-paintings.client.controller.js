@@ -23,7 +23,7 @@
       vm.figureOutItemsToDisplay();
     }
 
-   function figureOutItemsToDisplay() {
+    function figureOutItemsToDisplay() {
       vm.filterLength = vm.paintings.length;
       var begin = ((vm.currentPage - 1) * vm.itemsPerPage);
       var end = begin + vm.itemsPerPage;

@@ -8,7 +8,7 @@ var paintingsPolicy = require('../policies/paintings.server.policy'),
 
 module.exports = function (app) {
   // Paintings collection routes
-   app.route('/api/paintings').all(paintingsPolicy.isAllowed)
+  app.route('/api/paintings').all(paintingsPolicy.isAllowed)
     .get(paintings.list)
     .post(paintings.create);
 
@@ -18,10 +18,6 @@ module.exports = function (app) {
     .put(paintings.update)
     .delete(paintings.delete);
 
-  // Get paintings by authorId routes
-  //app.route('/api/paintings/authorfilter/:authorId').all(paintingsPolicy.isAllowed)
-   // .get(paintings.list1);
-
   app.get('/api/paintings/byauthor/:authorId', paintingsPolicy.isAllowed, paintings.paintingByAuthorID);
 
 
@@ -30,5 +26,5 @@ module.exports = function (app) {
 
 
   app.route('/api/painting/picture')
-  .post(paintings.changePicture);
+    .post(paintings.changePicture);
 };

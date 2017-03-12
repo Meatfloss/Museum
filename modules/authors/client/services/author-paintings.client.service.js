@@ -8,11 +8,9 @@
   AuthorPaintingsService.$inject = ['$resource'];
 
   function AuthorPaintingsService($resource) {
-    var Author = $resource('api/paintings/byauthor/:authorId', {
-      authorId: '@_id'
-    }, {
-      query:  {method:'GET', isArray:true}
-    });
+    var Author = $resource('api/paintings/byauthor/:authorId',
+    { authorId: '@_id' },
+    { query: { method: 'GET', isArray: true } });
 
     angular.extend(Author.prototype, {
       createOrUpdate: function () {
