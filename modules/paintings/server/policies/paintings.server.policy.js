@@ -45,7 +45,7 @@ exports.invokeRolesPolicies = function () {
       resources: '/api/paintings/:paintingId',
       permissions: ['get']
     }, {
-      resources: '/api/paintings/byauthor:authorId',
+      resources: '/api/paintings/byauthor/:authorId',
       permissions: ['get']
     }]
   }]);
