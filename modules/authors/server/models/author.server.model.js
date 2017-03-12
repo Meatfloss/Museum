@@ -39,6 +39,10 @@ var AuthorSchema = new Schema({
     type: String,
     trim: true
   },
+  descriptionZH: {
+    type: String,
+    trim: true
+  },
   dynasty: {
     type: String,
     trim: true
