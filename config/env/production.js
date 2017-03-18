@@ -33,8 +33,8 @@ module.exports = {
     }
   },
   facebook: {
-    clientID: process.env.FACEBOOK_ID || 'APP_ID',
-    clientSecret: process.env.FACEBOOK_SECRET || 'APP_SECRET',
+    clientID: process.env.FACEBOOK_ID || '276904949415087',
+    clientSecret: process.env.FACEBOOK_SECRET || '9cfdf1cb8e580fe19a82c37ba8332bf6',
     callbackURL: '/api/auth/facebook/callback'
   },
   twitter: {
