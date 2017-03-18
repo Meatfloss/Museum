@@ -142,7 +142,10 @@
     };
     $translateProvider.translations('en', translationsEN);
     $translateProvider.translations('zh', translationsZH);
-    $translateProvider.preferredLanguage('en');
+    $translateProvider.registerAvailableLanguageKeys(['en', 'zh'], {
+    'en_*': 'en',
+    'zh_*': 'zh'
+  }).determinePreferredLanguage();
     $translateProvider.fallbackLanguage('en');
     $translateProvider.useSanitizeValueStrategy('escapeParameters');
   }]);
