@@ -45,10 +45,10 @@
     }
 
     function hideDescription() {
-      vm.description = author.description.length > 1000 ? author.description.slice(0, 1000) + "..." : author.description;
-      vm.descriptionZH = author.descriptionZH.length > 500 ? author.descriptionZH.slice(0, 500) + "..." : author.descriptionZH;
-      vm.descriptionHide = author.description.length > 1000;
-      vm.descriptionZHHide = author.descriptionZH.length > 500;
+      vm.descriptionHide = author.description && author.description.length > 1000;
+      vm.descriptionZHHide = author.descriptionZH && author.descriptionZH.length > 500;
+      vm.description = vm.descriptionHide ? author.description.slice(0, 1000) + "..." : author.description;
+      vm.descriptionZH = vm.descriptionZHHide ? author.descriptionZH.slice(0, 500) + "..." : author.descriptionZH;
     }
   }
 }());

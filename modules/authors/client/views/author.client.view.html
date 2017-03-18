@@ -10,11 +10,11 @@
 			</div>
   </div>
   <div class="col-md-12">
-		<p class="lead" translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.description}}" translate-value-namezh="{{vm.descriptionZH}}"></p>
-		<p class="lead" ng-if="vm.descriptionHide">
+		<p class="lead newline-display" translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.description}}" translate-value-namezh="{{vm.descriptionZH}}"></p>
+		<p class="lead" ng-if="vm.description && vm.descriptionHide">
 			<a ng-click="vm.showDescription()">{{'READ MORE' | translate}}</a>
 		</p>
-		<p class="lead" ng-if="!vm.descriptionHide">
+		<p class="lead" ng-if="vm.description && !vm.descriptionHide">
 			<a ng-click="vm.hideDescription()">{{ 'HIDE' | translate}}</a>
 		</p>
   </div>
