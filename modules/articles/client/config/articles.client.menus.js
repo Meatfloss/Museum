@@ -11,7 +11,7 @@
     menuService.addMenuItem('topbar', {
       title: 'Articles',
       state: 'articles.list',
-      //type: 'dropdown',
+      // type: 'dropdown',
       roles: ['*'],
       position: 4
     });

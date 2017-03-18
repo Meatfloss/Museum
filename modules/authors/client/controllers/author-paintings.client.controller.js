@@ -47,8 +47,8 @@
     function hideDescription() {
       vm.descriptionHide = author.description && author.description.length > 1000;
       vm.descriptionZHHide = author.descriptionZH && author.descriptionZH.length > 500;
-      vm.description = vm.descriptionHide ? author.description.slice(0, 1000) + "..." : author.description;
-      vm.descriptionZH = vm.descriptionZHHide ? author.descriptionZH.slice(0, 500) + "..." : author.descriptionZH;
+      vm.description = vm.descriptionHide ? author.description.slice(0, 1000) + '...' : author.description;
+      vm.descriptionZH = vm.descriptionZHHide ? author.descriptionZH.slice(0, 500) + '...' : author.descriptionZH;
     }
   }
 }());

@@ -137,7 +137,7 @@
       'READ MORE': '显示更多',
       'HIDE': '隐藏',
       'Posted on': '发布于',
-      'view all':'显示全部',
+      'view all': '显示全部',
       VARIABLE_REPLACEMENT: '{{namezh}}',
       BUTTON_LANG_ZH: '中文',
       BUTTON_LANG_EN: '英文'
@@ -145,9 +145,9 @@
     $translateProvider.translations('en', translationsEN);
     $translateProvider.translations('zh', translationsZH);
     $translateProvider.registerAvailableLanguageKeys(['en', 'zh'], {
-    'en_*': 'en',
-    'zh_*': 'zh'
-  }).determinePreferredLanguage();
+      'en_*': 'en',
+      'zh_*': 'zh'
+    }).determinePreferredLanguage();
     $translateProvider.fallbackLanguage('en');
     $translateProvider.useSanitizeValueStrategy('escapeParameters');
   }]);

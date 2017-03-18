@@ -22,8 +22,8 @@
     $scope.changeLanguage = function (langKey) {
       $translate.use(langKey);
     };
-    $scope.isEnglish = function(){
-      return $translate.use() == 'en';
+    $scope.isEnglish = function () {
+      return $translate.use() === 'en';
     };
   }
 }());
