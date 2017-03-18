@@ -13,7 +13,7 @@
     vm.teapot = teapot;
     vm.authentication = Authentication;
     vm.types = ['Teapot Type 1', 'Teapot Type 2'];
-    vm.dynasties = ['Xia', 'Shang', 'Zhou', 'Qin', 'Han', 'Three Kindoms', 'Sui', 'Tang', 'Yuan', 'Ming', 'Qing', 'Modern'];
+    vm.dynasties = ['Xia', 'Shang', 'Zhou', 'Qin', 'Han', 'Three Kindoms', 'Sui', 'Tang', 'Northern Song', 'Southern Song', 'Yuan', 'Ming', 'Qing', 'Modern'];
 
     vm.error = null;
     vm.form = {};

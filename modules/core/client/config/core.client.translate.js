@@ -73,6 +73,8 @@
       'Three Kindoms': '三国',
       'Sui': '隋',
       'Tang': '唐',
+      'Northern Song': '北宋',
+      'Southern Song': '南宋',
       'Yuan': '元',
       'Ming': '明',
       'Qing': '清',
