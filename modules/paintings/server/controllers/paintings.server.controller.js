@@ -130,7 +130,7 @@ exports.paintingByID = function (req, res, next, id) {
 exports.paintingByAuthorID = function (req, res) {
   // var ObjectId = require('mongodb').ObjectID;
   var authorId = req.params.authorId;
-  Painting.find({ 'author': authorId }).populate('user', 'displayName').populate('author', 'name').exec(function (err, paintings) {
+  Painting.find({ 'author': authorId }).sort('-created').populate('user', 'displayName').populate('author', 'name').exec(function (err, paintings) {
     if (err) {
       return err;
     } else if (!paintings) {
