@@ -140,3 +140,8 @@ section{
 {
   white-space:pre-wrap;
 }
+
+.cursorPointer
+{
+  cursor:pointer;
+}

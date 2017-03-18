@@ -73,6 +73,7 @@
       'Three Kindoms': '三国',
       'Sui': '隋',
       'Tang': '唐',
+      'Five Dynasties': '五代',
       'Northern Song': '北宋',
       'Southern Song': '南宋',
       'Yuan': '元',
@@ -136,6 +137,7 @@
       'READ MORE': '显示更多',
       'HIDE': '隐藏',
       'Posted on': '发布于',
+      'view all':'显示全部',
       VARIABLE_REPLACEMENT: '{{namezh}}',
       BUTTON_LANG_ZH: '中文',
       BUTTON_LANG_EN: '英文'
