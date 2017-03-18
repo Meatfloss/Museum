@@ -19,7 +19,7 @@
         <span ng-if="author.birthYear || author.deadYear">-</span>
         <span data-ng-bind="author.deadYear"></span>
       </small>
-      <!--<p class="list-group-item-text" data-ng-bind="author.description"></p>-->
+      <p class="list-group-item-text oneline-text" data-ng-bind="author.description"></p>
     </a>
   </div>
   <div class="alert alert-warning text-center" data-ng-if="authors.$resolved && !authors.length">

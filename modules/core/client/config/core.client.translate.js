@@ -135,6 +135,7 @@
       'Unknown': '未知',
       'READ MORE': '显示更多',
       'HIDE': '隐藏',
+      'Posted on': '发布于',
       VARIABLE_REPLACEMENT: '{{namezh}}',
       BUTTON_LANG_ZH: '中文',
       BUTTON_LANG_EN: '英文'
