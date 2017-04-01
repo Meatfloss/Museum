@@ -22,7 +22,7 @@
           separeteBy = ' - ';
         if (toState.data && toState.data.pageTitle) {
           var stateTitle = $interpolate(toState.data.pageTitle)($state.$current.locals.globals);
-          element.html(applicationCoreTitle + separeteBy + stateTitle);
+          element.html(stateTitle + separeteBy + applicationCoreTitle);
         } else {
           element.html(applicationCoreTitle);
         }

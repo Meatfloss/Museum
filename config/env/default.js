@@ -4,7 +4,7 @@ module.exports = {
   app: {
     title: 'Sai Yang Tang',
     description: 'Kwong Lam (Sai Yang Tang) On-Line Museum of Art',
-    keywords: 'mongodb, express, angularjs, node.js, mongoose, passport',
+    keywords: 'art, museum, paintings, bronzes, zisha teapot, famille rose, famille rose Enamel',
     googleAnalyticsTrackingID: process.env.GOOGLE_ANALYTICS_TRACKING_ID || 'GOOGLE_ANALYTICS_TRACKING_ID'
   },
   port: process.env.PORT || 3000,
