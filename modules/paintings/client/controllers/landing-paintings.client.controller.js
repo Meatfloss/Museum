@@ -10,7 +10,10 @@
   function PaintingsLandingController(PaintingsService, authors) {
     var vm = this;
     vm.authors = authors;
-    vm.dynastyList = _.map(_.uniqBy(authors, 'dynasty'), 'dynasty');
+    var dynastyListOrder = ['Pre Tang', 'Tang', 'Five Dynasties', 'Northern Song', 'Southern Song', 'Ming', 'Qing', 'Modern']
+    vm.dynastyList = _.sortBy(_.map(_.uniqBy(authors, 'dynasty'), 'dynasty'), function(x){
+        return dynastyListOrder.indexOf(x);
+    });
     vm.dynasties = [];
     for (var i = 0; i < vm.dynastyList.length; i++) {
       var indexName = vm.dynastyList[i] || 'Unknown';
