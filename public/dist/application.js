@@ -666,7 +666,7 @@
 
     vm.author = author;
     vm.authentication = Authentication;
-    vm.dynasties = ['Pre Tang', 'Tang', 'Yuan', 'Ming', 'Qing', 'Modern'];
+    vm.dynasties = ['Xia', 'Shang', 'Zhou', 'Qin', 'Han', 'Three Kindoms', 'Sui', 'Tang', 'Yuan', 'Ming', 'Qing', 'Modern'];
 
     vm.error = null;
     vm.form = {};
@@ -1694,7 +1694,6 @@
       'Han': '汉',
       'Three Kindoms': '三国',
       'Sui': '隋',
-      'Pre Tang': '前唐',
       'Tang': '唐',
       'Yuan': '元',
       'Ming': '明',
