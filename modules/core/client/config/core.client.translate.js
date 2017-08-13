@@ -72,6 +72,7 @@
       'Han': '汉',
       'Three Kindoms': '三国',
       'Sui': '隋',
+      'Pre Tang': '前唐',
       'Tang': '唐',
       'Five Dynasties': '五代',
       'Northern Song': '北宋',
