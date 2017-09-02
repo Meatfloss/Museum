@@ -5,42 +5,56 @@
 	<div class="text-center">
 		<img class="img-responsive" src="{{vm.imageURL}}" alt="{{vm.teapot.name}}">
 	</div>
+	<br />
 	<div class="img-responsive row lead">
-		<div class="col-xs-4">
-			<strong translate="Name"></strong><strong>:</strong>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2">
+				<strong translate="Name"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8">
+				<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.teapot.name}}" translate-value-namezh="{{vm.teapot.nameZH}}"></span>
+			</div>
 		</div>
-		<div class="col-xs-8">
-			<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.teapot.name}}" translate-value-namezh="{{vm.teapot.nameZH}}"></span>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2">
+				<strong translate="Author"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8">
+				<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.teapot.author}}" translate-value-namezh="{{vm.teapot.authorZH}}"></span>
+			</div>
 		</div>
-		<div class="col-xs-4">
-			<strong translate="Author"></strong><strong>:</strong>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.teapot.dynasty">
+				<strong translate="Dynasty"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.teapot.dynasty">
+				<span translate="{{vm.teapot.dynasty}}"></span>&nbsp;
+				<span translate="{{vm.teapot.reignTitle}}"></span>
+			</div>
 		</div>
-		<div class="col-xs-8">
-			<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.teapot.author}}" translate-value-namezh="{{vm.teapot.authorZH}}"></span>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.teapot.mark">
+				<strong translate="Mark"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.teapot.mark">
+				<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.teapot.mark}}" translate-value-namezh="{{vm.teapot.markZH}}"></span>
+			</div>
 		</div>
-		<div class="col-xs-4" ng-if="vm.teapot.dynasty">
-			<strong translate="Dynasty"></strong><strong>:</strong>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.teapot.height">
+				<strong translate="Height"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.teapot.height">
+				<span ng-bind="vm.teapot.height"></span>&nbsp;in.
+			</div>
 		</div>
-		<div class="col-xs-8" ng-if="vm.teapot.dynasty">
-			<span translate="{{vm.teapot.dynasty}}"></span>
-		</div>
-		<div class="col-xs-4" ng-if="vm.teapot.mark">
-			<strong translate="Mark"></strong><strong>:</strong>
-		</div>
-		<div class="col-xs-8" ng-if="vm.teapot.mark">
-			<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.teapot.mark}}" translate-value-namezh="{{vm.teapot.markZH}}"></span>
-		</div>
-		<div class="col-xs-4" ng-if="vm.teapot.height">
-			<strong translate="Height"></strong><strong>:</strong>
-		</div>
-		<div class="col-xs-8" ng-if="vm.teapot.height">
-			<span ng-bind="vm.teapot.height"></span>&nbsp;in.
-		</div>
-		<div class="col-xs-4">
-			<strong translate="Description"></strong><strong>:</strong>
-		</div>
-		<div class="col-xs-8">
-			<span class="newline-display" translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.teapot.description}}" translate-value-namezh="{{vm.teapot.descriptionZH}}"></span>
+		<div class="row" ng-if="vm.teapot.description || vm.teapot.descriptionZH">
+			<div class="col-xs-2 col-xs-offset-2">
+				<strong translate="Description"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8">
+				<span class="newline-display" translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.teapot.description}}" translate-value-namezh="{{vm.teapot.descriptionZH}}"></span>
+			</div>
 		</div>
 	</div>
 

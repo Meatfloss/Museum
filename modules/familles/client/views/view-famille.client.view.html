@@ -5,42 +5,56 @@
 	<div class="text-center">
 		<img class="img-responsive" src="{{vm.imageURL}}" alt="{{vm.famille.name}}">
 	</div>
+	<br />
 	<div class="img-responsive row lead">
-		<div class="col-xs-4">
-			<strong translate="Name"></strong><strong>:</strong>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2">
+				<strong translate="Name"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8">
+				<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.famille.name}}" translate-value-namezh="{{vm.famille.nameZH}}"></span>
+			</div>
 		</div>
-    <div class="col-xs-8">
-			<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.famille.name}}" translate-value-namezh="{{vm.famille.nameZH}}"></span>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.famille.dynasty">
+				<strong translate="Dynasty"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.famille.dynasty">
+				<span translate="{{vm.famille.dynasty}}"></span>&nbsp;
+				<span translate="{{vm.famille.reignTitle}}"></span>
+			</div>
 		</div>
-		<div class="col-xs-4" ng-if="vm.famille.dynasty">
-			<strong translate="Dynasty"></strong><strong>:</strong>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.famille.topDiameter">
+				<strong translate="Top Diameter"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.famille.topDiameter">
+				<span ng-bind="vm.famille.topDiameter"></span>&nbsp;in.
+			</div>
 		</div>
-    <div class="col-xs-8" ng-if="vm.famille.dynasty">
-			<span translate="{{vm.famille.dynasty}}"></span>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.famille.botDiameter">
+				<strong translate="Bottom Diameter"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.famille.botDiameter">
+				<span ng-bind="vm.famille.botDiameter"></span>&nbsp;in.
+			</div>
 		</div>
-		<div class="col-xs-4" ng-if="vm.famille.topDiameter">
-			<strong translate="Top Diameter"></strong><strong>:</strong>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.famille.height">
+				<strong translate="Height"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.famille.height">
+				<span ng-bind="vm.famille.height"></span>&nbsp;in.
+			</div>
 		</div>
-    <div class="col-xs-8" ng-if="vm.famille.topDiameter">
-			<span ng-bind="vm.famille.topDiameter"></span>&nbsp;in.
-		</div>
-		<div class="col-xs-4" ng-if="vm.famille.botDiameter">
-			<strong translate="Bottom Diameter"></strong><strong>:</strong>
-		</div>
-    <div class="col-xs-8" ng-if="vm.famille.botDiameter">
-			<span ng-bind="vm.famille.botDiameter"></span>&nbsp;in.
-		</div>
-				<div class="col-xs-4" ng-if="vm.famille.height">
-			<strong translate="Height"></strong><strong>:</strong>
-		</div>
-    <div class="col-xs-8" ng-if="vm.famille.height">
-			<span ng-bind="vm.famille.height"></span>&nbsp;in.
-		</div>
-		<div class="col-xs-4">
-			<strong translate="Description"></strong><strong>:</strong>
-		</div>
-    <div class="col-xs-8">
-			<span class="newline-display" translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.famille.description}}" translate-value-namezh="{{vm.famille.descriptionZH}}"></span>
+		<div class="row" ng-if="vm.famille.description || vm.famille.descriptionZH">
+			<div class="col-xs-2 col-xs-offset-2">
+				<strong translate="Description"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8">
+				<span class="newline-display" translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.famille.description}}" translate-value-namezh="{{vm.famille.descriptionZH}}"></span>
+			</div>
 		</div>
 	</div>
 

@@ -5,6 +5,7 @@
 	<div class="text-center">
 		<img class="img-responsive" src="{{vm.imageURL}}" alt="{{vm.painting.name}}">
 	</div>
+	<br />
 	<div class="img-responsive lead">
 		<div class="row">
 			<div class="col-xs-2 col-xs-offset-2">
@@ -47,7 +48,7 @@
 				<span ng-bind="vm.painting.width"></span>&nbsp;in.
 			</div>
 		</div>
-		<div class="row">
+		<div class="row" ng-if="vm.painting.description || vm.painting.descriptionZH">
 			<div class="col-xs-2 col-xs-offset-2">
 				<strong translate="Description"></strong><strong>:</strong>
 			</div>
