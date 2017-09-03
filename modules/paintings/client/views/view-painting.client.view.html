@@ -32,20 +32,20 @@
 				 translate-value-namezh="{{vm.painting.colorType | translate}}{{vm.painting.materialType | translate}}{{vm.painting.scrollType | translate}}"></span>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.painting.length">
+		<div class="row" ng-if="vm.painting.length">
+			<div class="col-xs-2 col-xs-offset-2">
 				<strong translate="Length"></strong><strong>:</strong>
 			</div>
-			<div class="col-xs-8" ng-if="vm.painting.length">
-				<span ng-bind="vm.painting.length"></span>&nbsp;in.
+			<div class="col-xs-8">
+				<span>{{vm.painting.length * 2.54}}&nbsp;cm</span>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.painting.width">
+		<div class="row" ng-if="vm.painting.width">
+			<div class="col-xs-2 col-xs-offset-2" >
 				<strong translate="Width"></strong><strong>:</strong>
 			</div>
-			<div class="col-xs-8" ng-if="vm.painting.width">
-				<span ng-bind="vm.painting.width"></span>&nbsp;in.
+			<div class="col-xs-8">
+				<span>{{vm.painting.width}}&nbsp;cm</span>
 			</div>
 		</div>
 		<div class="row" ng-if="vm.painting.description || vm.painting.descriptionZH">
