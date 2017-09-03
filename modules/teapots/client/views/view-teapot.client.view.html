@@ -45,7 +45,7 @@
 				<strong translate="Height"></strong><strong>:</strong>
 			</div>
 			<div class="col-xs-8" ng-if="vm.teapot.height">
-				<span>{{vm.teapot.height * 2.54}}&nbsp;cm</span>
+				<span>{{vm.teapot.height * 2.54 | number:1}}&nbsp;cm</span>
 			</div>
 		</div>
 		<div class="row" ng-if="vm.teapot.description || vm.teapot.descriptionZH">

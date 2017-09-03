@@ -37,7 +37,7 @@
 				<strong translate="Length"></strong><strong>:</strong>
 			</div>
 			<div class="col-xs-8">
-				<span>{{vm.painting.length * 2.54}}&nbsp;cm</span>
+				<span>{{vm.painting.length * 2.54 | number:1}}&nbsp;cm</span>
 			</div>
 		</div>
 		<div class="row" ng-if="vm.painting.width">
@@ -45,7 +45,7 @@
 				<strong translate="Width"></strong><strong>:</strong>
 			</div>
 			<div class="col-xs-8">
-				<span>{{vm.painting.width}}&nbsp;cm</span>
+				<span>{{vm.painting.width * 2.54 | number:1}}&nbsp;cm</span>
 			</div>
 		</div>
 		<div class="row" ng-if="vm.painting.description || vm.painting.descriptionZH">

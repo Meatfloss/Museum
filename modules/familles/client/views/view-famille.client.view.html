@@ -29,7 +29,7 @@
 				<strong translate="Top Diameter"></strong><strong>:</strong>
 			</div>
 			<div class="col-xs-8" ng-if="vm.famille.topDiameter">
-				<span>{{vm.famille.topDiameter * 2.54}}&nbsp;cm</span>
+				<span>{{vm.famille.topDiameter * 2.54 | number:1}}&nbsp;cm</span>
 
 			</div>
 		</div>
@@ -38,7 +38,7 @@
 				<strong translate="Bottom Diameter"></strong><strong>:</strong>
 			</div>
 			<div class="col-xs-8" ng-if="vm.famille.botDiameter">
-				<span>{{vm.famille.botDiameter * 2.54}}&nbsp;cm</span>
+				<span>{{vm.famille.botDiameter * 2.54 | number:1}}&nbsp;cm</span>
 			</div>
 		</div>
 		<div class="row">
@@ -46,7 +46,7 @@
 				<strong translate="Height"></strong><strong>:</strong>
 			</div>
 			<div class="col-xs-8" ng-if="vm.famille.height">
-				<span>{{vm.famille.height * 2.54}}&nbsp;cm</span>
+				<span>{{vm.famille.height * 2.54 | number:1}}&nbsp;cm</span>
 			</div>
 		</div>
 		<div class="row" ng-if="vm.famille.description || vm.famille.descriptionZH">

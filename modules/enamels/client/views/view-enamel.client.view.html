@@ -38,7 +38,7 @@
 				<strong translate="Top Diameter"></strong><strong>:</strong>
 			</div>
 			<div class="col-xs-8" ng-if="vm.enamel.topDiameter">
-				<span>{{vm.enamel.topDiameter * 2.54}}&nbsp;cm</span>
+				<span>{{vm.enamel.topDiameter * 2.54 | number:1}}&nbsp;cm</span>
 
 			</div>
 		</div>
@@ -47,7 +47,7 @@
 				<strong translate="Bottom Diameter"></strong><strong>:</strong>
 			</div>
 			<div class="col-xs-8" ng-if="vm.enamel.botDiameter">
-				<span>{{vm.enamel.botDiameter * 2.54}}&nbsp;cm</span>
+				<span>{{vm.enamel.botDiameter * 2.54 | number:1}}&nbsp;cm</span>
 
 			</div>
 		</div>
@@ -56,7 +56,7 @@
 				<strong translate="Height"></strong><strong>:</strong>
 			</div>
 			<div class="col-xs-8" ng-if="vm.enamel.height">
-				<span>{{vm.enamel.height * 2.54}}&nbsp;cm</span>
+				<span>{{vm.enamel.height * 2.54 | number:1}}&nbsp;cm</span>
 			</div>
 		</div>
 		<div class="row" ng-if="vm.enamel.description || vm.enamel.descriptionZH">
