@@ -15,9 +15,9 @@
     vm.authors = authors;
     vm.painting.author = vm.painting.author && chooseDropDown(vm.painting.author, authors, 'name');
     // vm.types = ['Album, Ink on Paper', 'Hanging Scroll, Ink and Color on Paper'];
-    vm.colorTypes = ['Ink', 'Color', 'Ink and Color'];
+    vm.colorTypes = ['Ink', 'Color', 'Ink and Color', 'Oil'];
     vm.materialTypes = ['Paper', 'Silk'];
-    vm.scrollTypes = ['Album', 'Hanging Scroll', 'Hand Scroll'];
+    vm.scrollTypes = ['Album', 'Hanging Scroll', 'Hand Scroll', 'Mounted and Framed'];
 
     vm.error = null;
     vm.form = {};
