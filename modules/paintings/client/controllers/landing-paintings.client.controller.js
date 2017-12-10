@@ -10,7 +10,7 @@
   function PaintingsLandingController(PaintingsService, authors) {
     var vm = this;
     vm.authors = authors;
-    var dynastyListOrder = ['Pre Tang', 'Tang', 'Five Dynasties', 'Northern Song', 'Southern Song', 'Yuan', 'Ming', 'Qing', 'Modern'];
+    var dynastyListOrder = ['Pre Tang', 'Tang', 'Liao', 'Five Dynasties', 'Northern Song', 'Southern Song', 'Jin', 'Yuan', 'Ming', 'Qing', 'Modern'];
     vm.dynastyList = _.sortBy(_.map(_.uniqBy(authors, 'dynasty'), 'dynasty'), function (x) {
       return dynastyListOrder.indexOf(x);
     });
