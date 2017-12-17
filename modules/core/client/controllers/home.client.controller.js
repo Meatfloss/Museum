@@ -8,7 +8,7 @@
   function HomeController() {
     var vm = this;
 
-    vm.myInterval = 5000;
+    vm.myInterval = 3000;
     vm.noWrapSlides = false;
     vm.active = 0;
     var slides = vm.slides = [];
