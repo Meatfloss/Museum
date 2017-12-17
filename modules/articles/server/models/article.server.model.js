@@ -20,7 +20,18 @@ var ArticleSchema = new Schema({
     trim: true,
     required: 'Title cannot be blank'
   },
+  titleZH: {
+    type: String,
+    default: '',
+    trim: true,
+    required: 'Chinese Title cannot be blank'
+  },
   content: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  contentZH: {
     type: String,
     default: '',
     trim: true

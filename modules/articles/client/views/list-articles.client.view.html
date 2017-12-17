@@ -1,18 +1,19 @@
 <section>
   <div class="page-header">
-    <h1>Articles</h1>
+    <h1>{{'Articles' | translate}}</h1>
   </div>
   <div class="list-group">
     <a ng-repeat="article in vm.articles" ui-sref="articles.view({ articleId: article._id })" class="list-group-item">
       <small class="list-group-item-text">
-        Posted on
+        {{'Posted on' | translate}}
         <span ng-bind="article.created | date:'mediumDate'"></span>
-        by list
-        <span ng-if="article.user" ng-bind="article.user.displayName"></span>
-        <span ng-if="!article.user">Deleted User</span>
+        <!--by list-->
+        <!--<span ng-if="article.user" ng-bind="article.user.displayName"></span>-->
+        <!--<span ng-if="!article.user">Deleted User</span>-->
       </small>
-      <h4 class="list-group-item-heading" ng-bind="article.title"></h4>
-      <p class="list-group-item-text" ng-bind="article.content"></p>
+      <h4 class="list-group-item-heading" translate="VARIABLE_REPLACEMENT" translate-value-name="{{article.title}}" translate-value-namezh="{{article.titleZH}}"></h4>
+      <p class="list-group-item-text oneline-text" translate="VARIABLE_REPLACEMENT" translate-value-name="{{article.content}}"
+        translate-value-namezh="{{article.contentZH}}"></p>
     </a>
   </div>
 </section>

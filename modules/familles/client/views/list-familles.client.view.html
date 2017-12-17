@@ -19,10 +19,11 @@
 				<div class="list-image img-responsive">
 					<img ng-src="{{famille.imageURL}}" class="img-thumbnail" />
 				</div>
-
-				<strong>
+				<div class="oneline-text text-center">
+					<strong>
 					<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{famille.name}}" translate-value-namezh="{{famille.nameZH}}"></span>
 				</strong>
+				</div>
 			</a>
 		</div>
 	</div>
@@ -30,6 +31,6 @@
 	<div class="alert alert-warning text-center" data-ng-if="familles.$resolved && !familles.length">
 		No famille found, please try to other filters.
 	</div>
-		<uib-pagination previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;" boundary-links="true" max-size="8" items-per-page="vm.itemsPerPage" total-items="vm.filterLength" ng-model="vm.currentPage"
-		ng-change="vm.pageChanged()"></uib-pagination>
+	<uib-pagination previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;" boundary-links="true"
+		max-size="8" items-per-page="vm.itemsPerPage" total-items="vm.filterLength" ng-model="vm.currentPage" ng-change="vm.pageChanged()"></uib-pagination>
 </section>

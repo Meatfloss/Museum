@@ -12,7 +12,7 @@
 
     vm.author = author;
     vm.authentication = Authentication;
-    vm.dynasties = ['Xia', 'Shang', 'Zhou', 'Qin', 'Han', 'Three Kindoms', 'Sui', 'Tang', 'Yuan', 'Ming', 'Qing', 'Modern'];
+    vm.dynasties = ['Pre Tang', 'Tang', 'Liao', 'Five Dynasties', 'Northern Song', 'Southern Song', 'Jin', 'Yuan', 'Ming', 'Qing', 'Modern'];
 
     vm.error = null;
     vm.form = {};

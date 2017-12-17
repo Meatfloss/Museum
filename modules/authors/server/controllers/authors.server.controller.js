@@ -42,6 +42,7 @@ exports.update = function (req, res) {
   author.name = req.body.name;
   author.nameZH = req.body.nameZH;
   author.description = req.body.description;
+  author.descriptionZH = req.body.descriptionZH;
   author.birthYear = req.body.birthYear;
   author.deadYear = req.body.deadYear;
   author.dynasty = req.body.dynasty;

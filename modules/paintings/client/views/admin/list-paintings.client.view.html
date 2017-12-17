@@ -32,13 +32,16 @@
 				<div class="list-image img-responsive">
 					<img ng-src="{{painting.imageURL}}" class="img-thumbnail" />
 				</div>
-
-				<strong>
+				<div class="oneline-text text-center">
+					<strong>
 					<span data-ng-bind="painting.name"></span>
 				</strong>
-				<small class="list-group-item-text">
-          <span ng-if="painting.author" ng-bind="painting.author.name"></span>
-        </small>
+				</div>
+				<div class="oneline-text text-center">
+					<small class="list-group-item-text">
+         	 			<span ng-if="painting.author" ng-bind="painting.author.name"></span>
+        			</small>
+				</div>
 			</a>
 		</div>
 	</div>

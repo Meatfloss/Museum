@@ -56,6 +56,7 @@ exports.update = function (req, res) {
   enamel.botDiameter = req.body.botDiameter;
   enamel.height = req.body.height;
   enamel.dynasty = req.body.dynasty;
+  enamel.reignTitle = req.body.reignTitle;
 
   enamel.save(function (err) {
     if (err) {

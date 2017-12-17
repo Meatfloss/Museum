@@ -1,52 +1,66 @@
 <section class="item-view">
 	<div class="page-header">
-		<h1  translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.bronze.name}}" translate-value-namezh="{{vm.bronze.nameZH}}"></h1>
+		<h1 translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.bronze.name}}" translate-value-namezh="{{vm.bronze.nameZH}}"></h1>
 	</div>
 	<div class="text-center">
 		<img class="img-responsive" src="{{vm.imageURL}}" alt="{{vm.bronze.name}}">
 	</div>
 	<div class="img-responsive row lead">
-		<div class="col-xs-4">
-			<strong translate="Name"></strong><strong>:</strong>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2">
+				<strong translate="Name"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8">
+				<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.bronze.name}}" translate-value-namezh="{{vm.bronze.nameZH}}"></span>
+			</div>
 		</div>
-    <div class="col-xs-8">
-			<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.bronze.name}}" translate-value-namezh="{{vm.bronze.nameZH}}"></span>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.bronze.dynasty">
+				<strong translate="Dynasty"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.bronze.dynasty">
+				<span ng-bind="vm.bronze.dynasty"></span>
+			</div>
 		</div>
-		<div class="col-xs-4">
-			<strong translate="Dynasty"></strong><strong>:</strong>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.bronze.type">
+				<strong translate="Type"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.bronze.type">
+				<span ng-bind="vm.bronze.type"></span>
+			</div>
 		</div>
-    <div class="col-xs-8">
-			<span ng-bind="vm.bronze.dynasty"></span>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.bronze.length">
+				<strong translate="Length"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.bronze.length">
+				<span>{{vm.bronze.length * 2.54 | number:1}}&nbsp;cm</span>
+			</div>
 		</div>
-		<div class="col-xs-4">
-			<strong translate="Type"></strong><strong>:</strong>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.bronze.width">
+				<strong translate="Width"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.bronze.width">
+				<span>{{vm.bronze.width * 2.54 | number:1}}&nbsp;cm</span>
+			</div>
 		</div>
-    <div class="col-xs-8">
-			<span ng-bind="vm.bronze.type"></span>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.bronze.height">
+				<strong translate="Height"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.bronze.height">
+				<span>{{vm.bronze.height * 2.54 | number:1}}&nbsp;cm</span>
+			</div>
 		</div>
-		<div class="col-xs-4">
-			<strong translate="Length"></strong><strong>:</strong>
-		</div>
-    <div class="col-xs-8">
-			<span ng-bind="vm.bronze.length"></span>&nbsp;in.
-		</div>
-		<div class="col-xs-4">
-			<strong translate="Width"></strong><strong>:</strong>
-		</div>
-    <div class="col-xs-8">
-			<span ng-bind="vm.bronze.width"></span>&nbsp;in.
-		</div>
-				<div class="col-xs-4">
-			<strong translate="Height"></strong><strong>:</strong>
-		</div>
-    <div class="col-xs-8">
-			<span ng-bind="vm.bronze.height"></span>&nbsp;in.
-		</div>
-		<div class="col-xs-4">
-			<strong translate="Description"></strong><strong>:</strong>
-		</div>
-    <div class="col-xs-8">
-			<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.bronze.description}}" translate-value-namezh="{{vm.bronze.descriptionZH}}"></span>
+		<div class="row" ng-if="vm.bronze.description || vm.bronze.descriptionZH">
+			<div class="col-xs-2 col-xs-offset-2">
+				<strong translate="Description"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8">
+				<span class="newline-display" translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.bronze.description}}" translate-value-namezh="{{vm.bronze.descriptionZH}}"></span>
+			</div>
 		</div>
 	</div>
 

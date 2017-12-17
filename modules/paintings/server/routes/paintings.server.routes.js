@@ -18,9 +18,13 @@ module.exports = function (app) {
     .put(paintings.update)
     .delete(paintings.delete);
 
+  app.get('/api/paintings/byauthor/:authorId', paintingsPolicy.isAllowed, paintings.paintingByAuthorID);
+
+
   // Finish by binding the painting middleware
   app.param('paintingId', paintings.paintingByID);
 
+
   app.route('/api/painting/picture')
-  .post(paintings.changePicture);
+    .post(paintings.changePicture);
 };
