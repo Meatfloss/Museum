@@ -99,7 +99,7 @@ section{
 }
 .collection-section img:hover{
   opacity: 1;
-  transform: scale(1.2);
+  transform: scale(1.15);
 }
 
 .list-image{
