@@ -94,12 +94,12 @@ section{
 .collection-section img{
   width: 230px;
   opacity: 0.8;
-  transform: scale(1);
+  backface-visibility: hidden;
   transition: transform 0.5s, opacity 0.5s;
 }
 .collection-section img:hover{
   opacity: 1;
-  transform: scale(1.05);
+  transform: scale(1.2);
 }
 
 .list-image{
