@@ -17,6 +17,7 @@
     vm.addSlide = function (index) {
       slides.push({
         image: 'modules/core/client/img/home-slide' + index + '.jpg',
+        imageMobile: 'modules/core/client/img/home-slide-mobile' + index + '.jpg',
         text: ['Nice image', 'Awesome photograph', 'That is so cool', 'I love that', 'number 5'][slides.length % 5],
         id: currIndex++
       });
