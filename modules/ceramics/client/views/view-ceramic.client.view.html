@@ -1,0 +1,67 @@
+<section class="item-view">
+	<div class="page-header">
+		<h1 translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.ceramic.name}}" translate-value-namezh="{{vm.ceramic.nameZH}}"></h1>
+	</div>
+	<div class="text-center">
+		<img class="img-responsive" src="{{vm.imageURL}}" alt="{{vm.ceramic.name}}">
+	</div>
+	<br />
+	<div class="img-responsive row lead">
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2">
+				<strong translate="Name"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8">
+				<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.ceramic.name}}" translate-value-namezh="{{vm.ceramic.nameZH}}"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.ceramic.dynasty">
+				<strong translate="Dynasty"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.ceramic.dynasty && vm.ceramic.reignTitle">
+				<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.ceramic.reignTitle}} {{vm.ceramic.dynasty}}"
+				 translate-value-namezh="{{vm.ceramic.dynasty | translate}} {{vm.ceramic.reignTitle | translate}}"></span>
+			</div>
+			<div class="col-xs-8" ng-if="vm.ceramic.dynasty && !vm.ceramic.reignTitle">
+				<span translate="{{vm.ceramic.dynasty}}"></span>&nbsp;
+				<span translate="{{vm.ceramic.reignTitle}}"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.ceramic.topDiameter">
+				<strong translate="Top Diameter"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.ceramic.topDiameter">
+				<span>{{vm.ceramic.topDiameter * 2.54 | number:1}}&nbsp;cm</span>
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.ceramic.botDiameter">
+				<strong translate="Bottom Diameter"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.ceramic.botDiameter">
+				<span>{{vm.ceramic.botDiameter * 2.54 | number:1}}&nbsp;cm</span>
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.ceramic.height">
+				<strong translate="Height"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.ceramic.height">
+				<span>{{vm.ceramic.height * 2.54 | number:1}}&nbsp;cm</span>
+			</div>
+		</div>
+		<div class="row" ng-if="vm.ceramic.description || vm.ceramic.descriptionZH">
+			<div class="col-xs-2 col-xs-offset-2">
+				<strong translate="Description"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8">
+				<span class="newline-display" translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.ceramic.description}}" translate-value-namezh="{{vm.ceramic.descriptionZH}}"></span>
+			</div>
+		</div>
+	</div>
+
+</section>

@@ -1,0 +1,95 @@
+<section class="item-view">
+	<div class="page-header">
+		<h1>{{vm.ceramic._id ? 'Edit Ceramic' : 'New Ceramic'}}
+			<a class="btn btn-primary pull-right" ng-click="vm.remove()">
+				<i class="glyphicon glyphicon-trash"></i>
+			</a>
+		</h1>
+	</div>
+	<div class="col-md-12">
+		<form name="vm.form.ceramicForm" class="form-horizontal" ng-submit="vm.save(vm.form.ceramicForm.$valid)" novalidate>
+			<fieldset>
+				<div class="form-group text-center">
+					<img ng-src="{{vm.imageURL}}" alt="{{vm.ceramic.name}}" class="img-responsive">
+				</div>
+				<div class="text-center form-group" ng-hide="vm.uploader.queue.length">
+					<span class="btn btn-default btn-file">
+              Select Image <input type="file" nv-file-select uploader="vm.uploader">
+          </span>
+				</div>
+				<div class="text-center form-group" ng-show="vm.uploader.queue.length">
+					<button class="btn btn-primary" ng-click="vm.uploadProfilePicture();">Upload</button>
+					<button class="btn btn-default" ng-click="vm.cancelUpload();">Cancel</button>
+				</div>
+				<div ng-show="vm.success" class="text-center text-success">
+					<strong>Profile Picture Changed Successfully</strong>
+				</div>
+				<div ng-show="vm.error" class="text-center text-danger">
+					<strong ng-bind="vm.error"></strong>
+				</div>
+
+
+				<div class="form-group" show-errors>
+					<label class="control-label" for="name">Name</label>
+					<input name="name" type="text" ng-model="vm.ceramic.name" id="name" class="form-control" placeholder="Name" required>
+					<div ng-messages="vm.form.ceramicForm.name.$error" role="alert">
+						<p class="help-block error-text" ng-message="required">Ceramic name is required.</p>
+					</div>
+				</div>
+				<div class="form-group" show-errors>
+					<label class="control-label" for="nameZH">Chinese Name</label>
+					<input name="nameZH" type="text" ng-model="vm.ceramic.nameZH" id="nameZH" class="form-control" placeholder="Chinese Name"
+					 required>
+					<div ng-messages="vm.form.ceramicForm.nameZH.$error" role="alert">
+						<p class="help-block error-text" ng-message="required">Ceramic Chinese name is required.</p>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label" for="type">Dynasty</label>
+					<select name="dynasty" id="dynasty" class="form-control" ng-model="vm.ceramic.dynasty" ng-options="dynasty for dynasty in vm.dynasties" ng-change="vm.updateDynasty(vm.ceramic.dynasty)"></select>
+				</div>
+				<div class="form-group">
+					<label class="control-label" for="type">Reign Title</label>
+					<select name="reignTitle" id="reignTitle" class="form-control" ng-model="vm.ceramic.reignTitle" ng-options="reignTitle for reignTitle in vm.reignTitles"></select>
+				</div>
+				<div class="form-group" show-errors>
+					<label class="control-label" for="topDiameter">Top Diameter(inch)</label>
+					<input name="topDiameter" type="number" ng-model="vm.ceramic.topDiameter" id="topDiameter" class="form-control" min="0">
+					<div ng-messages="vm.form.ceramicForm.topDiameter.$error" role="alert">
+						<p class="help-block error-text" ng-message="min number">Please put in valid top diameter</p>
+					</div>
+				</div>
+				<div class="form-group" show-errors>
+					<label class="control-label" for="botDiameter">Bottom Diameter(inch)</label>
+					<input name="botDiameter" type="number" ng-model="vm.ceramic.botDiameter" id="botDiameter" class="form-control" min="0">
+					<div ng-messages="vm.form.ceramicForm.botDiameter.$error" role="alert">
+						<p class="help-block error-text" ng-message="min number">Please put in valid bottom diameter</p>
+					</div>
+				</div>
+				<div class="form-group" show-errors>
+					<label class="control-label" for="height">Height(inch)</label>
+					<input name="height" type="number" ng-model="vm.ceramic.height" id="height" class="form-control" min="0">
+					<div ng-messages="vm.form.ceramicForm.height.$error" role="alert">
+						<p class="help-block error-text" ng-message="min number">Please put in valid height</p>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label" for="description">Description</label>
+					<textarea name="description" data-ng-model="vm.ceramic.description" id="description" class="form-control" cols="30" rows="10"
+					 placeholder="Description"></textarea>
+				</div>
+				<div class="form-group">
+					<label class="control-label" for="descriptionZH">Chinese Description</label>
+					<textarea name="descriptionZH" data-ng-model="vm.ceramic.descriptionZH" id="descriptionZH" class="form-control" cols="30"
+					 rows="10" placeholder="Chinese Description"></textarea>
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn btn-default">{{vm.ceramic._id ? 'Update' : 'Create'}}</button>
+				</div>
+				<div ng-show="vm.error" class="text-danger">
+					<strong ng-bind="vm.error"></strong>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+</section>
