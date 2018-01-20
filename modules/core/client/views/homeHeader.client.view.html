@@ -3,7 +3,8 @@
 		<div style="max-height: 100%">
 			<div uib-carousel active="active" interval="vm.myInterval" no-pause="true" no-wrap="vm.noWrapSlides">
 				<div uib-slide ng-repeat="slide in vm.slides track by slide.id" index="slide.id">
-					<img ng-src="{{slide.image}}" style="margin:auto; max-height:100%">
+					<img class="hidden-xs" ng-src="{{slide.image}}" style="margin:auto; max-height:100%">
+					<img class="hidden-sm hidden-md hidden-lg" ng-src="{{slide.imageMobile}}" style="margin:auto; max-height:100%">
 					<div class="carousel-caption">
 						<!-- <h4>Slide {{slide.id}}</h4>
 						<p>{{slide.text}}</p> -->
