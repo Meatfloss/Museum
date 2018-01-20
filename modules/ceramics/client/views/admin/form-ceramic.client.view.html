@@ -49,29 +49,43 @@
 					<select name="dynasty" id="dynasty" class="form-control" ng-model="vm.ceramic.dynasty" ng-options="dynasty for dynasty in vm.dynasties" ng-change="vm.updateDynasty(vm.ceramic.dynasty)"></select>
 				</div>
 				<div class="form-group">
-					<label class="control-label" for="type">Reign Title</label>
-					<select name="reignTitle" id="reignTitle" class="form-control" ng-model="vm.ceramic.reignTitle" ng-options="reignTitle for reignTitle in vm.reignTitles"></select>
+					<label class="control-label" for="type">Category</label>
+					<select name="category" id="category" class="form-control" ng-model="vm.ceramic.category" ng-options="category for category in vm.categories"></select>
 				</div>
 				<div class="form-group" show-errors>
-					<label class="control-label" for="topDiameter">Top Diameter(inch)</label>
+					<label class="control-label" for="topDiameter">Top Diameter (inch)</label>
 					<input name="topDiameter" type="number" ng-model="vm.ceramic.topDiameter" id="topDiameter" class="form-control" min="0">
 					<div ng-messages="vm.form.ceramicForm.topDiameter.$error" role="alert">
 						<p class="help-block error-text" ng-message="min number">Please put in valid top diameter</p>
 					</div>
 				</div>
 				<div class="form-group" show-errors>
-					<label class="control-label" for="botDiameter">Bottom Diameter(inch)</label>
+					<label class="control-label" for="botDiameter">Bottom Diameter (inch)</label>
 					<input name="botDiameter" type="number" ng-model="vm.ceramic.botDiameter" id="botDiameter" class="form-control" min="0">
 					<div ng-messages="vm.form.ceramicForm.botDiameter.$error" role="alert">
 						<p class="help-block error-text" ng-message="min number">Please put in valid bottom diameter</p>
 					</div>
 				</div>
 				<div class="form-group" show-errors>
-					<label class="control-label" for="height">Height(inch)</label>
-					<input name="height" type="number" ng-model="vm.ceramic.height" id="height" class="form-control" min="0">
-					<div ng-messages="vm.form.ceramicForm.height.$error" role="alert">
-						<p class="help-block error-text" ng-message="min number">Please put in valid height</p>
+						<label class="control-label" for="length">Length (inch)</label>
+						<input name="length" type="number" ng-model="vm.ceramic.length" id="length" class="form-control" min="0">
+						<div ng-messages="vm.form.ceramicForm.length.$error" role="alert">
+							<p class="help-block error-text" ng-message="min number">Please put in valid length</p>
+						</div>
+				</div>
+				<div class="form-group" show-errors>
+					<label class="control-label" for="width">Width (inch)</label>
+					<input name="width" type="number" ng-model="vm.ceramic.width" id="width" class="form-control" min="0">
+					<div ng-messages="vm.form.ceramicForm.width.$error" role="alert">
+						<p class="help-block error-text" ng-message="min number">Please put in valid width</p>
 					</div>
+				</div>
+				<div class="form-group" show-errors>
+						<label class="control-label" for="height">Height (inch)</label>
+						<input name="height" type="number" ng-model="vm.ceramic.height" id="height" class="form-control" min="0">
+						<div ng-messages="vm.form.ceramicForm.height.$error" role="alert">
+							<p class="help-block error-text" ng-message="min number">Please put in valid height</p>
+						</div>
 				</div>
 				<div class="form-group">
 					<label class="control-label" for="description">Description</label>

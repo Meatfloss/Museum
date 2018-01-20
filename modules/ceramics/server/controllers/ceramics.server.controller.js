@@ -54,9 +54,11 @@ exports.update = function (req, res) {
   ceramic.descriptionZH = req.body.descriptionZH;
   ceramic.topDiameter = req.body.topDiameter;
   ceramic.botDiameter = req.body.botDiameter;
+  ceramic.length = req.body.length;
+  ceramic.width = req.body.width;
   ceramic.height = req.body.height;
   ceramic.dynasty = req.body.dynasty;
-  ceramic.reignTitle = req.body.reignTitle;
+  ceramic.category = req.body.category;
 
   ceramic.save(function (err) {
     if (err) {

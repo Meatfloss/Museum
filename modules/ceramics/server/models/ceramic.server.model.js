@@ -35,6 +35,14 @@ var CeramicSchema = new Schema({
     type: Number,
     trim: true
   },
+  length: {
+    type: Number,
+    trim: true
+  },
+  width: {
+    type: Number,
+    trim: true
+  },
   height: {
     type: Number,
     trim: true
@@ -44,7 +52,7 @@ var CeramicSchema = new Schema({
     default: '',
     trim: true
   },
-  reignTitle: {
+  category: {
     type: String,
     default: '',
     trim: true

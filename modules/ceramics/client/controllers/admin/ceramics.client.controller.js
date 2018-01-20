@@ -5,19 +5,19 @@
     .module('ceramics.admin')
     .controller('CeramicsController', CeramicsController);
 
-  CeramicsController.$inject = ['$scope', '$timeout', '$state', '$window', 'ceramicResolve', 'Authentication', 'FileUploader'];
+  CeramicsController.$inject = ['$scope', '$timeout', '$state', '$window', 'ceramicResolve', 'dynastyResolve', 'Authentication', 'FileUploader'];
 
-  function CeramicsController($scope, $timeout, $state, $window, ceramic, Authentication, FileUploader) {
+  function CeramicsController($scope, $timeout, $state, $window, ceramic, dynasties, Authentication, FileUploader) {
     var vm = this;
 
     vm.ceramic = ceramic;
     vm.authentication = Authentication;
-    vm.dynasties = ['Xia', 'Shang', 'Zhou', 'Qin', 'Han', 'Three Kindoms', 'Sui', 'Tang', 'Northern Song', 'Southern Song', 'Yuan', 'Ming', 'Qing', 'Modern'];
-    vm.reignTitleList = {
-      'Ming': ['Hongwu', 'Jianwen', 'Yongle', 'Hongxi', 'Xuande', 'Zhengtong', 'Jingtai', 'Tianshun', 'Chenghua', 'Hongzhi', 'Zhengde', 'Jiajing', 'Longqing', 'Wanli', 'Taichang', 'Tianqi', 'Chongzhen'],
-      'Qing': ['Shunzhi', 'Kangxi', 'Yongzheng', 'Qianlong', 'Jiaqing', 'Daoguang', 'Xianfeng', 'Tongzhi', 'Guangxu', 'Xuantong']
-    };
-    vm.reignTitles = vm.reignTitleList[vm.ceramic.dynasty];
+
+    vm.dynasties = _.map(dynasties, 'name');
+    var dynasty = _.find(dynasties, { 'name': vm.ceramic.dynasty });
+    if (dynasty) {
+      vm.categories = dynasty.categories;
+    }
 
     vm.error = null;
     vm.form = {};
@@ -51,7 +51,7 @@
 
     // update Dynasty
     function updateDynasty(dynasty) {
-      vm.reignTitles = vm.reignTitleList[dynasty];
+      vm.categories = _.find(dynasties, { 'name': vm.ceramic.dynasty }).categories;
     }
 
     // add ceramic data
