@@ -54,7 +54,7 @@
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'collections', {
       title: 'Ancient Ceramics',
-      state: 'ceramics.list',
+      state: 'ceramics.landing',
       roles: ['*']
     });
 

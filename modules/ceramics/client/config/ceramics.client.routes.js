@@ -14,6 +14,15 @@
         url: '/ceramics',
         template: '<ui-view/>'
       })
+      .state('ceramics.landing', {
+        url: '/landing',
+        templateUrl: 'modules/ceramics/client/views/landing-ceramics.client.view.html',
+        controller: 'CeramicsLandingController',
+        controllerAs: 'vm',
+        data: {
+          pageTitle: 'Chinese Ancient Ceramics List'
+        }
+      })
       .state('ceramics.list', {
         url: '',
         templateUrl: 'modules/ceramics/client/views/list-ceramics.client.view.html',

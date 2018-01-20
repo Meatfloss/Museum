@@ -1,0 +1,24 @@
+<section>
+  <div class="page-header">
+    <h2>{{'Ceramics'|translate}}</h2>
+    <a data-ui-sref="ceramics.list">{{'view all' | translate}}</a>
+  </div>
+
+  <div class="panel-group" ng-repeat='dynasty in vm.categories'>
+      <div ng-click="vm.toggleCategory(dynasty.name)" class="panel panel-default cursorPointer">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            {{dynasty.name | translate}}
+          </h4>
+        </div>
+
+        <ul class="list-group" ng-show='dynasty.show'>
+          <li ng-repeat='sub in dynasty.subCategories' class="list-group-item">
+            <a data-ui-sref="authors.view({authorId: author._id})">
+              <span translate="VARIABLE_REPLACEMENT" translate-value-name="{{sub}}" translate-value-namezh="{{author.nameZH}}"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+  </div>
+</section>
