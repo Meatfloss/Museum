@@ -19,6 +19,9 @@
         templateUrl: 'modules/ceramics/client/views/landing-ceramics.client.view.html',
         controller: 'CeramicsLandingController',
         controllerAs: 'vm',
+        resolve: {
+          dynastyResolve: getDynasties
+        },
         data: {
           pageTitle: 'Chinese Ancient Ceramics List'
         }
@@ -28,6 +31,9 @@
         templateUrl: 'modules/ceramics/client/views/list-ceramics.client.view.html',
         controller: 'CeramicsListController',
         controllerAs: 'vm',
+        resolve: {
+          dynastyResolve: getDynasties
+        },
         data: {
           pageTitle: 'Ceramics List'
         }
@@ -38,7 +44,7 @@
         controller: 'CeramicsController',
         controllerAs: 'vm',
         resolve: {
-          ceramicResolve: getPainting
+          ceramicResolve: getCeramic
         },
         data: {
           pageTitle: 'Painting {{ ceramicResolve.title }}'
@@ -46,11 +52,17 @@
       });
   }
 
-  getPainting.$inject = ['$stateParams', 'CeramicsService'];
+  getCeramic.$inject = ['$stateParams', 'CeramicsService'];
 
-  function getPainting($stateParams, CeramicsService) {
+  function getCeramic($stateParams, CeramicsService) {
     return CeramicsService.get({
       ceramicId: $stateParams.ceramicId
     }).$promise;
+  }
+
+  getDynasties.$inject = ['$stateParams', 'DynastyService'];
+
+  function getDynasties($stateParams, CeramicsService) {
+    return CeramicsService;
   }
 }());

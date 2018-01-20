@@ -19,6 +19,9 @@
         templateUrl: 'modules/ceramics/client/views/admin/list-ceramics.client.view.html',
         controller: 'CeramicsListController',
         controllerAs: 'vm',
+        resolve: {
+          dynastyResolve: getDynasties
+        },
         data: {
           roles: ['admin']
         }
@@ -32,7 +35,8 @@
           roles: ['admin']
         },
         resolve: {
-          ceramicResolve: newPainting
+          ceramicResolve: newCeramic,
+          dynastyResolve: getDynasties
         }
       })
       .state('admin.ceramics.edit', {
@@ -44,22 +48,29 @@
           roles: ['admin']
         },
         resolve: {
-          ceramicResolve: getPainting
+          ceramicResolve: getCeramic,
+          dynastyResolve: getDynasties
         }
       });
   }
 
-  getPainting.$inject = ['$stateParams', 'CeramicsService'];
+  getCeramic.$inject = ['$stateParams', 'CeramicsService'];
 
-  function getPainting($stateParams, CeramicsService) {
+  function getCeramic($stateParams, CeramicsService) {
     return CeramicsService.get({
       ceramicId: $stateParams.ceramicId
     }).$promise;
   }
 
-  newPainting.$inject = ['CeramicsService'];
+  newCeramic.$inject = ['CeramicsService'];
 
-  function newPainting(CeramicsService) {
+  function newCeramic(CeramicsService) {
     return new CeramicsService();
+  }
+
+  getDynasties.$inject = ['$stateParams', 'DynastyService'];
+
+  function getDynasties($stateParams, CeramicsService) {
+    return CeramicsService;
   }
 }());
