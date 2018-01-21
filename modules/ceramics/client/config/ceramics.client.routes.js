@@ -38,6 +38,19 @@
           pageTitle: 'Ceramics List'
         }
       })
+      .state('ceramics.list2', {
+        url: '/:dynasty/:category',
+        templateUrl: 'modules/ceramics/client/views/list-ceramics.client.view.html',
+        controller: 'CeramicsListController',
+        controllerAs: 'vm',
+        resolve: {
+          dynastyResolve: getDynasties,
+          ceramicListResolve: getCeramicList
+        },
+        data: {
+          pageTitle: 'Ceramics List'
+        }
+      })
       .state('ceramics.view', {
         url: '/:ceramicId',
         templateUrl: 'modules/ceramics/client/views/view-ceramic.client.view.html',
@@ -53,15 +66,21 @@
   }
 
   getCeramic.$inject = ['$stateParams', 'CeramicsService'];
-
   function getCeramic($stateParams, CeramicsService) {
     return CeramicsService.get({
       ceramicId: $stateParams.ceramicId
     }).$promise;
   }
 
-  getDynasties.$inject = ['$stateParams', 'DynastyService'];
+  getCeramicList.$inject = ['$stateParams', 'CeramicsService'];
+  function getCeramicList($stateParams, CeramicsService) {
+    return CeramicsService.get({
+      dynasty: $stateParams.dynasty,
+      category: $stateParams.category
+    }).$promise;
+  }
 
+  getDynasties.$inject = ['$stateParams', 'DynastyService'];
   function getDynasties($stateParams, CeramicsService) {
     return CeramicsService;
   }
