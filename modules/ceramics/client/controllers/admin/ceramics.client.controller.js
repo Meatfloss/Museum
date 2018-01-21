@@ -3,7 +3,7 @@
 
   angular
     .module('ceramics.admin')
-    .controller('CeramicsController', CeramicsController);
+    .controller('CeramicsAdminController', CeramicsController);
 
   CeramicsController.$inject = ['$scope', '$timeout', '$state', '$window', 'ceramicResolve', 'dynastyResolve', 'Authentication', 'FileUploader'];
 

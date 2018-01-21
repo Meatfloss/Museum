@@ -29,7 +29,7 @@
       .state('admin.ceramics.create', {
         url: '/create',
         templateUrl: 'modules/ceramics/client/views/admin/form-ceramic.client.view.html',
-        controller: 'CeramicsController',
+        controller: 'CeramicsAdminController',
         controllerAs: 'vm',
         data: {
           roles: ['admin']
@@ -42,7 +42,7 @@
       .state('admin.ceramics.edit', {
         url: '/:ceramicId/edit',
         templateUrl: 'modules/ceramics/client/views/admin/form-ceramic.client.view.html',
-        controller: 'CeramicsController',
+        controller: 'CeramicsAdminController',
         controllerAs: 'vm',
         data: {
           roles: ['admin']

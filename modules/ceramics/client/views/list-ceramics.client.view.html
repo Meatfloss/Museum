@@ -12,6 +12,12 @@
 				<select class="form-control" ng-model="vm.selectedDynasty" ng-change="vm.updateForDynasty()" ng-options="x | translate for x in vm.dynastyList"></select>
 			</div>
 		</div>
+		<div class="col-sm-4 col-xs-12">
+			<div class="input-group">
+				<span class="input-group-addon" translate="Category"></span>
+				<select class="form-control" ng-model="vm.selectedCategory" ng-change="vm.updateForCategory()" ng-options="x | translate for x in vm.categoryList"></select>
+			</div>
+		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-2 col-sm-4 col-xs-6" data-ng-repeat="ceramic in vm.pagedItems">

@@ -34,7 +34,6 @@
 			</div>
 			<div class="col-xs-8" ng-if="vm.ceramic.topDiameter">
 				<span>{{vm.ceramic.topDiameter * 2.54 | number:1}}&nbsp;cm</span>
-
 			</div>
 		</div>
 		<div class="row">
@@ -46,6 +45,22 @@
 
 			</div>
 		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.ceramic.length">
+				<strong translate="Length"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.ceramic.length">
+				<span>{{vm.ceramic.length * 2.54 | number:1}}&nbsp;cm</span>
+			</div>
+		</div>
+		<div class="row">
+				<div class="col-xs-2 col-xs-offset-2" ng-if="vm.ceramic.width">
+					<strong translate="Width"></strong><strong>:</strong>
+				</div>
+				<div class="col-xs-8" ng-if="vm.ceramic.width">
+					<span>{{vm.ceramic.width * 2.54 | number:1}}&nbsp;cm</span>
+				</div>
+			</div>
 		<div class="row">
 			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.ceramic.height">
 				<strong translate="Height"></strong><strong>:</strong>
