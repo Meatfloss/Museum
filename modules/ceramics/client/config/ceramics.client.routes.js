@@ -23,7 +23,7 @@
           dynastyResolve: getDynasties
         },
         data: {
-          pageTitle: 'Chinese Ancient Ceramics List'
+          pageTitle: 'Ancient Ceramics List'
         }
       })
       .state('ceramics.list', {

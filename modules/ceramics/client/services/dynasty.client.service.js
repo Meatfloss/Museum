@@ -16,7 +16,7 @@
     var dynasty5 = { name: 'Eastern Gin', show: false };
     var dynasty6 = { name: 'Southern Dynasty', show: false };
     var dynasty7 = { name: 'Tang / Five Dynasties', show: false, categories: ['Yue Yao', 'Mishe Porcelain', 'Changsha Yao', 'Jiaxian Yao', 'Marbled Porcelain', 'Tongguan Yao', 'Xing Yao', 'Ding Yao', 'Chai Yao'] };
-    var dynasty8 = { name: 'Song Dynasty (North & South)', show: false, categories: ['Ru Yao', 'Guan Yao', 'Ge Yao', 'Ding Yao', 'Jun Yao', 'Longquan Yao', 'Ying Qing Yao', 'Jizhou Yao', 'Yaozhou Yao', 'Cizhou Yao', 'Bacun Yao', 'Dengfeng Yao', 'Jian Yao'] };
+    var dynasty8 = { name: 'Song Dynasty (North & South)', show: false, categories: ['Ru Yao', 'Guan Yao', 'Ge Yao', 'Ding Yao', 'Jun Yao', 'Longquan Yao', 'Yingqing Yao', 'Jizhou Yao', 'Yaozhou Yao', 'Cizhou Yao', 'Bacun Yao', 'Dengfeng Yao', 'Jian Yao'] };
     var dynasty9 = { name: 'Xixia', show: false };
     var dynasty10 = { name: 'Jin', show: false };
 
