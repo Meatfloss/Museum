@@ -17,7 +17,8 @@
         <ul class="list-group" ng-show='dynasty.show'>
           <li ng-repeat='c in dynasty.categories' class="list-group-item">
             <a data-ui-sref="authors.view({authorId: author._id})">
-              <span translate="VARIABLE_REPLACEMENT" translate-value-name="{{c}}" translate-value-namezh="{{author.nameZH}}"></span>
+              <!-- <span translate="VARIABLE_REPLACEMENT" translate-value-name="{{c}}" translate-value-namezh="{{author.nameZH}}"></span> -->
+              <span>{{c |translate}}</span>
             </a>
           </li>
         </ul>
