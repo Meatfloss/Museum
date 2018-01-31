@@ -32,7 +32,7 @@
         controller: 'CeramicsListController',
         controllerAs: 'vm',
         resolve: {
-          dynastyResolve: getDynasties
+          ceramicListResolve: getCeramicList
         },
         data: {
           pageTitle: 'Ceramics List'
@@ -44,7 +44,6 @@
         controller: 'CeramicsListController',
         controllerAs: 'vm',
         resolve: {
-          dynastyResolve: getDynasties,
           ceramicListResolve: getCeramicList
         },
         data: {
@@ -74,7 +73,7 @@
 
   getCeramicList.$inject = ['$stateParams', 'CeramicsService'];
   function getCeramicList($stateParams, CeramicsService) {
-    return CeramicsService.get({
+    return CeramicsService.filteredList({
       dynasty: $stateParams.dynasty,
       category: $stateParams.category
     }).$promise;

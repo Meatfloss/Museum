@@ -8,11 +8,19 @@
   CeramicsService.$inject = ['$resource'];
 
   function CeramicsService($resource) {
-    var Ceramic = $resource('api/ceramics/:ceramicId', {
-      ceramicId: '@_id'
+    var Ceramic = $resource('api/ceramics/:ceramicId:dynasty/:category', {
+      ceramicId: '@_id',
+      dynasty: '@dynasty',
+      category: '@category'
     }, {
       update: {
         method: 'PUT'
+      },
+      filteredList: {
+        method: 'GET',
+        isArray: true
+        // ,
+        // params: { collectionRoute: 'autocomplete' }
       }
     });
 

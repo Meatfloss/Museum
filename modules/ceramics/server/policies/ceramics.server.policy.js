@@ -18,6 +18,9 @@ exports.invokeRolesPolicies = function () {
       resources: '/api/ceramics',
       permissions: '*'
     }, {
+      resources: '/api/ceramics/:dynasty/:category',
+      permissions: ['get']
+    }, {
       resources: '/api/ceramics/:ceramicId',
       permissions: '*'
     }]
@@ -27,6 +30,9 @@ exports.invokeRolesPolicies = function () {
       resources: '/api/ceramics',
       permissions: ['get']
     }, {
+      resources: '/api/ceramics/:dynasty/:category',
+      permissions: ['get']
+    }, {
       resources: '/api/ceramics/:ceramicId',
       permissions: ['get']
     }]
@@ -34,6 +40,9 @@ exports.invokeRolesPolicies = function () {
     roles: ['guest'],
     allows: [{
       resources: '/api/ceramics',
+      permissions: ['get']
+    }, {
+      resources: '/api/ceramics/:dynasty/:category',
       permissions: ['get']
     }, {
       resources: '/api/ceramics/:ceramicId',

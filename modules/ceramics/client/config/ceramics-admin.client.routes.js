@@ -20,7 +20,7 @@
         controller: 'CeramicsListController',
         controllerAs: 'vm',
         resolve: {
-          dynastyResolve: getDynasties
+          ceramicListResolve: getCeramicList
         },
         data: {
           roles: ['admin']
@@ -55,21 +55,26 @@
   }
 
   getCeramic.$inject = ['$stateParams', 'CeramicsService'];
-
   function getCeramic($stateParams, CeramicsService) {
     return CeramicsService.get({
       ceramicId: $stateParams.ceramicId
     }).$promise;
   }
 
-  newCeramic.$inject = ['CeramicsService'];
+  getCeramicList.$inject = ['$stateParams', 'CeramicsService'];
+  function getCeramicList($stateParams, CeramicsService) {
+    return CeramicsService.filteredList({
+      dynasty: $stateParams.dynasty,
+      category: $stateParams.category
+    }).$promise;
+  }
 
+  newCeramic.$inject = ['CeramicsService'];
   function newCeramic(CeramicsService) {
     return new CeramicsService();
   }
 
   getDynasties.$inject = ['$stateParams', 'DynastyService'];
-
   function getDynasties($stateParams, CeramicsService) {
     return CeramicsService;
   }

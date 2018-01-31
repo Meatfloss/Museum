@@ -12,6 +12,10 @@ module.exports = function (app) {
     .get(ceramics.list)
     .post(ceramics.create);
 
+  // Ceramics collection routes
+  app.route('/api/ceramics/:dynasty/:category').all(ceramicsPolicy.isAllowed)
+  .get(ceramics.filteredList);
+
   // Single ceramic routes
   app.route('/api/ceramics/:ceramicId').all(ceramicsPolicy.isAllowed)
     .get(ceramics.read)
@@ -20,6 +24,7 @@ module.exports = function (app) {
 
   // Finish by binding the ceramic middleware
   app.param('ceramicId', ceramics.ceramicByID);
+  app.param(['dynasty', 'category'], ceramics.filteredCeramics);
 
   app.route('/api/ceramic/picture')
   .post(ceramics.changePicture);

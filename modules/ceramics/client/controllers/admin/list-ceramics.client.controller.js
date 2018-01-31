@@ -5,25 +5,34 @@
     .module('ceramics.admin')
     .controller('CeramicsListController', CeramicsListController);
 
-  CeramicsListController.$inject = ['$filter', 'CeramicsService'];
+  CeramicsListController.$inject = ['$filter', 'CeramicsService', 'ceramicListResolve'];
 
-  function CeramicsListController($filter, CeramicsService) {
+  function CeramicsListController($filter, CeramicsService, ceramics) {
     var vm = this;
     vm.buildPager = buildPager;
     vm.figureOutItemsToDisplay = figureOutItemsToDisplay;
     vm.pageChanged = pageChanged;
 
-    CeramicsService.query(function (data) {
-      vm.ceramics = data;
-      vm.buildPager();
-      // update dropdown list
-      vm.dynastyList = _.compact(_.map(_.uniqBy(vm.ceramics, 'dynasty'), 'dynasty'));
-      vm.dynastyList.unshift('All');
-      vm.selectedDynasty = 'All';
-      vm.categoryList = _.compact(_.map(_.uniqBy(vm.ceramics, 'category'), 'category'));
-      vm.categoryList.unshift('All');
-      vm.selectedCategory = 'All';
-    });
+    vm.ceramics = ceramics;
+    vm.buildPager();
+    // update dropdown list
+    vm.dynastyList = _.compact(_.map(_.uniqBy(vm.ceramics, 'dynasty'), 'dynasty'));
+    vm.dynastyList.unshift('All');
+    vm.selectedDynasty = 'All';
+    vm.categoryList = _.compact(_.map(_.uniqBy(vm.ceramics, 'category'), 'category'));
+    vm.categoryList.unshift('All');
+    vm.selectedCategory = 'All';
+    // CeramicsService.query(function (data) {
+    //   vm.ceramics = data;
+    //   vm.buildPager();
+    //   // update dropdown list
+    //   vm.dynastyList = _.compact(_.map(_.uniqBy(vm.ceramics, 'dynasty'), 'dynasty'));
+    //   vm.dynastyList.unshift('All');
+    //   vm.selectedDynasty = 'All';
+    //   vm.categoryList = _.compact(_.map(_.uniqBy(vm.ceramics, 'category'), 'category'));
+    //   vm.categoryList.unshift('All');
+    //   vm.selectedCategory = 'All';
+    // });
 
     function buildPager() {
       vm.pagedItems = [];
