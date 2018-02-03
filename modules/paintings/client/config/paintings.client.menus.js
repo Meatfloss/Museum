@@ -61,28 +61,28 @@
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'collections', {
       title: 'Chai Yao Porcelain',
-      state: 'paintings.list',
+      state: 'cporcelains.list',
       roles: ['*']
     });
 
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'collections', {
       title: 'Yuan Dynasty Porcelain',
-      state: 'paintings.list',
+      state: 'yporcelains.list',
       roles: ['*']
     });
 
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'collections', {
       title: 'Ming Dynasty Porcelain',
-      state: 'paintings.list',
+      state: 'mporcelains.list',
       roles: ['*']
     });
 
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'collections', {
       title: 'Qing Dynasty Porcelain',
-      state: 'paintings.list',
+      state: 'qßporcelains.list',
       roles: ['*']
     });
   }
