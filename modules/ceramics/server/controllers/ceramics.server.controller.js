@@ -103,8 +103,15 @@ exports.list = function (req, res) {
   });
 };
 
-exports.filteredList = function (req, res, dynasty, category) {
-  Ceramic.find({ 'dynasty': req.params.dynasty, 'category': req.params.category }).sort('-created').exec(function (err, ceramics) {
+exports.filteredList = function (req, res) {
+  var filter = {};
+  if (req.params.dynasty && req.params.dynasty !== 'all') {
+    filter.dynasty = { $regex: new RegExp(req.params.dynasty, 'i') };
+  }
+  if (req.params.category && req.params.category !== 'all') {
+    filter.category = { $regex: new RegExp(req.params.category, 'i') };
+  }
+  Ceramic.find(filter).sort('-created').exec(function (err, ceramics) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
@@ -135,28 +142,6 @@ exports.ceramicByID = function (req, res, next, id) {
         message: 'No ceramic with that identifier has been found'
       });
     }
-    req.ceramic = ceramic;
-    next();
-  });
-};
-
-exports.filteredCeramics = function (req, res, next, dynasty, category) {
-  var filter = {};
-  if (dynasty && dynasty !== 'all') {
-    filter.dynasty = dynasty;
-  }
-  if (category && category !== 'all') {
-    filter.category = category;
-  }
-  Ceramic.find({ dynasty: 'Shang Dynasty' }).exec(function (err, ceramic) {
-    if (err) {
-      return next(err);
-    }
-    // else if (!ceramic) {
-      // return res.status(404).send({
-      //   message: 'No ceramic with that identifier has been found'
-      // });
-    // }
     req.ceramic = ceramic;
     next();
   });

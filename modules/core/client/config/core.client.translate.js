@@ -120,7 +120,7 @@
       'Southern Dynasty': '南朝',
       'Tang / Five Dynasties': '唐/五代',
       'Yue Yao': '越窑',
-      'Mishe Porcelain': '秘色瓷',
+      'Mise Porcelain': '秘色瓷',
       'Changsha Yao': '长沙窑',
       'Jiaxian Yao': '郏县窑',
       'Marbled Porcelain': '绞胎瓷',

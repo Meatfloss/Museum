@@ -24,7 +24,6 @@ module.exports = function (app) {
 
   // Finish by binding the ceramic middleware
   app.param('ceramicId', ceramics.ceramicByID);
-  app.param(['dynasty', 'category'], ceramics.filteredCeramics);
 
   app.route('/api/ceramic/picture')
   .post(ceramics.changePicture);
