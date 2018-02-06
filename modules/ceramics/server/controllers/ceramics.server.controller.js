@@ -10,7 +10,7 @@ var path = require('path'),
   multer = require('multer'),
   config = require(path.resolve('./config/config')),
   Ceramic = mongoose.model('Ceramic');
-// mongoose.Promise = global.Promise;
+mongoose.Promise = global.Promise;
 /**
  * Create an ceramic
  */
@@ -92,63 +92,19 @@ exports.delete = function (req, res) {
 /**
  * List of Ceramics
  */
-exports.list = function (req, res) {
-  Ceramic.find().sort('-created').exec(function (err, ceramics) {
-    if (err) {
-      return res.status(400).send({
-        message: errorHandler.getErrorMessage(err)
-      });
-    } else {
-      // var dynastes = _.compact(_.map(_.uniqBy(ceramics, 'dynasty'), 'dynasty'));
-      // var categories = _.compact(_.map(_.uniqBy(ceramics, 'category'), 'category'));
-      // res.json({ data: ceramics, metaData: { dynastyList: dynastes, categoryList: categories } });
-      return ceramics;
-    }
-  });
-};
-
-exports.filteredList = function (req, res) {
-  var filter = {};
-  if (req.params.dynasty && req.params.dynasty !== 'all') {
-    filter.dynasty = { $regex: new RegExp(req.params.dynasty, 'i') };
-  }
-  if (req.params.category && req.params.category !== 'all') {
-    filter.category = { $regex: new RegExp(req.params.category, 'i') };
-  }
-  Ceramic.find(filter).sort('-created').exec(function (err, ceramics) {
-    if (err) {
-      return res.status(400).send({
-        message: errorHandler.getErrorMessage(err)
-      });
-    } else {
-      // var dynastes = _.compact(_.map(_.uniqBy(ceramics, 'dynasty'), 'dynasty'));
-      // var categories = _.compact(_.map(_.uniqBy(ceramics, 'category'), 'category'));
-      // res.json({ data: ceramics, metaData: { dynastyList: dynastes, categoryList: categories } });
-      return ceramics;
-    }
-  });
-};
-
 // exports.list = function (req, res) {
-//   var result = {};
-//   Ceramic.find().sort('-created').exec()
-//     .then(function (ceramics) {
-//       result.data = ceramics;
-//       return Ceramic.find().distinct('dynasty').exec();
-//     })
-//     .then(function (dynastes) {
-//       result.metaData = { dynastyList: dynastes };
-//       return Ceramic.find().distinct('category').exec();
-//     })
-//     .then(function(categories) {
-//       result.metaData.categoryList = categories;
-//       return result;
-//     })
-//     .catch(function (err) {
+//   Ceramic.find().sort('-created').exec(function (err, ceramics) {
+//     if (err) {
 //       return res.status(400).send({
 //         message: errorHandler.getErrorMessage(err)
 //       });
-//     });
+//     } else {
+//       // var dynastes = _.compact(_.map(_.uniqBy(ceramics, 'dynasty'), 'dynasty'));
+//       // var categories = _.compact(_.map(_.uniqBy(ceramics, 'category'), 'category'));
+//       // res.json({ data: ceramics, metaData: { dynastyList: dynastes, categoryList: categories } });
+//       return ceramics;
+//     }
+//   });
 // };
 
 // exports.filteredList = function (req, res) {
@@ -159,26 +115,70 @@ exports.filteredList = function (req, res) {
 //   if (req.params.category && req.params.category !== 'all') {
 //     filter.category = { $regex: new RegExp(req.params.category, 'i') };
 //   }
-//   var result = {};
-//   Ceramic.find(filter).sort('-created').exec()
-//     .then(function (ceramics) {
-//       result.data = ceramics;
-//       return Ceramic.find().distinct('dynasty').exec();
-//     })
-//     .then(function (dynastes) {
-//       result.metaData = { dynastyList: dynastes };
-//       return Ceramic.find().distinct('category').exec();
-//     })
-//     .then(function(categories) {
-//       result.metaData.categoryList = categories;
-//       return result;
-//     })
-//     .catch(function (err) {
+//   Ceramic.find(filter).sort('-created').exec(function (err, ceramics) {
+//     if (err) {
 //       return res.status(400).send({
 //         message: errorHandler.getErrorMessage(err)
 //       });
-//     });
+//     } else {
+//       // var dynastes = _.compact(_.map(_.uniqBy(ceramics, 'dynasty'), 'dynasty'));
+//       // var categories = _.compact(_.map(_.uniqBy(ceramics, 'category'), 'category'));
+//       // res.json({ data: ceramics, metaData: { dynastyList: dynastes, categoryList: categories } });
+//       return ceramics;
+//     }
+//   });
 // };
+
+exports.list = function (req, res) {
+  var result = {};
+  Ceramic.find().sort('-created').exec()
+    .then(function (ceramics) {
+      result.data = ceramics;
+      return Ceramic.find().distinct('dynasty').exec();
+    })
+    .then(function (dynastes) {
+      result.metaData = { dynastyList: dynastes };
+      return Ceramic.find().distinct('category').exec();
+    })
+    .then(function(categories) {
+      result.metaData.categoryList = categories;
+      res.json(result);
+    })
+    .catch(function (err) {
+      return res.status(400).send({
+        message: errorHandler.getErrorMessage(err)
+      });
+    });
+};
+
+exports.filteredList = function (req, res) {
+  var filter = {};
+  if (req.params.dynasty && req.params.dynasty !== 'all') {
+    filter.dynasty = { $regex: new RegExp(req.params.dynasty, 'i') };
+  }
+  if (req.params.category && req.params.category !== 'all') {
+    filter.category = { $regex: new RegExp(req.params.category, 'i') };
+  }
+  var result = {};
+  Ceramic.find(filter).sort('-created').exec()
+    .then(function (ceramics) {
+      result.data = ceramics;
+      return Ceramic.find().distinct('dynasty').exec();
+    })
+    .then(function (dynastes) {
+      result.metaData = { dynastyList: dynastes };
+      return Ceramic.find().distinct('category').exec();
+    })
+    .then(function(categories) {
+      result.metaData.categoryList = categories;
+      res.json(result);
+    })
+    .catch(function (err) {
+      return res.status(400).send({
+        message: errorHandler.getErrorMessage(err)
+      });
+    });
+};
 
 
 /**

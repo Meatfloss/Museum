@@ -18,7 +18,7 @@
       },
       filteredList: {
         method: 'GET',
-        isArray: true
+        isArray: false
         // ,
         // params: { collectionRoute: 'autocomplete' }
       }
