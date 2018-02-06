@@ -14,7 +14,7 @@ module.exports = function (app) {
 
   // Ceramics collection routes
   app.route('/api/ceramics/:dynasty/:category').all(ceramicsPolicy.isAllowed)
-  .get(ceramics.filteredList);
+    .get(ceramics.filteredList);
 
   // Single ceramic routes
   app.route('/api/ceramics/:ceramicId').all(ceramicsPolicy.isAllowed)
@@ -26,5 +26,5 @@ module.exports = function (app) {
   app.param('ceramicId', ceramics.ceramicByID);
 
   app.route('/api/ceramic/picture')
-  .post(ceramics.changePicture);
+    .post(ceramics.changePicture);
 };

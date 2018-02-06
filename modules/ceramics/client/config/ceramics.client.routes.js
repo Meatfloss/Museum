@@ -38,7 +38,7 @@
           pageTitle: 'Ceramics List'
         }
       })
-      .state('ceramics.list2', {
+      .state('ceramics.list-with-param', {
         url: '/:dynasty/:category',
         templateUrl: 'modules/ceramics/client/views/list-ceramics.client.view.html',
         controller: 'CeramicsListController',
