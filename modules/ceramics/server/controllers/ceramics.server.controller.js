@@ -153,8 +153,10 @@ exports.list = function (req, res) {
 
 exports.filteredList = function (req, res) {
   var filter = {};
+  var dyanstyFilter = {};
   if (req.params.dynasty && req.params.dynasty !== 'all') {
     filter.dynasty = { $regex: new RegExp(req.params.dynasty, 'i') };
+    dyanstyFilter.dynasty = { $regex: new RegExp(req.params.dynasty, 'i') };
   }
   if (req.params.category && req.params.category !== 'all') {
     filter.category = { $regex: new RegExp(req.params.category, 'i') };
@@ -167,7 +169,7 @@ exports.filteredList = function (req, res) {
     })
     .then(function (dynastes) {
       result.metaData = { dynastyList: dynastes };
-      return Ceramic.find().distinct('category').exec();
+      return Ceramic.find(dyanstyFilter).distinct('category').exec();
     })
     .then(function(categories) {
       result.metaData.categoryList = categories;

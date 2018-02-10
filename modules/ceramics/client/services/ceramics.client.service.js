@@ -8,21 +8,16 @@
   CeramicsService.$inject = ['$resource'];
 
   function CeramicsService($resource) {
-    var Ceramic = $resource('api/ceramics/:ceramicId:dynasty/:category', {
-      ceramicId: '@_id',
+    var Ceramic = $resource('api/ceramics/:ceramicId', {
+      ceramicId: '@_id'
+    },
+      { update: { method: 'PUT' } });
+
+    var CeramicList = $resource('api/ceramics/:dynasty/:category', {
       dynasty: '@dynasty',
       category: '@category'
-    }, {
-      update: {
-        method: 'PUT'
-      },
-      filteredList: {
-        method: 'GET',
-        isArray: false
-        // ,
-        // params: { collectionRoute: 'autocomplete' }
-      }
-    });
+    },
+      { filteredList: { method: 'GET', isArray: false } });
 
     angular.extend(Ceramic.prototype, {
       createOrUpdate: function () {
@@ -31,7 +26,7 @@
       }
     });
 
-    return Ceramic;
+    return { item: Ceramic, list: CeramicList };
 
     function createOrUpdate(ceramic) {
       if (ceramic._id) {

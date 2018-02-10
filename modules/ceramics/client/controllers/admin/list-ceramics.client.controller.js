@@ -5,9 +5,9 @@
     .module('ceramics.admin')
     .controller('CeramicsListController', CeramicsListController);
 
-  CeramicsListController.$inject = ['$filter', '$state', 'CeramicsService', 'ceramicListResolve'];
+  CeramicsListController.$inject = ['$filter', '$state', '$stateParams', 'CeramicsService', 'ceramicListResolve'];
 
-  function CeramicsListController($filter, $state, CeramicsService, ceramics) {
+  function CeramicsListController($filter, $state, $stateParams, CeramicsService, ceramics) {
     var vm = this;
     vm.buildPager = buildPager;
     vm.figureOutItemsToDisplay = figureOutItemsToDisplay;
@@ -16,12 +16,39 @@
     vm.ceramics = ceramics.data;
     vm.buildPager();
     // update dropdown list
-    vm.dynastyList = ceramics.metaData.dynastyList;
+    vm.dynastyList = _.compact(ceramics.metaData.dynastyList);
     vm.dynastyList.unshift('All');
-    vm.selectedDynasty = 'All';
-    vm.categoryList = ceramics.metaData.categoryList;
+    vm.selectedDynasty = $stateParams.dynasty || 'All';
+    if (vm.selectedDynasty !== 'All') {
+      if (vm.selectedDynasty === 'all') {
+        vm.selectedDynasty = 'All';
+      }
+      else {
+        for (var j = 0; j < ceramics.metaData.dynastyList.length; j++) {
+          if (vm.selectedDynasty === ceramics.metaData.dynastyList[j].toLowerCase()) {
+            vm.selectedDynasty = ceramics.metaData.dynastyList[j];
+            break;
+          }
+        }
+      }
+
+    }
+    vm.categoryList = _.compact(ceramics.metaData.categoryList);
     vm.categoryList.unshift('All');
-    vm.selectedCategory = 'All';
+    vm.selectedCategory = $stateParams.category || 'All';
+    if (vm.categoryList !== 'All') {
+      if (vm.selectedCategory === 'all') {
+        vm.selectedCategory = 'All';
+      }
+      else {
+        for (var i = 0; i < ceramics.metaData.categoryList.length; i++) {
+          if (vm.selectedCategory === ceramics.metaData.categoryList[i].toLowerCase()) {
+            vm.selectedCategory = ceramics.metaData.categoryList[i];
+            break;
+          }
+        }
+      }
+    }
 
     function buildPager() {
       vm.pagedItems = [];
@@ -49,12 +76,14 @@
     }
 
     vm.updateForDynasty = function () {
-      var filter = {};
       if (vm.selectedDynasty !== 'All' || vm.selectedCategory !== 'All') {
+        var filter = {};
         filter.dynasty = vm.selectedDynasty.toLowerCase();
-        filter.category = vm.selectedCategory.toLowerCase();
+        filter.category = 'all';
+        $state.go('ceramics.list-with-param', filter);
       }
-      $state.go('ceramics.list-with-param', filter);
+      $state.go('ceramics.list');
+
       // CeramicsService.filteredList(filter, function (ceramics) {
       //   vm.ceramics = ceramics;
       //   vm.figureOutItemsToDisplay();
@@ -63,8 +92,16 @@
     };
 
     vm.updateForCategory = function () {
+      if (vm.selectedDynasty !== 'All' || vm.selectedCategory !== 'All') {
+        var filter = {};
+        filter.dynasty = vm.selectedDynasty.toLowerCase();
+        filter.category = vm.selectedCategory.toLowerCase();
+        $state.go('ceramics.list-with-param', filter);
+      }
+      $state.go('ceramics.list');
+
       // update list
-      vm.figureOutItemsToDisplay();
+      // vm.figureOutItemsToDisplay();
     };
   }
 }());
