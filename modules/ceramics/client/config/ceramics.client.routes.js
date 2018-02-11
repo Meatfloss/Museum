@@ -71,9 +71,14 @@
     }).$promise;
   }
 
-  getCeramicList.$inject = ['$stateParams', 'CeramicsService'];
-  function getCeramicList($stateParams, CeramicsService) {
-    return CeramicsService.filteredList({
+  // getAllCeramics.$inject = ['$stateParams', 'CeramicsService'];
+  // function getAllCeramics($stateParams, CeramicsService, CeramicsListService) {
+  //   return CeramicsService.query().$promise;
+  // }
+
+  getCeramicList.$inject = ['$stateParams', 'CeramicsListService'];
+  function getCeramicList($stateParams, CeramicsListService) {
+    return CeramicsListService.filteredList({
       dynasty: $stateParams.dynasty,
       category: $stateParams.category
     }).$promise;

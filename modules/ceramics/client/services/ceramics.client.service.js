@@ -11,13 +11,8 @@
     var Ceramic = $resource('api/ceramics/:ceramicId', {
       ceramicId: '@_id'
     },
-      { update: { method: 'PUT' } });
-
-    var CeramicList = $resource('api/ceramics/:dynasty/:category', {
-      dynasty: '@dynasty',
-      category: '@category'
-    },
-      { filteredList: { method: 'GET', isArray: false } });
+      { update: { method: 'PUT' } },
+      { query: { method: 'GET', isArray: true } });
 
     angular.extend(Ceramic.prototype, {
       createOrUpdate: function () {
@@ -26,7 +21,7 @@
       }
     });
 
-    return { item: Ceramic, list: CeramicList };
+    return Ceramic;
 
     function createOrUpdate(ceramic) {
       if (ceramic._id) {

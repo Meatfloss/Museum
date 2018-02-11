@@ -61,9 +61,9 @@
     }).$promise;
   }
 
-  getCeramicList.$inject = ['$stateParams', 'CeramicsService'];
-  function getCeramicList($stateParams, CeramicsService) {
-    return CeramicsService.filteredList({
+  getCeramicList.$inject = ['$stateParams', 'CeramicsListService'];
+  function getCeramicList($stateParams, CeramicsListService) {
+    return CeramicsListService.filteredList({
       dynasty: $stateParams.dynasty,
       category: $stateParams.category
     }).$promise;

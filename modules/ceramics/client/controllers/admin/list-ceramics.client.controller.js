@@ -82,7 +82,9 @@
         filter.category = 'all';
         $state.go('ceramics.list-with-param', filter);
       }
-      $state.go('ceramics.list');
+      else {
+        $state.go('ceramics.list');
+      }
 
       // CeramicsService.filteredList(filter, function (ceramics) {
       //   vm.ceramics = ceramics;
@@ -98,8 +100,9 @@
         filter.category = vm.selectedCategory.toLowerCase();
         $state.go('ceramics.list-with-param', filter);
       }
-      $state.go('ceramics.list');
-
+      else {
+        $state.go('ceramics.list');
+      }
       // update list
       // vm.figureOutItemsToDisplay();
     };
