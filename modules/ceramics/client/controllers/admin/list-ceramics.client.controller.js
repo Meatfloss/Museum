@@ -22,8 +22,7 @@
     if (vm.selectedDynasty !== 'All') {
       if (vm.selectedDynasty === 'all') {
         vm.selectedDynasty = 'All';
-      }
-      else {
+      } else {
         for (var j = 0; j < ceramics.metaData.dynastyList.length; j++) {
           if (vm.selectedDynasty === ceramics.metaData.dynastyList[j].toLowerCase()) {
             vm.selectedDynasty = ceramics.metaData.dynastyList[j];
@@ -39,8 +38,7 @@
     if (vm.categoryList !== 'All') {
       if (vm.selectedCategory === 'all') {
         vm.selectedCategory = 'All';
-      }
-      else {
+      } else {
         for (var i = 0; i < ceramics.metaData.categoryList.length; i++) {
           if (vm.selectedCategory === ceramics.metaData.categoryList[i].toLowerCase()) {
             vm.selectedCategory = ceramics.metaData.categoryList[i];
