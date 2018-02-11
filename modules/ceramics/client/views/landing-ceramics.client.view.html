@@ -5,7 +5,7 @@
   </div>
 
   <div class="panel-group" ng-repeat='dynasty in vm.dynasties'>
-      <div ng-click="vm.toggleDynasty(dynasty.name)" class="panel panel-default cursorPointer">
+      <div ng-click="vm.toggleDynasty(dynasty.name); vm.linkToList(dynasty)" class="panel panel-default cursorPointer">
         <div class="panel-heading">
           <h4 class="panel-title">
             <i class="glyphicon glyphicon-triangle-right" ng-if="dynasty.categories && !dynasty.show"></i>

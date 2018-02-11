@@ -81,10 +81,9 @@
         filter.dynasty = vm.selectedDynasty.toLowerCase();
         filter.category = 'all';
         $state.go('ceramics.list-with-param', filter);
+        return;
       }
-      else {
-        $state.go('ceramics.list');
-      }
+      $state.go('ceramics.list');
 
       // CeramicsService.filteredList(filter, function (ceramics) {
       //   vm.ceramics = ceramics;
@@ -99,10 +98,9 @@
         filter.dynasty = vm.selectedDynasty.toLowerCase();
         filter.category = vm.selectedCategory.toLowerCase();
         $state.go('ceramics.list-with-param', filter);
+        return;
       }
-      else {
-        $state.go('ceramics.list');
-      }
+      $state.go('ceramics.list');
       // update list
       // vm.figureOutItemsToDisplay();
     };
