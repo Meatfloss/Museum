@@ -27,7 +27,17 @@ var PaintingSchema = new Schema({
     trim: true,
     required: 'Name cannot be blank'
   },
-  type: {
+  colorType: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  materialType: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  scrollType: {
     type: String,
     default: '',
     trim: true

@@ -1,0 +1,26 @@
+<section>
+  <div class="page-header">
+    <h2>{{'Ancient Ceramics'|translate}}</h2>
+    <a data-ui-sref="ceramics.list">{{'view all' | translate}}</a>
+  </div>
+
+  <div class="panel-group" ng-repeat='dynasty in vm.dynasties'>
+      <div ng-click="vm.toggleDynasty(dynasty.name); vm.linkToList(dynasty)" class="panel panel-default cursorPointer">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <i class="glyphicon glyphicon-triangle-right" ng-if="dynasty.categories && !dynasty.show"></i>
+            <i class="glyphicon glyphicon-triangle-bottom" ng-if="dynasty.categories && dynasty.show"></i>
+            {{dynasty.name | translate}}
+          </h4>
+        </div>
+
+        <ul class="list-group" ng-show='dynasty.show'>
+          <li ng-repeat='c in dynasty.categories' class="list-group-item">
+            <a data-ui-sref="ceramics.list-with-param({dynasty: dynasty.name.toLowerCase(), category: c.toLowerCase()})">
+              <span>{{c |translate}}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+  </div>
+</section>

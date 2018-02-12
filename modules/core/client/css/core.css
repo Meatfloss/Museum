@@ -1,5 +1,5 @@
 .content {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 .undecorated-link:hover {
   text-decoration: none;
@@ -42,32 +42,26 @@ a:hover .header-profile-image {
   display: inline;
 }
 
-.home-jumbotron{
+/*.home-jumbotron{
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/modules/core/client/img/home-background.jpg);
   background-size: cover;
   background-position: center;
   height: 500px;
   font-style: oblique;
-  /*line-height: 500px;*/
 }
 
 .home-jumbotron div{
   color: white;
   font-size: 40px;
   font-family: Georgia, serif;
-  /*width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-62%, -50%);*/
   display:inline;
-  text-align:center; /* center horizontally */
-  vertical-align:middle; /* center vertically */
+  text-align:center;
+  vertical-align:middle;
 }
 
 .home-jumbotron .row:before{
   margin-top: 100px;
-}
+}*/
 
 section{
   margin-top: 20px;
@@ -100,12 +94,12 @@ section{
 .collection-section img{
   width: 230px;
   opacity: 0.8;
-  transform: scale(1);
+  backface-visibility: hidden;
   transition: transform 0.5s, opacity 0.5s;
 }
 .collection-section img:hover{
   opacity: 1;
-  transform: scale(1.05);
+  transform: scale(1.15);
 }
 
 .list-image{
@@ -135,3 +129,19 @@ section{
   margin-bottom: 10px;
 }
 
+.oneline-text
+{
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.newline-display
+{
+  white-space:pre-wrap;
+}
+
+.cursorPointer
+{
+  cursor:pointer;
+}

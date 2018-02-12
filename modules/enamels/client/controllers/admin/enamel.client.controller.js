@@ -12,7 +12,12 @@
 
     vm.enamel = enamel;
     vm.authentication = Authentication;
-    vm.dynasties = ['Xia', 'Shang', 'Zhou', 'Qin', 'Han', 'Three Kindoms', 'Sui', 'Tang', 'Yuan', 'Ming', 'Qing', 'Modern'];
+    vm.dynasties = ['Xia', 'Shang', 'Zhou', 'Qin', 'Han', 'Three Kindoms', 'Sui', 'Tang', 'Northern Song', 'Southern Song', 'Yuan', 'Ming', 'Qing', 'Modern'];
+    vm.reignTitleList = {
+      'Ming': ['Hongwu', 'Jianwen', 'Yongle', 'Hongxi', 'Xuande', 'Zhengtong', 'Jingtai', 'Tianshun', 'Chenghua', 'Hongzhi', 'Zhengde', 'Jiajing', 'Longqing', 'Wanli', 'Taichang', 'Tianqi', 'Chongzhen'],
+      'Qing': ['Shunzhi', 'Kangxi', 'Yongzheng', 'Qianlong', 'Jiaqing', 'Daoguang', 'Xianfeng', 'Tongzhi', 'Guangxu', 'Xuantong']
+    };
+    vm.reignTitles = vm.reignTitleList[vm.enamel.dynasty];
 
     vm.error = null;
     vm.form = {};
@@ -33,6 +38,8 @@
     });
 
     vm.uploader.onBeforeUploadItem = onBeforeUploadItem;
+    vm.updateDynasty = updateDynasty;
+
     // Set file uploader image filter
     vm.uploader.filters.push({
       name: 'imageFilter',
@@ -41,6 +48,11 @@
         return '|jpg|png|jpeg|bmp|gif|'.indexOf(type) !== -1;
       }
     });
+
+    // update Dynasty
+    function updateDynasty(dynasty) {
+      vm.reignTitles = vm.reignTitleList[dynasty];
+    }
 
     // add enamel data
     function onBeforeUploadItem(item) {

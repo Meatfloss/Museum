@@ -39,7 +39,7 @@
 				<div class="form-group" show-errors>
 					<label class="control-label" for="nameZH">Chinese Name</label>
 					<input name="nameZH" type="text" ng-model="vm.teapot.nameZH" id="nameZH" class="form-control" placeholder="Chinese Name"
-						required>
+					 required>
 					<div ng-messages="vm.form.teapotForm.nameZH.$error" role="alert">
 						<p class="help-block error-text" ng-message="required">Chnese Teapot name is required.</p>
 					</div>
@@ -51,7 +51,7 @@
 				<div class="form-group" show-errors>
 					<label class="control-label" for="authorZH">Chinese Author</label>
 					<input name="authorZH" type="text" ng-model="vm.teapot.authorZH" id="authorZH" class="form-control" placeholder="Chinese Author"
-						required>
+					 required>
 				</div>
 				<div class="form-group" show-errors>
 					<label class="control-label" for="mark">Mark</label>
@@ -59,11 +59,16 @@
 				</div>
 				<div class="form-group" show-errors>
 					<label class="control-label" for="markZH">Chinese Mark</label>
-					<input name="markZH" type="text" ng-model="vm.teapot.markZH" id="markZH" class="form-control" placeholder="Chinese Mark" required>
+					<input name="markZH" type="text" ng-model="vm.teapot.markZH" id="markZH" class="form-control" placeholder="Chinese Mark"
+					 required>
 				</div>
 				<div class="form-group">
 					<label class="control-label" for="type">Dynasty</label>
-					<select name="type" id="type" class="form-control" ng-model="vm.teapot.dynasty" ng-options="dynasty for dynasty in vm.dynasties"></select>
+					<select name="dynasty" id="dynasty" class="form-control" ng-model="vm.teapot.dynasty" ng-options="dynasty for dynasty in vm.dynasties" ng-change="vm.updateDynasty(vm.teapot.dynasty)"></select>
+				</div>
+				<div class="form-group">
+					<label class="control-label" for="type">Reign Title</label>
+					<select name="reignTitle" id="reignTitle" class="form-control" ng-model="vm.teapot.reignTitle" ng-options="reignTitle for reignTitle in vm.reignTitles"></select>
 				</div>
 				<div class="form-group" show-errors>
 					<label class="control-label" for="height">Height(inch)</label>
@@ -75,12 +80,12 @@
 				<div class="form-group">
 					<label class="control-label" for="description">Description</label>
 					<textarea name="description" data-ng-model="vm.teapot.description" id="description" class="form-control" cols="30" rows="10"
-						placeholder="Description"></textarea>
+					 placeholder="Description"></textarea>
 				</div>
 				<div class="form-group">
 					<label class="control-label" for="descriptionZH">Chinese Description</label>
-					<textarea name="descriptionZH" data-ng-model="vm.teapot.descriptionZH" id="descriptionZH" class="form-control" cols="30" rows="10"
-						placeholder="Chinese Description"></textarea>
+					<textarea name="descriptionZH" data-ng-model="vm.teapot.descriptionZH" id="descriptionZH" class="form-control" cols="30"
+					 rows="10" placeholder="Chinese Description"></textarea>
 				</div>
 				<div class="form-group">
 					<button type="submit" class="btn btn-default">{{vm.teapot._id ? 'Update' : 'Create'}}</button>

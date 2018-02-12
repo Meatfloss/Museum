@@ -56,6 +56,7 @@ exports.update = function (req, res) {
   famille.botDiameter = req.body.botDiameter;
   famille.height = req.body.height;
   famille.dynasty = req.body.dynasty;
+  famille.reignTitle = req.body.reignTitle;
 
   famille.save(function (err) {
     if (err) {

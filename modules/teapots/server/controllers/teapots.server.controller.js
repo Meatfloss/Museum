@@ -58,6 +58,7 @@ exports.update = function (req, res) {
   teapot.markZH = req.body.markZH;
   teapot.height = req.body.height;
   teapot.dynasty = req.body.dynasty;
+  teapot.reignTitle = req.body.reignTitle;
 
   teapot.save(function (err) {
     if (err) {

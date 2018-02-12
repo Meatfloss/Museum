@@ -23,10 +23,10 @@
 				</ul>
 				<a ng-switch-default ui-sref="{{item.state}}" translate="{{item.title}}"></a>
 			</li>
-			<li>
+			<li ng-if='isEnglish()'>
 				<a ng-click="changeLanguage('zh')" translate="BUTTON_LANG_ZH"></a>
 			</li>
-			<li>
+			<li ng-if='!isEnglish()'>
 				<a ng-click="changeLanguage('en')" translate="BUTTON_LANG_EN"></a>
 			</li>
 

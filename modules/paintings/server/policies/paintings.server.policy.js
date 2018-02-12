@@ -20,6 +20,9 @@ exports.invokeRolesPolicies = function () {
     }, {
       resources: '/api/paintings/:paintingId',
       permissions: '*'
+    }, {
+      resources: '/api/paintings/byauthor/:authorId',
+      permissions: ['get']
     }]
   }, {
     roles: ['user'],
@@ -29,6 +32,9 @@ exports.invokeRolesPolicies = function () {
     }, {
       resources: '/api/paintings/:paintingId',
       permissions: ['get']
+    }, {
+      resources: '/api/paintings/byauthor/:authorId',
+      permissions: ['get']
     }]
   }, {
     roles: ['guest'],
@@ -37,6 +43,9 @@ exports.invokeRolesPolicies = function () {
       permissions: ['get']
     }, {
       resources: '/api/paintings/:paintingId',
+      permissions: ['get']
+    }, {
+      resources: '/api/paintings/byauthor/:authorId',
       permissions: ['get']
     }]
   }]);

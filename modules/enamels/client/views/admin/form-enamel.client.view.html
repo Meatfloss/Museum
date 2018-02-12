@@ -38,14 +38,19 @@
 				</div>
 				<div class="form-group" show-errors>
 					<label class="control-label" for="nameZH">Chinese Name</label>
-					<input name="nameZH" type="text" ng-model="vm.enamel.nameZH" id="nameZH" class="form-control" placeholder="Chinese Name" required>
+					<input name="nameZH" type="text" ng-model="vm.enamel.nameZH" id="nameZH" class="form-control" placeholder="Chinese Name"
+					 required>
 					<div ng-messages="vm.form.enamelForm.nameZH.$error" role="alert">
 						<p class="help-block error-text" ng-message="required">Enamel Chinese name is required.</p>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="control-label" for="type">Dynasty</label>
-					<select name="type" id="type" class="form-control" ng-model="vm.enamel.dynasty" ng-options="dynasty for dynasty in vm.dynasties"></select>
+					<select name="dynasty" id="dynasty" class="form-control" ng-model="vm.enamel.dynasty" ng-options="dynasty for dynasty in vm.dynasties" ng-change="vm.updateDynasty(vm.enamel.dynasty)"></select>
+				</div>
+				<div class="form-group">
+					<label class="control-label" for="type">Reign Title</label>
+					<select name="reignTitle" id="reignTitle" class="form-control" ng-model="vm.enamel.reignTitle" ng-options="reignTitle for reignTitle in vm.reignTitles"></select>
 				</div>
 				<div class="form-group" show-errors>
 					<label class="control-label" for="topDiameter">Top Diameter(inch)</label>
@@ -71,12 +76,12 @@
 				<div class="form-group">
 					<label class="control-label" for="description">Description</label>
 					<textarea name="description" data-ng-model="vm.enamel.description" id="description" class="form-control" cols="30" rows="10"
-						placeholder="Description"></textarea>
+					 placeholder="Description"></textarea>
 				</div>
 				<div class="form-group">
 					<label class="control-label" for="descriptionZH">Chinese Description</label>
-					<textarea name="descriptionZH" data-ng-model="vm.enamel.descriptionZH" id="descriptionZH" class="form-control" cols="30" rows="10"
-						placeholder="Chinese Description"></textarea>
+					<textarea name="descriptionZH" data-ng-model="vm.enamel.descriptionZH" id="descriptionZH" class="form-control" cols="30"
+					 rows="10" placeholder="Chinese Description"></textarea>
 				</div>
 				<div class="form-group">
 					<button type="submit" class="btn btn-default">{{vm.enamel._id ? 'Update' : 'Create'}}</button>
