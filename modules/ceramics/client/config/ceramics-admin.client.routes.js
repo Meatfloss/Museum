@@ -17,7 +17,7 @@
       .state('admin.ceramics.list', {
         url: '',
         templateUrl: 'modules/ceramics/client/views/admin/list-ceramics.client.view.html',
-        controller: 'CeramicsListController',
+        controller: 'CeramicsAdminListController',
         controllerAs: 'vm',
         resolve: {
           ceramicListResolve: getCeramicList
@@ -50,6 +50,18 @@
         resolve: {
           ceramicResolve: getCeramic,
           dynastyResolve: getDynasties
+        }
+      })
+      .state('admin.ceramics.list-with-param', {
+        url: '/:dynasty/:category',
+        templateUrl: 'modules/ceramics/client/views/admin/list-ceramics.client.view.html',
+        controller: 'CeramicsAdminListController',
+        controllerAs: 'vm',
+        resolve: {
+          ceramicListResolve: getCeramicList
+        },
+        data: {
+          pageTitle: 'Ceramics List'
         }
       });
   }

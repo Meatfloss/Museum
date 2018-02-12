@@ -3,7 +3,7 @@
 
   angular
     .module('ceramics.admin')
-    .controller('CeramicsAdminListController', CeramicsListController);
+    .controller('CeramicsListController', CeramicsListController);
 
   CeramicsListController.$inject = ['$filter', '$state', '$stateParams', 'CeramicsService', 'ceramicListResolve'];
 
@@ -78,10 +78,10 @@
         var filter = {};
         filter.dynasty = vm.selectedDynasty.toLowerCase();
         filter.category = 'all';
-        $state.go('admin.ceramics.list-with-param', filter);
+        $state.go('ceramics.list-with-param', filter);
         return;
       }
-      $state.go('admin.ceramics.list');
+      $state.go('ceramics.list');
 
     };
 
@@ -90,10 +90,10 @@
         var filter = {};
         filter.dynasty = vm.selectedDynasty.toLowerCase();
         filter.category = vm.selectedCategory.toLowerCase();
-        $state.go('admin.ceramics.list-with-param', filter);
+        $state.go('ceramics.list-with-param', filter);
         return;
       }
-      $state.go('admin.ceramics.list');
+      $state.go('ceramics.list');
     };
   }
 }());
