@@ -59,11 +59,11 @@
     });
 
     // Add the dropdown list item
-    menuService.addSubMenuItem('topbar', 'collections', {
-      title: 'Chai Yao Porcelain',
-      state: 'cporcelains.list',
-      roles: ['*']
-    });
+    // menuService.addSubMenuItem('topbar', 'collections', {
+    //   title: 'Chai Yao Porcelain',
+    //   state: 'cporcelains.list',
+    //   roles: ['*']
+    // });
 
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'collections', {
