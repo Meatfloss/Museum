@@ -155,11 +155,14 @@ exports.filteredList = function (req, res) {
   var filter = {};
   var dyanstyFilter = {};
   if (req.params.dynasty && req.params.dynasty !== 'all') {
-    filter.dynasty = { $regex: new RegExp(req.params.dynasty, 'i') };
-    dyanstyFilter.dynasty = { $regex: new RegExp(req.params.dynasty, 'i') };
+    // filter.dynasty = { $regex: new RegExp(req.params.dynasty, 'i') };
+    // dyanstyFilter.dynasty = { $regex: new RegExp(req.params.dynasty, 'i') };
+    filter.dynasty = req.params.dynasty;
+    dyanstyFilter.dynasty = req.params.dynasty;
   }
   if (req.params.category && req.params.category !== 'all') {
-    filter.category = { $regex: new RegExp(req.params.category, 'i') };
+    // filter.category = { $regex: new RegExp(req.params.category, 'i') };
+    filter.category = req.params.category;
   }
   var result = {};
   Ceramic.find(filter).sort('-created').exec()
@@ -181,7 +184,6 @@ exports.filteredList = function (req, res) {
       });
     });
 };
-
 
 /**
  * Ceramic middleware

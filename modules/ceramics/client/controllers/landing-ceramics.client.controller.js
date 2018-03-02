@@ -19,7 +19,7 @@
     vm.linkToList = function (dynasty) {
       if (!dynasty.categories) {
         var filter = {};
-        filter.dynasty = dynasty.name.toLowerCase();
+        filter.dynasty = dynasty.name;
         filter.category = 'all';
         $state.go('ceramics.list-with-param', filter);
       }

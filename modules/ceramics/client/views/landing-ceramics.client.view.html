@@ -16,7 +16,7 @@
 
         <ul class="list-group" ng-show='dynasty.show'>
           <li ng-repeat='c in dynasty.categories' class="list-group-item">
-            <a data-ui-sref="ceramics.list-with-param({dynasty: dynasty.name.toLowerCase(), category: c.toLowerCase()})">
+            <a data-ui-sref="ceramics.list-with-param({dynasty: dynasty.name, category: c})">
               <span>{{c |translate}}</span>
             </a>
           </li>

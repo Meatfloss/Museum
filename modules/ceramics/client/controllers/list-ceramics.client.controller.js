@@ -24,7 +24,7 @@
         vm.selectedDynasty = 'All';
       } else {
         for (var j = 0; j < ceramics.metaData.dynastyList.length; j++) {
-          if (vm.selectedDynasty === ceramics.metaData.dynastyList[j].toLowerCase()) {
+          if (vm.selectedDynasty === ceramics.metaData.dynastyList[j]) {
             vm.selectedDynasty = ceramics.metaData.dynastyList[j];
             break;
           }
@@ -40,7 +40,7 @@
         vm.selectedCategory = 'All';
       } else {
         for (var i = 0; i < ceramics.metaData.categoryList.length; i++) {
-          if (vm.selectedCategory === ceramics.metaData.categoryList[i].toLowerCase()) {
+          if (vm.selectedCategory === ceramics.metaData.categoryList[i]) {
             vm.selectedCategory = ceramics.metaData.categoryList[i];
             break;
           }
@@ -76,7 +76,7 @@
     vm.updateForDynasty = function () {
       if (vm.selectedDynasty !== 'All' || vm.selectedCategory !== 'All') {
         var filter = {};
-        filter.dynasty = vm.selectedDynasty.toLowerCase();
+        filter.dynasty = vm.selectedDynasty;
         filter.category = 'all';
         $state.go('ceramics.list-with-param', filter);
         return;
@@ -88,8 +88,8 @@
     vm.updateForCategory = function () {
       if (vm.selectedDynasty !== 'All' || vm.selectedCategory !== 'All') {
         var filter = {};
-        filter.dynasty = vm.selectedDynasty.toLowerCase();
-        filter.category = vm.selectedCategory.toLowerCase();
+        filter.dynasty = vm.selectedDynasty;
+        filter.category = vm.selectedCategory;
         $state.go('ceramics.list-with-param', filter);
         return;
       }
