@@ -132,7 +132,7 @@
       'Ru Yao': '汝窑',
       'Guan Yao': '官窑',
       'Ge Yao': '哥窑',
-      'Jun Yao': '均窑',
+      'Jun Yao': '钧窑',
       'Longquan Yao': '龙泉窑',
       'Yingqing Yao': '影青窑',
       'Jizhou Yao': '吉州窑',
