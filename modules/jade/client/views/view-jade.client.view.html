@@ -1,0 +1,82 @@
+<section class="item-view">
+	<div class="page-header">
+		<h1 translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.jade.name}}" translate-value-namezh="{{vm.jade.nameZH}}"></h1>
+	</div>
+	<div class="text-center">
+		<img class="img-responsive" src="{{vm.jade.imageURL}}" alt="{{vm.jade.name}}">
+	</div>
+	<br />
+	<div class="img-responsive row lead">
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2">
+				<strong translate="Name"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8">
+				<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.jade.name}}" translate-value-namezh="{{vm.jade.nameZH}}"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.jade.dynasty">
+				<strong translate="Dynasty"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.jade.dynasty && vm.jade.reignTitle">
+				<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.jade.reignTitle}} {{vm.jade.dynasty}}"
+				 translate-value-namezh="{{vm.jade.dynasty | translate}} {{vm.jade.reignTitle | translate}}"></span>
+			</div>
+			<div class="col-xs-8" ng-if="vm.jade.dynasty && !vm.jade.reignTitle">
+				<span translate="{{vm.jade.dynasty}}"></span>&nbsp;
+				<span translate="{{vm.jade.reignTitle}}"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.jade.topDiameter">
+				<strong translate="Top Diameter"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.jade.topDiameter">
+				<span>{{vm.jade.topDiameter * 2.54 | number:1}}&nbsp;cm</span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.jade.botDiameter">
+				<strong translate="Bottom Diameter"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.jade.botDiameter">
+				<span>{{vm.jade.botDiameter * 2.54 | number:1}}&nbsp;cm</span>
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.jade.length">
+				<strong translate="Length"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.jade.length">
+				<span>{{vm.jade.length * 2.54 | number:1}}&nbsp;cm</span>
+			</div>
+		</div>
+		<div class="row">
+				<div class="col-xs-2 col-xs-offset-2" ng-if="vm.jade.width">
+					<strong translate="Width"></strong><strong>:</strong>
+				</div>
+				<div class="col-xs-8" ng-if="vm.jade.width">
+					<span>{{vm.jade.width * 2.54 | number:1}}&nbsp;cm</span>
+				</div>
+			</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.jade.height">
+				<strong translate="Height"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.jade.height">
+				<span>{{vm.jade.height * 2.54 | number:1}}&nbsp;cm</span>
+			</div>
+		</div>
+		<div class="row" ng-if="vm.jade.description || vm.jade.descriptionZH">
+			<div class="col-xs-2 col-xs-offset-2">
+				<strong translate="Description"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8">
+				<span class="newline-display" translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.jade.description}}" translate-value-namezh="{{vm.jade.descriptionZH}}"></span>
+			</div>
+		</div>
+	</div>
+
+</section>
