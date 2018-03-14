@@ -84,7 +84,7 @@
     }).$promise;
   }
 
-  getDynasties.$inject = ['$stateParams', 'DynastyService'];
+  getDynasties.$inject = ['$stateParams', 'CeramicDynastyService'];
   function getDynasties($stateParams, CeramicsService) {
     return CeramicsService;
   }

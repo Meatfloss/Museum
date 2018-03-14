@@ -84,7 +84,7 @@
     }).$promise;
   }
 
-  getDynasties.$inject = ['$stateParams', 'DynastyService'];
+  getDynasties.$inject = ['$stateParams', 'JadeDynastyService'];
   function getDynasties($stateParams, JadeService) {
     return JadeService;
   }
