@@ -196,7 +196,7 @@
       title: 'Crystal Collection',
       state: 'crystal.list',
       roles: ['*']
-    });  
+    });
 
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'collections', {
@@ -211,13 +211,13 @@
       state: 'snuff.list',
       roles: ['*']
     });
-    
+
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'collections', {
       title: 'Four Treasures',
       state: 'fourtreasure.list',
       roles: ['*']
-    });    
+    });
 
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'collections', {
@@ -225,12 +225,12 @@
       state: 'currency.list',
       roles: ['*']
     });
-    
+
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'collections', {
       title: 'Buddha Sculptures',
       state: 'buddha.list',
       roles: ['*']
-    });    
+    });
   }
 }());
