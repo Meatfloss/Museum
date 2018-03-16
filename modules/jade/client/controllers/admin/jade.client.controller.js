@@ -29,7 +29,7 @@
     vm.cancelUpload = cancelUpload;
     // Create file uploader instance
     vm.uploader = new FileUploader({
-      url: 'api/jade/picture',
+      url: 'api/jadeItem/picture',
       alias: 'newPicture',
       jade: vm.jade,
       onAfterAddingFile: onAfterAddingFile,
