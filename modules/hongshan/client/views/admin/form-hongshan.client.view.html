@@ -43,10 +43,10 @@
             <p class="help-block error-text" ng-message="required">Hongshan Chinese name is required.</p>
           </div>
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
           <label class="control-label" for="type">Hongshan Type</label>
           <select name="type" id="type" class="form-control" ng-model="vm.hongshan.type" ng-options="type for type in vm.types"></select>
-        </div>
+        </div> -->
         <div class="form-group">
           <label class="control-label" for="type">Dynasty</label>
           <select name="type" id="type" class="form-control" ng-model="vm.hongshan.dynasty" ng-options="dynasty for dynasty in vm.dynasties"></select>
@@ -56,6 +56,13 @@
           <input name="length" type="number" ng-model="vm.hongshan.length" id="length" class="form-control" min="0">
           <div ng-messages="vm.form.hongshanForm.length.$error" role="alert">
             <p class="help-block error-text" ng-message="min number">Please put in valid length</p>
+          </div>
+        </div>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="width">Weight(g)</label>
+          <input name="weight" type="number" ng-model="vm.hongshan.weight" id="weight" class="form-control" min="0">
+          <div ng-messages="vm.form.hongshanForm.weight.$error" role="alert">
+            <p class="help-block error-text" ng-message="min number">Please put in valid weight</p>
           </div>
         </div>
         <div class="form-group" show-errors>

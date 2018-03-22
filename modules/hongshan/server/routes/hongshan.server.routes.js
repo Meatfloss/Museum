@@ -21,6 +21,6 @@ module.exports = function (app) {
   // Finish by binding the hongshan middleware
   app.param('hongshanId', hongshan.hongshanByID);
 
-  app.route('/api/hongshan/picture')
+  app.route('/api/hongshanItem/picture')
   .post(hongshan.changePicture);
 };

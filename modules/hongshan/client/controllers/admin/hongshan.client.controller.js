@@ -26,7 +26,7 @@
     vm.cancelUpload = cancelUpload;
     // Create file uploader instance
     vm.uploader = new FileUploader({
-      url: 'api/hongshan/picture',
+      url: 'api/hongshanItem/picture',
       alias: 'newPicture',
       hongshan: vm.hongshan,
       onAfterAddingFile: onAfterAddingFile,

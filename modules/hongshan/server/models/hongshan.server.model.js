@@ -36,6 +36,10 @@ var HongshanSchema = new Schema({
     type: Number,
     trim: true
   },
+  weight: {
+    type: Number,
+    trim: true
+  },
   width: {
     type: Number,
     trim: true
