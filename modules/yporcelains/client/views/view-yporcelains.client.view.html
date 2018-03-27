@@ -1,9 +1,9 @@
 <section class="item-view">
 	<div class="page-header">
-		<h1 translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.jade.name}}" translate-value-namezh="{{vm.jade.nameZH}}"></h1>
+		<h1 translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.yporcelains.name}}" translate-value-namezh="{{vm.yporcelains.nameZH}}"></h1>
 	</div>
 	<div class="text-center">
-		<img class="img-responsive" src="{{vm.jade.imageURL}}" alt="{{vm.jade.name}}">
+		<img class="img-responsive" src="{{vm.yporcelains.imageURL}}" alt="{{vm.yporcelains.name}}">
 	</div>
 	<br />
 	<div class="img-responsive row lead">
@@ -12,69 +12,69 @@
 				<strong translate="Name"></strong><strong>:</strong>
 			</div>
 			<div class="col-xs-8">
-				<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.jade.name}}" translate-value-namezh="{{vm.jade.nameZH}}"></span>
+				<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.yporcelains.name}}" translate-value-namezh="{{vm.yporcelains.nameZH}}"></span>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.jade.dynasty">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.yporcelains.dynasty">
 				<strong translate="Dynasty"></strong><strong>:</strong>
 			</div>
-			<div class="col-xs-8" ng-if="vm.jade.dynasty && vm.jade.reignTitle">
-				<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.jade.reignTitle}} {{vm.jade.dynasty}}"
-				 translate-value-namezh="{{vm.jade.dynasty | translate}} {{vm.jade.reignTitle | translate}}"></span>
+			<div class="col-xs-8" ng-if="vm.yporcelains.dynasty && vm.yporcelains.reignTitle">
+				<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.yporcelains.reignTitle}} {{vm.yporcelains.dynasty}}"
+				 translate-value-namezh="{{vm.yporcelains.dynasty | translate}} {{vm.yporcelains.reignTitle | translate}}"></span>
 			</div>
-			<div class="col-xs-8" ng-if="vm.jade.dynasty && !vm.jade.reignTitle">
-				<span translate="{{vm.jade.dynasty}}"></span>&nbsp;
-				<span translate="{{vm.jade.reignTitle}}"></span>
+			<div class="col-xs-8" ng-if="vm.yporcelains.dynasty && !vm.yporcelains.reignTitle">
+				<span translate="{{vm.yporcelains.dynasty}}"></span>&nbsp;
+				<span translate="{{vm.yporcelains.reignTitle}}"></span>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.jade.topDiameter">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.yporcelains.topDiameter">
 				<strong translate="Top Diameter"></strong><strong>:</strong>
 			</div>
-			<div class="col-xs-8" ng-if="vm.jade.topDiameter">
-				<span>{{vm.jade.topDiameter * 2.54 | number:1}}&nbsp;cm</span>
+			<div class="col-xs-8" ng-if="vm.yporcelains.topDiameter">
+				<span>{{vm.yporcelains.topDiameter * 2.54 | number:1}}&nbsp;cm</span>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.jade.botDiameter">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.yporcelains.botDiameter">
 				<strong translate="Bottom Diameter"></strong><strong>:</strong>
 			</div>
-			<div class="col-xs-8" ng-if="vm.jade.botDiameter">
-				<span>{{vm.jade.botDiameter * 2.54 | number:1}}&nbsp;cm</span>
+			<div class="col-xs-8" ng-if="vm.yporcelains.botDiameter">
+				<span>{{vm.yporcelains.botDiameter * 2.54 | number:1}}&nbsp;cm</span>
 
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.jade.length">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.yporcelains.length">
 				<strong translate="Length"></strong><strong>:</strong>
 			</div>
-			<div class="col-xs-8" ng-if="vm.jade.length">
-				<span>{{vm.jade.length * 2.54 | number:1}}&nbsp;cm</span>
+			<div class="col-xs-8" ng-if="vm.yporcelains.length">
+				<span>{{vm.yporcelains.length * 2.54 | number:1}}&nbsp;cm</span>
 			</div>
 		</div>
 		<div class="row">
-				<div class="col-xs-2 col-xs-offset-2" ng-if="vm.jade.width">
+				<div class="col-xs-2 col-xs-offset-2" ng-if="vm.yporcelains.width">
 					<strong translate="Width"></strong><strong>:</strong>
 				</div>
-				<div class="col-xs-8" ng-if="vm.jade.width">
-					<span>{{vm.jade.width * 2.54 | number:1}}&nbsp;cm</span>
+				<div class="col-xs-8" ng-if="vm.yporcelains.width">
+					<span>{{vm.yporcelains.width * 2.54 | number:1}}&nbsp;cm</span>
 				</div>
 			</div>
 		<div class="row">
-			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.jade.height">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.yporcelains.height">
 				<strong translate="Height"></strong><strong>:</strong>
 			</div>
-			<div class="col-xs-8" ng-if="vm.jade.height">
-				<span>{{vm.jade.height * 2.54 | number:1}}&nbsp;cm</span>
+			<div class="col-xs-8" ng-if="vm.yporcelains.height">
+				<span>{{vm.yporcelains.height * 2.54 | number:1}}&nbsp;cm</span>
 			</div>
 		</div>
-		<div class="row" ng-if="vm.jade.description || vm.jade.descriptionZH">
+		<div class="row" ng-if="vm.yporcelains.description || vm.yporcelains.descriptionZH">
 			<div class="col-xs-2 col-xs-offset-2">
 				<strong translate="Description"></strong><strong>:</strong>
 			</div>
 			<div class="col-xs-8">
-				<span class="newline-display" translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.jade.description}}" translate-value-namezh="{{vm.jade.descriptionZH}}"></span>
+				<span class="newline-display" translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.yporcelains.description}}" translate-value-namezh="{{vm.yporcelains.descriptionZH}}"></span>
 			</div>
 		</div>
 	</div>

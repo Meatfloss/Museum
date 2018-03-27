@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('jade')
+    .module('yporcelains')
     .run(menuConfig);
 
   menuConfig.$inject = ['menuService'];

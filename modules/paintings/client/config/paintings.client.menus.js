@@ -88,7 +88,7 @@
 
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'collections', {
-      title: 'Ancient Jade Collection',
+      title: 'Ancient Jade',
       state: 'jade.landing',
       roles: ['*']
     });
