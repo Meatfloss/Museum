@@ -10,7 +10,7 @@
 
   function menuConfig(Menus) {
     Menus.addSubMenuItem('topbar', 'admin', {
-      title: 'Manage Ming Dynasty Porcelains',
+      title: 'Manage Ming Dynasty Porcelain',
       state: 'admin.mporcelains.list'
     });
   }

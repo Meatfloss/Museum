@@ -61,7 +61,7 @@
           mporcelainsListResolve: getMporcelainsList
         },
         data: {
-          pageTitle: 'Ming Dynasty Porcelains'
+          pageTitle: 'Ming Dynasty Porcelain'
         }
       });
   }

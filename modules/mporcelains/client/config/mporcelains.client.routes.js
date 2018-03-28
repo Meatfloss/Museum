@@ -23,7 +23,7 @@
           dynastyResolve: getDynasties
         },
         data: {
-          pageTitle: 'Ming Dynasty Porcelains List'
+          pageTitle: 'Ming Dynasty Porcelain List'
         }
       })
       .state('mporcelains.list', {
@@ -35,7 +35,7 @@
           mporcelainsListResolve: getMporcelainsList
         },
         data: {
-          pageTitle: 'Ming Dynasty Porcelains List'
+          pageTitle: 'Ming Dynasty Porcelain List'
         }
       })
       .state('mporcelains.list-with-param', {
@@ -47,7 +47,7 @@
           mporcelainsListResolve: getMporcelainsList
         },
         data: {
-          pageTitle: 'Ming Dynasty Porcelains List'
+          pageTitle: 'Ming Dynasty Porcelain List'
         }
       })
       .state('mporcelains.view', {
