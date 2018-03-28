@@ -75,14 +75,14 @@
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'collections', {
       title: 'Ming Dynasty Porcelain',
-      state: 'mporcelains.list',
+      state: 'mporcelains.landing',
       roles: ['*']
     });
 
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'collections', {
       title: 'Qing Dynasty Porcelain',
-      state: 'qporcelains.list',
+      state: 'qporcelains.landing',
       roles: ['*']
     });
 
