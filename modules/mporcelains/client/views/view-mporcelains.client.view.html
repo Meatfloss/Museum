@@ -1,0 +1,82 @@
+<section class="item-view">
+	<div class="page-header">
+		<h1 translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.mporcelains.name}}" translate-value-namezh="{{vm.mporcelains.nameZH}}"></h1>
+	</div>
+	<div class="text-center">
+		<img class="img-responsive" src="{{vm.mporcelains.imageURL}}" alt="{{vm.mporcelains.name}}">
+	</div>
+	<br />
+	<div class="img-responsive row lead">
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2">
+				<strong translate="Name"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8">
+				<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.mporcelains.name}}" translate-value-namezh="{{vm.mporcelains.nameZH}}"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.mporcelains.dynasty">
+				<strong translate="Dynasty"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.mporcelains.dynasty && vm.mporcelains.reignTitle">
+				<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.mporcelains.reignTitle}} {{vm.mporcelains.dynasty}}"
+				 translate-value-namezh="{{vm.mporcelains.dynasty | translate}} {{vm.mporcelains.reignTitle | translate}}"></span>
+			</div>
+			<div class="col-xs-8" ng-if="vm.mporcelains.dynasty && !vm.mporcelains.reignTitle">
+				<span translate="{{vm.mporcelains.dynasty}}"></span>&nbsp;
+				<span translate="{{vm.mporcelains.reignTitle}}"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.mporcelains.topDiameter">
+				<strong translate="Top Diameter"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.mporcelains.topDiameter">
+				<span>{{vm.mporcelains.topDiameter * 2.54 | number:1}}&nbsp;cm</span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.mporcelains.botDiameter">
+				<strong translate="Bottom Diameter"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.mporcelains.botDiameter">
+				<span>{{vm.mporcelains.botDiameter * 2.54 | number:1}}&nbsp;cm</span>
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.mporcelains.length">
+				<strong translate="Length"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.mporcelains.length">
+				<span>{{vm.mporcelains.length * 2.54 | number:1}}&nbsp;cm</span>
+			</div>
+		</div>
+		<div class="row">
+				<div class="col-xs-2 col-xs-offset-2" ng-if="vm.mporcelains.width">
+					<strong translate="Width"></strong><strong>:</strong>
+				</div>
+				<div class="col-xs-8" ng-if="vm.mporcelains.width">
+					<span>{{vm.mporcelains.width * 2.54 | number:1}}&nbsp;cm</span>
+				</div>
+			</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.mporcelains.height">
+				<strong translate="Height"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.mporcelains.height">
+				<span>{{vm.mporcelains.height * 2.54 | number:1}}&nbsp;cm</span>
+			</div>
+		</div>
+		<div class="row" ng-if="vm.mporcelains.description || vm.mporcelains.descriptionZH">
+			<div class="col-xs-2 col-xs-offset-2">
+				<strong translate="Description"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8">
+				<span class="newline-display" translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.mporcelains.description}}" translate-value-namezh="{{vm.mporcelains.descriptionZH}}"></span>
+			</div>
+		</div>
+	</div>
+
+</section>

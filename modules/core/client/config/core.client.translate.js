@@ -150,7 +150,7 @@
       'Yuan Dynasty Porcelain': '元朝瓷器',
       'Ming Dynasty Porcelain': '明朝瓷器',
       'Qing Dynasty Porcelain': '清朝瓷器',
-      'Ancient Jade Collection': '古玉珍藏',
+      'Ancient Jade': '古玉珍藏',
       'Neolithic Age': '新石器时代',
       'Zhou Dynasty': '周',
       'Spring & Autumn Period': '春秋',

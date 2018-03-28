@@ -1,0 +1,109 @@
+<section class="item-view">
+	<div class="page-header">
+		<h1>{{vm.mporcelains._id ? 'Edit Mporcelains' : 'New Mporcelains'}}
+			<a class="btn btn-primary pull-right" ng-click="vm.remove()">
+				<i class="glyphicon glyphicon-trash"></i>
+			</a>
+		</h1>
+	</div>
+	<div class="col-md-12">
+		<form name="vm.form.mporcelainsForm" class="form-horizontal" ng-submit="vm.save(vm.form.mporcelainsForm.$valid)" novalidate>
+			<fieldset>
+				<div class="form-group text-center">
+					<img ng-src="{{vm.imageURL}}" alt="{{vm.mporcelains.name}}" class="img-responsive">
+				</div>
+				<div class="text-center form-group" ng-hide="vm.uploader.queue.length">
+					<span class="btn btn-default btn-file">
+              Select Image <input type="file" nv-file-select uploader="vm.uploader">
+          </span>
+				</div>
+				<div class="text-center form-group" ng-show="vm.uploader.queue.length">
+					<button class="btn btn-primary" ng-click="vm.uploadProfilePicture();">Upload</button>
+					<button class="btn btn-default" ng-click="vm.cancelUpload();">Cancel</button>
+				</div>
+				<div ng-show="vm.success" class="text-center text-success">
+					<strong>Profile Picture Changed Successfully</strong>
+				</div>
+				<div ng-show="vm.error" class="text-center text-danger">
+					<strong ng-bind="vm.error"></strong>
+				</div>
+
+
+				<div class="form-group" show-errors>
+					<label class="control-label" for="name">Name</label>
+					<input name="name" type="text" ng-model="vm.mporcelains.name" id="name" class="form-control" placeholder="Name" required>
+					<div ng-messages="vm.form.mporcelainsForm.name.$error" role="alert">
+						<p class="help-block error-text" ng-message="required">Mporcelains name is required.</p>
+					</div>
+				</div>
+				<div class="form-group" show-errors>
+					<label class="control-label" for="nameZH">Chinese Name</label>
+					<input name="nameZH" type="text" ng-model="vm.mporcelains.nameZH" id="nameZH" class="form-control" placeholder="Chinese Name"
+					 required>
+					<div ng-messages="vm.form.mporcelainsForm.nameZH.$error" role="alert">
+						<p class="help-block error-text" ng-message="required">Mporcelains Chinese name is required.</p>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label" for="type">Dynasty</label>
+					<select name="dynasty" id="dynasty" class="form-control" ng-model="vm.mporcelains.dynasty" ng-options="dynasty for dynasty in vm.dynasties" ng-change="vm.updateDynasty(vm.mporcelains.dynasty)"></select>
+				</div>
+				<div class="form-group">
+					<label class="control-label" for="type">Category</label>
+					<select name="category" id="category" class="form-control" ng-model="vm.mporcelains.category" ng-options="category for category in vm.categories"></select>
+				</div>
+				<div class="form-group" show-errors>
+					<label class="control-label" for="topDiameter">Top Diameter (inch)</label>
+					<input name="topDiameter" type="number" ng-model="vm.mporcelains.topDiameter" id="topDiameter" class="form-control" min="0">
+					<div ng-messages="vm.form.mporcelainsForm.topDiameter.$error" role="alert">
+						<p class="help-block error-text" ng-message="min number">Please put in valid top diameter</p>
+					</div>
+				</div>
+				<div class="form-group" show-errors>
+					<label class="control-label" for="botDiameter">Bottom Diameter (inch)</label>
+					<input name="botDiameter" type="number" ng-model="vm.mporcelains.botDiameter" id="botDiameter" class="form-control" min="0">
+					<div ng-messages="vm.form.mporcelainsForm.botDiameter.$error" role="alert">
+						<p class="help-block error-text" ng-message="min number">Please put in valid bottom diameter</p>
+					</div>
+				</div>
+				<div class="form-group" show-errors>
+						<label class="control-label" for="length">Length (inch)</label>
+						<input name="length" type="number" ng-model="vm.mporcelains.length" id="length" class="form-control" min="0">
+						<div ng-messages="vm.form.mporcelainsForm.length.$error" role="alert">
+							<p class="help-block error-text" ng-message="min number">Please put in valid length</p>
+						</div>
+				</div>
+				<div class="form-group" show-errors>
+					<label class="control-label" for="width">Width (inch)</label>
+					<input name="width" type="number" ng-model="vm.mporcelains.width" id="width" class="form-control" min="0">
+					<div ng-messages="vm.form.mporcelainsForm.width.$error" role="alert">
+						<p class="help-block error-text" ng-message="min number">Please put in valid width</p>
+					</div>
+				</div>
+				<div class="form-group" show-errors>
+						<label class="control-label" for="height">Height (inch)</label>
+						<input name="height" type="number" ng-model="vm.mporcelains.height" id="height" class="form-control" min="0">
+						<div ng-messages="vm.form.mporcelainsForm.height.$error" role="alert">
+							<p class="help-block error-text" ng-message="min number">Please put in valid height</p>
+						</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label" for="description">Description</label>
+					<textarea name="description" data-ng-model="vm.mporcelains.description" id="description" class="form-control" cols="30" rows="10"
+					 placeholder="Description"></textarea>
+				</div>
+				<div class="form-group">
+					<label class="control-label" for="descriptionZH">Chinese Description</label>
+					<textarea name="descriptionZH" data-ng-model="vm.mporcelains.descriptionZH" id="descriptionZH" class="form-control" cols="30"
+					 rows="10" placeholder="Chinese Description"></textarea>
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn btn-default">{{vm.mporcelains._id ? 'Update' : 'Create'}}</button>
+				</div>
+				<div ng-show="vm.error" class="text-danger">
+					<strong ng-bind="vm.error"></strong>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+</section>
