@@ -25,6 +25,6 @@ module.exports = function (app) {
   // Finish by binding the mporcelains middleware
   app.param('mporcelainsId', mporcelains.mporcelainsByID);
 
-  app.route('/api/mporcelains/picture')
+  app.route('/api/mporcelainsItem/picture')
     .post(mporcelains.changePicture);
 };

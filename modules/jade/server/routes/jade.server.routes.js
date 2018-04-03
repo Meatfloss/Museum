@@ -25,6 +25,6 @@ module.exports = function (app) {
   // Finish by binding the jade middleware
   app.param('jadeId', jade.jadeByID);
 
-  app.route('/api/jade/picture')
+  app.route('/api/jadeItem/picture')
     .post(jade.changePicture);
 };

@@ -55,6 +55,7 @@
       'Sign In': '登录',
       'Sign Out': '登出',
       'Dynasty': '朝代',
+      'Reign': '年号',      
       'Type': '种类',
       'Width': '宽度',
       'Height': '高度',

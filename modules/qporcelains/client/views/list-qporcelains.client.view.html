@@ -1,0 +1,42 @@
+<section class="grid-view">
+	<div class="page-header">
+		<h2 translate="Qing Dynasty Porcelain"></h2>
+	</div>
+	<div class="row filter">
+		<div class="col-sm-4 col-xs-12">
+			<input type="text" class="form-control" placeholder="Search name..." ng-model="vm.search" ng-change="vm.figureOutItemsToDisplay()">
+		</div>
+		<div class="col-sm-4 col-xs-12">
+			<div class="input-group">
+				<span class="input-group-addon" translate="Reign"></span>
+				<select class="form-control" ng-model="vm.selectedDynasty" ng-change="vm.updateForDynasty()" ng-options="x | translate for x in vm.dynastyList"></select>
+			</div>
+		</div>
+		<!-- <div class="col-sm-4 col-xs-12">
+			<div class="input-group">
+				<span class="input-group-addon" translate="Category"></span>
+				<select class="form-control" ng-model="vm.selectedCategory" ng-change="vm.updateForCategory()" ng-options="x | translate for x in vm.categoryList"></select>
+			</div>
+		</div> -->
+	</div>
+	<div class="row">
+		<div class="col-md-2 col-sm-4 col-xs-6" data-ng-repeat="qporcelains in vm.pagedItems">
+			<a data-ui-sref="qporcelains.view({qporcelainsId: qporcelains._id})" class="list-group-item">
+				<div class="list-image img-responsive">
+					<img ng-src="{{qporcelains.imageURL}}" class="img-thumbnail" />
+				</div>
+				<div class="oneline-text text-center">
+					<strong>
+					<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{qporcelains.name}}" translate-value-namezh="{{qporcelains.nameZH}}"></span>
+				</strong>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div class="alert alert-warning text-center" data-ng-if="qporcelains.$resolved && !qporcelains.length">
+		No qporcelains found, please try to other filters.
+	</div>
+	<uib-pagination previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;" boundary-links="true"
+		max-size="8" items-per-page="vm.itemsPerPage" total-items="vm.filterLength" ng-model="vm.currentPage" ng-change="vm.pageChanged()"></uib-pagination>
+</section>
