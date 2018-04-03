@@ -29,7 +29,7 @@
     vm.cancelUpload = cancelUpload;
     // Create file uploader instance
     vm.uploader = new FileUploader({
-      url: 'api/mporcelains/picture',
+      url: 'api/mporcelainsItem/picture',
       alias: 'newPicture',
       mporcelains: vm.mporcelains,
       onAfterAddingFile: onAfterAddingFile,
