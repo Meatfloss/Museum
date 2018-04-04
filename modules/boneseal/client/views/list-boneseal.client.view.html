@@ -1,7 +1,7 @@
 <section class="grid-view">
 	<div class="page-header">
 		<h2>
-			<h2 translate="Turtle and Oracle Bones"></h2>
+			<h2 translate="Emperor Wu Ding Bone Seals"></h2>
 		</h2>
 	</div>
 	<div class="row filter">
@@ -16,22 +16,22 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-2 col-sm-4 col-xs-6" data-ng-repeat="bone in vm.pagedItems">
-			<a data-ui-sref="bone.view({boneId: bone._id})" class="list-group-item">
+		<div class="col-md-2 col-sm-4 col-xs-6" data-ng-repeat="boneseal in vm.pagedItems">
+			<a data-ui-sref="boneseal.view({bonesealId: boneseal._id})" class="list-group-item">
 				<div class="list-image img-responsive">
-					<img ng-src="{{bone.imageURL}}" class="img-thumbnail" />
+					<img ng-src="{{boneseal.imageURL}}" class="img-thumbnail" />
 				</div>
 				<div class="oneline-text text-center">
 					<strong>
-					<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{bone.name}}" translate-value-namezh="{{bone.nameZH}}"></span>
+					<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{boneseal.name}}" translate-value-namezh="{{boneseal.nameZH}}"></span>
 				</strong>
 				</div>
 			</a>
 		</div>
 	</div>
 
-	<div class="alert alert-warning text-center" data-ng-if="bone.$resolved && !bone.length">
-		No bone found, please try to other filters.
+	<div class="alert alert-warning text-center" data-ng-if="boneseal.$resolved && !boneseal.length">
+		No boneseal found, please try to other filters.
 	</div>
 	<uib-pagination previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;" boundary-links="true"
 		max-size="8" items-per-page="vm.itemsPerPage" total-items="vm.filterLength" ng-model="vm.currentPage" ng-change="vm.pageChanged()"></uib-pagination>
