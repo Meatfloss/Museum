@@ -2,19 +2,19 @@
   'use strict';
 
   angular
-    .module('goldsilverware')
-    .controller('GoldsilverwareListController', GoldsilverwareListController);
+    .module('goldsilver')
+    .controller('GoldsilverListController', GoldsilverListController);
 
-  GoldsilverwareListController.$inject = ['$filter', 'GoldsilverwareService', 'authorsResolve'];
+  GoldsilverListController.$inject = ['$filter', 'GoldsilverService', 'authorsResolve'];
 
-  function GoldsilverwareListController($filter, GoldsilverwareService, authors) {
+  function GoldsilverListController($filter, GoldsilverService, authors) {
     var vm = this;
     vm.buildPager = buildPager;
     vm.figureOutItemsToDisplay = figureOutItemsToDisplay;
     vm.pageChanged = pageChanged;
 
-    GoldsilverwareService.query(function (data) {
-      vm.goldsilverware = data;
+    GoldsilverService.query(function (data) {
+      vm.goldsilver = data;
       vm.buildPager();
     });
 
@@ -26,7 +26,7 @@
     }
 
     function figureOutItemsToDisplay() {
-      vm.filteredItems = $filter('filter')(vm.goldsilverware, { $: vm.search });
+      vm.filteredItems = $filter('filter')(vm.goldsilver, { $: vm.search });
       if (vm.selectedDynasty && vm.selectedDynasty !== 'All') {
         vm.filteredItems = _.filter(vm.filteredItems, { author: { dynasty: vm.selectedDynasty } });
       }

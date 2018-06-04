@@ -4,15 +4,15 @@
 
   // Configuring the Articles Admin module
   angular
-    .module('goldsilverware.admin')
+    .module('goldsilver.admin')
     .run(menuConfig);
 
   menuConfig.$inject = ['menuService'];
 
   function menuConfig(Menus) {
     Menus.addSubMenuItem('topbar', 'admin', {
-      title: 'Manage Goldsilverware',
-      state: 'admin.goldsilverware.list'
+      title: 'Manage Goldsilver',
+      state: 'admin.goldsilver.list'
     });
   }
 }());

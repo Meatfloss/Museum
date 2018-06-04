@@ -2,22 +2,22 @@
   'use strict';
 
   angular
-    .module('goldsilverware.admin')
-    .controller('GoldsilverwareListController', GoldsilverwareListController);
+    .module('goldsilver.admin')
+    .controller('GoldsilverListController', GoldsilverListController);
 
-  GoldsilverwareListController.$inject = ['$filter', 'GoldsilverwareService'];
+  GoldsilverListController.$inject = ['$filter', 'GoldsilverService'];
 
-  function GoldsilverwareListController($filter, GoldsilverwareService) {
+  function GoldsilverListController($filter, GoldsilverService) {
     var vm = this;
     vm.buildPager = buildPager;
     vm.figureOutItemsToDisplay = figureOutItemsToDisplay;
     vm.pageChanged = pageChanged;
 
-    GoldsilverwareService.query(function (data) {
-      vm.goldsilverware = data;
+    GoldsilverService.query(function (data) {
+      vm.goldsilver = data;
       vm.buildPager();
       // update dropdown list
-      vm.dynastyList = _.map(_.uniqBy(vm.goldsilverware, 'dynasty'), 'dynasty');
+      vm.dynastyList = _.map(_.uniqBy(vm.goldsilver, 'dynasty'), 'dynasty');
       vm.dynastyList.unshift('All');
       vm.selectedDynasty = 'All';
     });
@@ -30,7 +30,7 @@
     }
 
     function figureOutItemsToDisplay() {
-      vm.filteredItems = $filter('filter')(vm.goldsilverware, { $: vm.search });
+      vm.filteredItems = $filter('filter')(vm.goldsilver, { $: vm.search });
       if (vm.selectedDynasty && vm.selectedDynasty !== 'All') {
         vm.filteredItems = _.filter(vm.filteredItems, { dynasty: vm.selectedDynasty });
       }

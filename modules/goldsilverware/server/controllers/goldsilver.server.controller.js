@@ -9,119 +9,119 @@ var path = require('path'),
   mongoose = require('mongoose'),
   multer = require('multer'),
   config = require(path.resolve('./config/config')),
-  Goldsilverware = mongoose.model('Goldsilverware');
+  Goldsilver = mongoose.model('Goldsilver');
 /**
- * Create an goldsilverware
+ * Create an goldsilver
  */
 exports.create = function (req, res) {
-  var goldsilverware = new Goldsilverware(req.body);
-  goldsilverware.user = req.user;
+  var goldsilver = new Goldsilver(req.body);
+  goldsilver.user = req.user;
 
-  goldsilverware.save(function (err) {
+  goldsilver.save(function (err) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
       });
     } else {
-      res.json(goldsilverware);
+      res.json(goldsilver);
     }
   });
 };
 
 /**
- * Show the current goldsilverware
+ * Show the current goldsilver
  */
 exports.read = function (req, res) {
   // convert mongoose document to JSON
-  var goldsilverware = req.goldsilverware ? req.goldsilverware.toJSON() : {};
+  var goldsilver = req.goldsilver ? req.goldsilver.toJSON() : {};
 
-  // Add a custom field to the Goldsilverware, for determining if the current User is the "owner".
-  // NOTE: This field is NOT persisted to the database, since it doesn't exist in the Goldsilverware model.
-  goldsilverware.isCurrentUserOwner = !!(req.user && goldsilverware.user && goldsilverware.user._id.toString() === req.user._id.toString());
+  // Add a custom field to the Goldsilver, for determining if the current User is the "owner".
+  // NOTE: This field is NOT persisted to the database, since it doesn't exist in the Goldsilver model.
+  goldsilver.isCurrentUserOwner = !!(req.user && goldsilver.user && goldsilver.user._id.toString() === req.user._id.toString());
 
-  res.json(goldsilverware);
+  res.json(goldsilver);
 };
 
 /**
- * Update an goldsilverware
+ * Update an goldsilver
  */
 exports.update = function (req, res) {
-  var goldsilverware = req.goldsilverware;
+  var goldsilver = req.goldsilver;
 
-  goldsilverware.name = req.body.name;
-  goldsilverware.nameZH = req.body.nameZH;
-  goldsilverware.description = req.body.description;
-  goldsilverware.descriptionZH = req.body.descriptionZH;
-  goldsilverware.type = req.body.type;
-  goldsilverware.weight = req.body.weight;  
-  goldsilverware.width = req.body.width;
-  goldsilverware.length = req.body.length;
-  goldsilverware.height = req.body.height;
-  goldsilverware.dynasty = req.body.dynasty;
+  goldsilver.name = req.body.name;
+  goldsilver.nameZH = req.body.nameZH;
+  goldsilver.description = req.body.description;
+  goldsilver.descriptionZH = req.body.descriptionZH;
+  goldsilver.type = req.body.type;
+  goldsilver.weight = req.body.weight;  
+  goldsilver.width = req.body.width;
+  goldsilver.length = req.body.length;
+  goldsilver.height = req.body.height;
+  goldsilver.dynasty = req.body.dynasty;
 
-  goldsilverware.save(function (err) {
+  goldsilver.save(function (err) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
       });
     } else {
-      res.json(goldsilverware);
+      res.json(goldsilver);
     }
   });
 };
 
 /**
- * Delete an goldsilverware
+ * Delete an goldsilver
  */
 exports.delete = function (req, res) {
-  var goldsilverware = req.goldsilverware;
+  var goldsilver = req.goldsilver;
 
-  goldsilverware.remove(function (err) {
+  goldsilver.remove(function (err) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
       });
     } else {
-      res.json(goldsilverware);
+      res.json(goldsilver);
     }
   });
 };
 
 /**
- * List of Goldsilverware
+ * List of Goldsilver
  */
 exports.list = function (req, res) {
-  Goldsilverware.find().sort('-created').populate('user', 'displayName').exec(function (err, goldsilverware) {
+  Goldsilver.find().sort('-created').populate('user', 'displayName').exec(function (err, goldsilver) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
       });
     } else {
-      res.json(goldsilverware);
+      res.json(goldsilver);
     }
   });
 };
 
 /**
- * Goldsilverware middleware
+ * Goldsilver middleware
  */
-exports.goldsilverwareByID = function (req, res, next, id) {
+exports.goldsilverByID = function (req, res, next, id) {
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
     return res.status(400).send({
-      message: 'Goldsilverware is invalid'
+      message: 'Goldsilver is invalid'
     });
   }
 
-  Goldsilverware.findById(id).populate('user', 'displayName').exec(function (err, goldsilverware) {
+  Goldsilver.findById(id).populate('user', 'displayName').exec(function (err, goldsilver) {
     if (err) {
       return next(err);
-    } else if (!goldsilverware) {
+    } else if (!goldsilver) {
       return res.status(404).send({
-        message: 'No goldsilverware with that identifier has been found'
+        message: 'No goldsilver with that identifier has been found'
       });
     }
-    req.goldsilverware = goldsilverware;
+    req.goldsilver = goldsilver;
     next();
   });
 };
@@ -132,8 +132,8 @@ exports.goldsilverwareByID = function (req, res, next, id) {
 exports.changePicture = function (req, res) {
   var user = req.user;
 
-  // Todo: change goldsilverware image location.
-  // var upload = multer(config.uploads.goldsilverwareImageUpload).single('newPicture');
+  // Todo: change goldsilver image location.
+  // var upload = multer(config.uploads.goldsilverImageUpload).single('newPicture');
   var upload = multer(config.uploads.profileUpload).single('newPicture');
   var profileUploadFileFilter = require(path.resolve('./config/lib/multer')).profileUploadFileFilter;
 
@@ -147,15 +147,15 @@ exports.changePicture = function (req, res) {
         });
       } else {
 
-        Goldsilverware.findById(req.body.goldsilverwareId).exec(function (err, goldsilverware) {
-          if (!goldsilverware) {
+        Goldsilver.findById(req.body.goldsilverId).exec(function (err, goldsilver) {
+          if (!goldsilver) {
             return res.status(404).send({
-              message: 'No goldsilverware with that identifier has been found'
+              message: 'No goldsilver with that identifier has been found'
             });
           }
 
-          goldsilverware.imageURL = config.uploads.profileUpload.dest + req.file.filename;
-          goldsilverware.save(function (saveError) {
+          goldsilver.imageURL = config.uploads.profileUpload.dest + req.file.filename;
+          goldsilver.save(function (saveError) {
             if (saveError) {
               return res.status(400).send({
                 message: errorHandler.getErrorMessage(saveError)

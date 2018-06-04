@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('goldsilverware')
+    .module('goldsilver')
     .run(menuConfig);
 
   menuConfig.$inject = ['menuService'];

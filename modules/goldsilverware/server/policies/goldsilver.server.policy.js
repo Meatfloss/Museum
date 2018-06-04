@@ -9,47 +9,47 @@ var acl = require('acl');
 acl = new acl(new acl.memoryBackend());
 
 /**
- * Invoke Goldsilverware Permissions
+ * Invoke Goldsilver Permissions
  */
 exports.invokeRolesPolicies = function () {
   acl.allow([{
     roles: ['admin'],
     allows: [{
-      resources: '/api/goldsilverware',
+      resources: '/api/goldsilver',
       permissions: '*'
     }, {
-      resources: '/api/goldsilverware/:goldsilverwareId',
+      resources: '/api/goldsilver/:goldsilverId',
       permissions: '*'
     }]
   }, {
     roles: ['user'],
     allows: [{
-      resources: '/api/goldsilverware',
+      resources: '/api/goldsilver',
       permissions: ['get']
     }, {
-      resources: '/api/goldsilverware/:goldsilverwareId',
+      resources: '/api/goldsilver/:goldsilverId',
       permissions: ['get']
     }]
   }, {
     roles: ['guest'],
     allows: [{
-      resources: '/api/goldsilverware',
+      resources: '/api/goldsilver',
       permissions: ['get']
     }, {
-      resources: '/api/goldsilverware/:goldsilverwareId',
+      resources: '/api/goldsilver/:goldsilverId',
       permissions: ['get']
     }]
   }]);
 };
 
 /**
- * Check If Goldsilverware Policy Allows
+ * Check If Goldsilver Policy Allows
  */
 exports.isAllowed = function (req, res, next) {
   var roles = (req.user) ? req.user.roles : ['guest'];
 
   // If an paint is being processed and the current user created it then allow any manipulation
-  if (req.goldsilverware && req.user && req.goldsilverware.user && req.goldsilverware.user.id === req.user.id) {
+  if (req.goldsilver && req.user && req.goldsilver.user && req.goldsilver.user.id === req.user.id) {
     return next();
   }
 

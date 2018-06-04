@@ -2,17 +2,17 @@
   'use strict';
 
   angular
-    .module('goldsilverware.admin')
-    .controller('GoldsilverwareController', GoldsilverwareController);
+    .module('goldsilver.admin')
+    .controller('GoldsilverController', GoldsilverController);
 
-  GoldsilverwareController.$inject = ['$scope', '$timeout', '$state', '$window', 'goldsilverwareResolve', 'Authentication', 'FileUploader'];
+  GoldsilverController.$inject = ['$scope', '$timeout', '$state', '$window', 'goldsilverResolve', 'Authentication', 'FileUploader'];
 
-  function GoldsilverwareController($scope, $timeout, $state, $window, goldsilverware, Authentication, FileUploader) {
+  function GoldsilverController($scope, $timeout, $state, $window, goldsilver, Authentication, FileUploader) {
     var vm = this;
 
-    vm.goldsilverware = goldsilverware;
+    vm.goldsilver = goldsilver;
     vm.authentication = Authentication;
-    vm.types = ['Goldsilverware Type 1', 'Goldsilverware Type 2'];
+    vm.types = ['Goldsilver Type 1', 'Goldsilver Type 2'];
     vm.dynasties = ['Xia', 'Shang', 'Zhou', 'Qin', 'Han', 'Three Kindoms', 'Sui', 'Tang', 'Northern Song', 'Southern Song', 'Yuan', 'Ming', 'Qing', 'Modern'];
 
 
@@ -20,15 +20,15 @@
     vm.form = {};
     vm.remove = remove;
     vm.save = save;
-    vm.imageURL = vm.goldsilverware.imageURL;
+    vm.imageURL = vm.goldsilver.imageURL;
     vm.uploadProfilePicture = uploadProfilePicture;
 
     vm.cancelUpload = cancelUpload;
     // Create file uploader instance
     vm.uploader = new FileUploader({
-      url: 'api/goldsilverwareItem/picture',
+      url: 'api/goldsilverItem/picture',
       alias: 'newPicture',
-      goldsilverware: vm.goldsilverware,
+      goldsilver: vm.goldsilver,
       onAfterAddingFile: onAfterAddingFile,
       onSuccessItem: onSuccessItem,
       onErrorItem: onErrorItem
@@ -44,9 +44,9 @@
       }
     });
 
-    // add goldsilverware data
+    // add goldsilver data
     function onBeforeUploadItem(item) {
-      item.formData.push({ goldsilverwareId: vm.goldsilverware._id });
+      item.formData.push({ goldsilverId: vm.goldsilver._id });
       // console.log(item);
     }
     // Called after the user selected a new picture file
@@ -96,30 +96,30 @@
     // Cancel the upload process
     function cancelUpload() {
       vm.uploader.clearQueue();
-      vm.imageURL = vm.goldsilverware.imageURL;
+      vm.imageURL = vm.goldsilver.imageURL;
     }
 
-    // Remove existing Goldsilverware
+    // Remove existing Goldsilver
     function remove() {
       if ($window.confirm('Are you sure you want to delete?')) {
-        vm.goldsilverware.$remove($state.go('admin.goldsilverware.list'));
+        vm.goldsilver.$remove($state.go('admin.goldsilver.list'));
       }
     }
 
-    // Save Goldsilverware
+    // Save Goldsilver
     function save(isValid) {
       if (!isValid) {
-        $scope.$broadcast('show-errors-check-validity', 'vm.form.goldsilverwareForm');
+        $scope.$broadcast('show-errors-check-validity', 'vm.form.goldsilverForm');
         return false;
       }
 
-      // Create a new goldsilverware, or update the current instance
-      vm.goldsilverware.createOrUpdate()
+      // Create a new goldsilver, or update the current instance
+      vm.goldsilver.createOrUpdate()
         .then(successCallback)
         .catch(errorCallback);
 
       function successCallback(res) {
-        $state.go('admin.goldsilverware.list'); // should we send the User to the list or the updated Goldsilverware's view?
+        $state.go('admin.goldsilver.list'); // should we send the User to the list or the updated Goldsilver's view?
       }
 
       function errorCallback(res) {

@@ -7,10 +7,10 @@ var mongoose = require('mongoose'),
   Schema = mongoose.Schema;
 
 /**
- * Goldsilverware Schema
+ * Goldsilver Schema
  */
 
-var goldsilverwareSchema = new Schema({
+var goldsilverSchema = new Schema({
   created: {
     type: Date,
     default: Date.now
@@ -72,4 +72,4 @@ var goldsilverwareSchema = new Schema({
     ref: 'User'
   }
 });
-mongoose.model('Goldsilverware', goldsilverwareSchema);
+mongoose.model('Goldsilver', goldsilverSchema);
