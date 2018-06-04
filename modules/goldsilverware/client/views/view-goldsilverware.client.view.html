@@ -1,0 +1,68 @@
+<section class="item-view">
+	<div class="page-header">
+		<h1 translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.goldsilverware.name}}" translate-value-namezh="{{vm.goldsilverware.nameZH}}"></h1>
+	</div>
+	<div class="text-center">
+		<img class="img-responsive" src="{{vm.imageURL}}" alt="{{vm.goldsilverware.name}}">
+	</div>
+	<br />
+	<div class="img-responsive row lead">
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2">
+				<strong translate="Name"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8">
+				<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.goldsilverware.name}}" translate-value-namezh="{{vm.goldsilverware.nameZH}}"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.goldsilverware.dynasty">
+				<strong translate="Dynasty"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.goldsilverware.dynasty">
+				<span ng-bind="vm.goldsilverware.dynasty"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.goldsilverware.type">
+				<strong translate="Type"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.goldsilverware.type">
+				<span ng-bind="vm.goldsilverware.type"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.goldsilverware.length">
+				<strong translate="Length"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.goldsilverware.length">
+				<span>{{vm.goldsilverware.length * 2.54 | number:1}}&nbsp;cm</span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.goldsilverware.width">
+				<strong translate="Width"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.goldsilverware.width">
+				<span>{{vm.goldsilverware.width * 2.54 | number:1}}&nbsp;cm</span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.goldsilverware.height">
+				<strong translate="Height"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.goldsilverware.height">
+				<span>{{vm.goldsilverware.height * 2.54 | number:1}}&nbsp;cm</span>
+			</div>
+		</div>
+		<div class="row" ng-if="vm.goldsilverware.description || vm.goldsilverware.descriptionZH">
+			<div class="col-xs-2 col-xs-offset-2">
+				<strong translate="Description"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8">
+				<span class="newline-display" translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.goldsilverware.description}}" translate-value-namezh="{{vm.goldsilverware.descriptionZH}}"></span>
+			</div>
+		</div>
+	</div>
+
+</section>
