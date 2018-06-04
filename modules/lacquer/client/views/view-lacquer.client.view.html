@@ -1,0 +1,68 @@
+<section class="item-view">
+	<div class="page-header">
+		<h1 translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.lacquer.name}}" translate-value-namezh="{{vm.lacquer.nameZH}}"></h1>
+	</div>
+	<div class="text-center">
+		<img class="img-responsive" src="{{vm.imageURL}}" alt="{{vm.lacquer.name}}">
+	</div>
+	<br />
+	<div class="img-responsive row lead">
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2">
+				<strong translate="Name"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8">
+				<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.lacquer.name}}" translate-value-namezh="{{vm.lacquer.nameZH}}"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.lacquer.dynasty">
+				<strong translate="Dynasty"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.lacquer.dynasty">
+				<span ng-bind="vm.lacquer.dynasty"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.lacquer.type">
+				<strong translate="Type"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.lacquer.type">
+				<span ng-bind="vm.lacquer.type"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.lacquer.length">
+				<strong translate="Length"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.lacquer.length">
+				<span>{{vm.lacquer.length * 2.54 | number:1}}&nbsp;cm</span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.lacquer.width">
+				<strong translate="Width"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.lacquer.width">
+				<span>{{vm.lacquer.width * 2.54 | number:1}}&nbsp;cm</span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.lacquer.height">
+				<strong translate="Height"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.lacquer.height">
+				<span>{{vm.lacquer.height * 2.54 | number:1}}&nbsp;cm</span>
+			</div>
+		</div>
+		<div class="row" ng-if="vm.lacquer.description || vm.lacquer.descriptionZH">
+			<div class="col-xs-2 col-xs-offset-2">
+				<strong translate="Description"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8">
+				<span class="newline-display" translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.lacquer.description}}" translate-value-namezh="{{vm.lacquer.descriptionZH}}"></span>
+			</div>
+		</div>
+	</div>
+
+</section>
