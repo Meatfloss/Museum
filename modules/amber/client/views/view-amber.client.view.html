@@ -1,0 +1,73 @@
+<section class="item-view">
+	<div class="page-header">
+		<h1 translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.amber.name}}" translate-value-namezh="{{vm.amber.nameZH}}"></h1>
+	</div>
+	<div class="text-center">
+		<img class="img-responsive" src="{{vm.imageURL}}" alt="{{vm.amber.name}}">
+	</div>
+	<br />
+	<div class="img-responsive row lead">
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2">
+				<strong translate="Name"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8">
+				<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.amber.name}}" translate-value-namezh="{{vm.amber.nameZH}}"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.amber.dynasty">
+				<strong translate="Dynasty"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.amber.dynasty && vm.amber.reignTitle">
+				<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.amber.reignTitle}} {{vm.amber.dynasty}}"
+				 translate-value-namezh="{{vm.amber.dynasty | translate}} {{vm.amber.reignTitle | translate}}"></span>
+			</div>
+			<div class="col-xs-8" ng-if="vm.amber.dynasty && !vm.amber.reignTitle">
+				<span translate="{{vm.amber.dynasty}}"></span>&nbsp;
+				<span translate="{{vm.amber.reignTitle}}"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.amber.type">
+				<strong translate="Type"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.amber.type">
+				<span ng-bind="vm.amber.type"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.amber.length">
+				<strong translate="Length"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.amber.length">
+				<span>{{vm.amber.length * 2.54 | number:1}}&nbsp;cm</span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.amber.width">
+				<strong translate="Width"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.amber.width">
+				<span>{{vm.amber.width * 2.54 | number:1}}&nbsp;cm</span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.amber.height">
+				<strong translate="Height"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.amber.height">
+				<span>{{vm.amber.height * 2.54 | number:1}}&nbsp;cm</span>
+			</div>
+		</div>
+		<div class="row" ng-if="vm.amber.description || vm.amber.descriptionZH">
+			<div class="col-xs-2 col-xs-offset-2">
+				<strong translate="Description"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8">
+				<span class="newline-display" translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.amber.description}}" translate-value-namezh="{{vm.amber.descriptionZH}}"></span>
+			</div>
+		</div>
+	</div>
+
+</section>
