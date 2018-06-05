@@ -19,8 +19,13 @@
 			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.cloisonne.dynasty">
 				<strong translate="Dynasty"></strong><strong>:</strong>
 			</div>
-			<div class="col-xs-8" ng-if="vm.cloisonne.dynasty">
-				<span ng-bind="vm.cloisonne.dynasty"></span>
+			<div class="col-xs-8" ng-if="vm.cloisonne.dynasty && vm.cloisonne.reignTitle">
+				<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.cloisonne.reignTitle}} {{vm.cloisonne.dynasty}}"
+				 translate-value-namezh="{{vm.cloisonne.dynasty | translate}} {{vm.cloisonne.reignTitle | translate}}"></span>
+			</div>
+			<div class="col-xs-8" ng-if="vm.cloisonne.dynasty && !vm.cloisonne.reignTitle">
+				<span translate="{{vm.cloisonne.dynasty}}"></span>&nbsp;
+				<span translate="{{vm.cloisonne.reignTitle}}"></span>
 			</div>
 		</div>
 		<div class="row">

@@ -19,8 +19,13 @@
 			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.tianhuang.dynasty">
 				<strong translate="Dynasty"></strong><strong>:</strong>
 			</div>
-			<div class="col-xs-8" ng-if="vm.tianhuang.dynasty">
-				<span ng-bind="vm.tianhuang.dynasty"></span>
+			<div class="col-xs-8" ng-if="vm.tianhuang.dynasty && vm.tianhuang.reignTitle">
+				<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.tianhuang.reignTitle}} {{vm.tianhuang.dynasty}}"
+				 translate-value-namezh="{{vm.tianhuang.dynasty | translate}} {{vm.tianhuang.reignTitle | translate}}"></span>
+			</div>
+			<div class="col-xs-8" ng-if="vm.tianhuang.dynasty && !vm.tianhuang.reignTitle">
+				<span translate="{{vm.tianhuang.dynasty}}"></span>&nbsp;
+				<span translate="{{vm.tianhuang.reignTitle}}"></span>
 			</div>
 		</div>
 		<div class="row">
