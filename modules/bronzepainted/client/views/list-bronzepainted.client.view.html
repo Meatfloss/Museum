@@ -1,7 +1,7 @@
 <section class="grid-view">
 	<div class="page-header">
 		<h2>
-			<h2 translate="Tianhuang Stone"></h2>
+			<h2 translate="Bronze Painted Famille-Rose Enamel"></h2>
 		</h2>
 	</div>
 	<div class="row filter">
@@ -16,22 +16,22 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-2 col-sm-4 col-xs-6" data-ng-repeat="tianhuang in vm.pagedItems">
-			<a data-ui-sref="tianhuang.view({tianhuangId: tianhuang._id})" class="list-group-item">
+		<div class="col-md-2 col-sm-4 col-xs-6" data-ng-repeat="bronzepainted in vm.pagedItems">
+			<a data-ui-sref="bronzepainted.view({bronzepaintedId: bronzepainted._id})" class="list-group-item">
 				<div class="list-image img-responsive">
-					<img ng-src="{{tianhuang.imageURL}}" class="img-thumbnail" />
+					<img ng-src="{{bronzepainted.imageURL}}" class="img-thumbnail" />
 				</div>
 				<div class="oneline-text text-center">
 					<strong>
-					<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{tianhuang.name}}" translate-value-namezh="{{tianhuang.nameZH}}"></span>
+					<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{bronzepainted.name}}" translate-value-namezh="{{bronzepainted.nameZH}}"></span>
 				</strong>
 				</div>
 			</a>
 		</div>
 	</div>
 
-	<div class="alert alert-warning text-center" data-ng-if="tianhuang.$resolved && !tianhuang.length">
-		No tianhuang found, please try to other filters.
+	<div class="alert alert-warning text-center" data-ng-if="bronzepainted.$resolved && !bronzepainted.length">
+		No bronzepainted found, please try to other filters.
 	</div>
 	<uib-pagination previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;" boundary-links="true"
 		max-size="8" items-per-page="vm.itemsPerPage" total-items="vm.filterLength" ng-model="vm.currentPage" ng-change="vm.pageChanged()"></uib-pagination>
