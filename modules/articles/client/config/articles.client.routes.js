@@ -23,6 +23,10 @@
           pageTitle: 'Articles List'
         }
       })
+      .state('articles.static', {
+        url: '/static',
+        templateUrl: 'modules/articles/client/views/view-article.client.static.view.html'
+      })
       .state('articles.view', {
         url: '/:articleId',
         templateUrl: 'modules/articles/client/views/view-article.client.view.html',
@@ -35,6 +39,7 @@
           pageTitle: 'Article {{ articleResolve.title }}'
         }
       });
+
   }
 
   getArticle.$inject = ['$stateParams', 'ArticlesService'];
