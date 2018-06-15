@@ -1,0 +1,82 @@
+<section class="item-view">
+	<div class="page-header">
+		<h1 translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.sculpture.name}}" translate-value-namezh="{{vm.sculpture.nameZH}}"></h1>
+	</div>
+	<div class="text-center">
+		<img class="img-responsive" src="{{vm.sculpture.imageURL}}" alt="{{vm.sculpture.name}}">
+	</div>
+	<br />
+	<div class="img-responsive row lead">
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2">
+				<strong translate="Name"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8">
+				<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.sculpture.name}}" translate-value-namezh="{{vm.sculpture.nameZH}}"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.sculpture.dynasty">
+				<strong translate="Dynasty"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.sculpture.dynasty && vm.sculpture.reignTitle">
+				<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.sculpture.reignTitle}} {{vm.sculpture.dynasty}}"
+				 translate-value-namezh="{{vm.sculpture.dynasty | translate}} {{vm.sculpture.reignTitle | translate}}"></span>
+			</div>
+			<div class="col-xs-8" ng-if="vm.sculpture.dynasty && !vm.sculpture.reignTitle">
+				<span translate="{{vm.sculpture.dynasty}}"></span>&nbsp;
+				<span translate="{{vm.sculpture.reignTitle}}"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.sculpture.topDiameter">
+				<strong translate="Top Diameter"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.sculpture.topDiameter">
+				<span>{{vm.sculpture.topDiameter * 2.54 | number:1}}&nbsp;cm</span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.sculpture.botDiameter">
+				<strong translate="Bottom Diameter"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.sculpture.botDiameter">
+				<span>{{vm.sculpture.botDiameter * 2.54 | number:1}}&nbsp;cm</span>
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.sculpture.length">
+				<strong translate="Length"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.sculpture.length">
+				<span>{{vm.sculpture.length * 2.54 | number:1}}&nbsp;cm</span>
+			</div>
+		</div>
+		<div class="row">
+				<div class="col-xs-2 col-xs-offset-2" ng-if="vm.sculpture.width">
+					<strong translate="Width"></strong><strong>:</strong>
+				</div>
+				<div class="col-xs-8" ng-if="vm.sculpture.width">
+					<span>{{vm.sculpture.width * 2.54 | number:1}}&nbsp;cm</span>
+				</div>
+			</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.sculpture.height">
+				<strong translate="Height"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.sculpture.height">
+				<span>{{vm.sculpture.height * 2.54 | number:1}}&nbsp;cm</span>
+			</div>
+		</div>
+		<div class="row" ng-if="vm.sculpture.description || vm.sculpture.descriptionZH">
+			<div class="col-xs-2 col-xs-offset-2">
+				<strong translate="Description"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8">
+				<span class="newline-display" translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.sculpture.description}}" translate-value-namezh="{{vm.sculpture.descriptionZH}}"></span>
+			</div>
+		</div>
+	</div>
+
+</section>
