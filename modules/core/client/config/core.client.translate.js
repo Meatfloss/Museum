@@ -188,7 +188,7 @@
       'Crystal Collection': '水晶珍藏',
       'Amber and Agate': '琥珀与玛瑙',
       'Snuff Bottles': '鼻烟壶',
-      'Four Treasures': '文房四宝',
+      'Treasures': '杂项',
       'Ancient Currency': '古代货币',
       'Buddha Sculptures': '佛像雕塑',
       'Category': '种类',

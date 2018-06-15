@@ -214,8 +214,8 @@
 
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'collections', {
-      title: 'Four Treasures',
-      state: 'fourtreasure.list',
+      title: 'Treasures',
+      state: 'treasures.list',
       roles: ['*']
     });
 
