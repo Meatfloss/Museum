@@ -1,0 +1,73 @@
+<section class="item-view">
+	<div class="page-header">
+		<h1 translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.treasures.name}}" translate-value-namezh="{{vm.treasures.nameZH}}"></h1>
+	</div>
+	<div class="text-center">
+		<img class="img-responsive" src="{{vm.imageURL}}" alt="{{vm.treasures.name}}">
+	</div>
+	<br />
+	<div class="img-responsive row lead">
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2">
+				<strong translate="Name"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8">
+				<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.treasures.name}}" translate-value-namezh="{{vm.treasures.nameZH}}"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.treasures.dynasty">
+				<strong translate="Dynasty"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.treasures.dynasty && vm.treasures.reignTitle">
+				<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.treasures.reignTitle}} {{vm.treasures.dynasty}}"
+				 translate-value-namezh="{{vm.treasures.dynasty | translate}} {{vm.treasures.reignTitle | translate}}"></span>
+			</div>
+			<div class="col-xs-8" ng-if="vm.treasures.dynasty && !vm.treasures.reignTitle">
+				<span translate="{{vm.treasures.dynasty}}"></span>&nbsp;
+				<span translate="{{vm.treasures.reignTitle}}"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.treasures.type">
+				<strong translate="Type"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.treasures.type">
+				<span ng-bind="vm.treasures.type"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.treasures.length">
+				<strong translate="Length"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.treasures.length">
+				<span>{{vm.treasures.length * 2.54 | number:1}}&nbsp;cm</span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.treasures.width">
+				<strong translate="Width"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.treasures.width">
+				<span>{{vm.treasures.width * 2.54 | number:1}}&nbsp;cm</span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.treasures.height">
+				<strong translate="Height"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.treasures.height">
+				<span>{{vm.treasures.height * 2.54 | number:1}}&nbsp;cm</span>
+			</div>
+		</div>
+		<div class="row" ng-if="vm.treasures.description || vm.treasures.descriptionZH">
+			<div class="col-xs-2 col-xs-offset-2">
+				<strong translate="Description"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8">
+				<span class="newline-display" translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.treasures.description}}" translate-value-namezh="{{vm.treasures.descriptionZH}}"></span>
+			</div>
+		</div>
+	</div>
+
+</section>
