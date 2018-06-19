@@ -152,7 +152,7 @@
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'collections', {
       title: 'Gold and Silver Ware',
-      state: 'glodsilverware.list',
+      state: 'goldsilver.list',
       roles: ['*']
     });
 
@@ -229,7 +229,7 @@
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'collections', {
       title: 'Buddha Sculptures',
-      state: 'buddha.list',
+      state: 'sculpture.list',
       roles: ['*']
     });
   }
