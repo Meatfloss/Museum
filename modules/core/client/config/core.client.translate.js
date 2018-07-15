@@ -190,7 +190,7 @@
       'Snuff Bottles': '鼻烟壶',
       'Treasures': '杂项',
       'Ancient Currency': '古代货币',
-      'Buddha Sculptures': '佛像雕塑',
+      'Buddha Sculptures': '佛像与雕塑',
       'Category': '种类',
       'Sign in using your social accounts': '使用社交账户登录',
       'Or with your account': '或者您自己的账户',
