@@ -145,3 +145,9 @@ section{
 {
   cursor:pointer;
 }
+
+.scrollable-menu {
+  height: auto;
+  max-height: 600px;
+  overflow-x: hidden;
+}
