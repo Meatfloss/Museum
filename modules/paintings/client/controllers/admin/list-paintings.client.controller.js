@@ -39,7 +39,7 @@
       if (vm.selectedDynasty && vm.selectedDynasty !== 'All') {
         vm.filteredItems = _.filter(vm.filteredItems, { author: { dynasty: vm.selectedDynasty } });
       }
-      if (vm.selectedAuthor && vm.selectedAuthor !== 'All') {
+      if (vm.selectedAuthor && vm.selectedAuthorName !== 'All' && vm.selectedAuthorName !== '全部') {
         vm.filteredItems = _.filter(vm.filteredItems, { author: { name: vm.selectedAuthor.name } });
       }
       vm.filterLength = vm.filteredItems.length;
