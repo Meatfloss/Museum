@@ -5,9 +5,9 @@
     .module('authors')
     .controller('AuthorPaintingsController', PaintingsListController);
 
-  PaintingsListController.$inject = ['$filter', 'authorResolve', 'paintingResolve'];
+  PaintingsListController.$inject = ['$translate', '$rootScope', 'authorResolve', 'paintingResolve'];
 
-  function PaintingsListController($filter, author, paintings) {
+  function PaintingsListController($translate, $rootScope, author, paintings) {
     var vm = this;
     vm.author = author;
     vm.paintings = paintings;
@@ -18,6 +18,11 @@
     vm.hideDescription = hideDescription;
     vm.buildPager();
     vm.hideDescription();
+
+    vm.showEnglish = $translate.use() === 'en';
+    $rootScope.$on('$translateChangeSuccess', function () {
+      vm.showEnglish = $translate.use() === 'en';
+    });
 
     function buildPager() {
       vm.pagedItems = [];

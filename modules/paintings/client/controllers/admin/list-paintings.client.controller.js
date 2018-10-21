@@ -5,9 +5,9 @@
     .module('paintings.admin')
     .controller('PaintingsListController', PaintingsListController);
 
-  PaintingsListController.$inject = ['$filter', 'PaintingsService', 'authorsResolve', '$translate', '$rootScope'];
+  PaintingsListController.$inject = ['$translate', '$rootScope', '$filter', 'PaintingsService', 'authorsResolve'];
 
-  function PaintingsListController($filter, PaintingsService, authors, $translate, $rootScope) {
+  function PaintingsListController($translate, $rootScope, $filter, PaintingsService, authors) {
     var vm = this;
     vm.buildPager = buildPager;
     vm.figureOutItemsToDisplay = figureOutItemsToDisplay;
