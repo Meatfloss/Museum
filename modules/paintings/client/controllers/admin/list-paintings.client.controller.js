@@ -5,13 +5,22 @@
     .module('paintings.admin')
     .controller('PaintingsListController', PaintingsListController);
 
-  PaintingsListController.$inject = ['$filter', 'PaintingsService', 'authorsResolve'];
+  PaintingsListController.$inject = ['$filter', 'PaintingsService', 'authorsResolve', '$translate', '$rootScope'];
 
-  function PaintingsListController($filter, PaintingsService, authors) {
+  function PaintingsListController($filter, PaintingsService, authors, $translate, $rootScope) {
     var vm = this;
     vm.buildPager = buildPager;
     vm.figureOutItemsToDisplay = figureOutItemsToDisplay;
     vm.pageChanged = pageChanged;
+
+    var translateName = $translate.use() === 'en' ? 'name' : 'nameZH';
+    $rootScope.$on('$translateChangeSuccess', function () {
+      translateName = $translate.use() === 'en' ? 'name' : 'nameZH';
+      vm.authorList = _.map(vm.currentAuthors, translateName);
+      vm.authorList.unshift($translate.use() === 'en' ? 'All' : '全部');
+      if ($translate.use() === 'en') { vm.selectedAuthorName = vm.selectedAuthor ? vm.selectedAuthor.name : 'All'; }
+      else { vm.selectedAuthorName = vm.selectedAuthor ? vm.selectedAuthor.nameZH : '全部'; }
+    });
 
     PaintingsService.query(function (data) {
       vm.paintings = data;
@@ -31,7 +40,7 @@
         vm.filteredItems = _.filter(vm.filteredItems, { author: { dynasty: vm.selectedDynasty } });
       }
       if (vm.selectedAuthor && vm.selectedAuthor !== 'All') {
-        vm.filteredItems = _.filter(vm.filteredItems, { author: { name: vm.selectedAuthor } });
+        vm.filteredItems = _.filter(vm.filteredItems, { author: { name: vm.selectedAuthor.name } });
       }
       vm.filterLength = vm.filteredItems.length;
       var begin = ((vm.currentPage - 1) * vm.itemsPerPage);
@@ -45,24 +54,29 @@
 
     // update dropdown list
     vm.authors = authors;
-    vm.authorList = _.map(authors, 'name');
+    vm.currentAuthors = authors.slice(0, authors.length);
+    vm.authorList = _.map(authors, translateName);
     vm.dynastyList = _.map(_.uniqBy(authors, 'dynasty'), 'dynasty');
     vm.authorList.unshift('All');
     vm.dynastyList.unshift('All');
     vm.selectedDynasty = 'All';
-    vm.selectedAuthor = 'All';
-
+    vm.selectedAuthorName = 'All';
 
     vm.updateForDynasty = function () {
       var filteredAuthors = vm.selectedDynasty === 'All' ? authors : _.filter(authors, { dynasty: vm.selectedDynasty });
-      vm.authorList = _.map(filteredAuthors, 'name');
+      vm.currentAuthors = filteredAuthors.slice(0, authors.length);
+      vm.authorList = _.map(filteredAuthors, translateName);
       vm.authorList.unshift('All');
-      vm.selectedAuthor = 'All';
+      vm.selectedAuthorName = 'All';
       // update list
       vm.figureOutItemsToDisplay();
     };
 
     vm.updateForAuthor = function () {
+      vm.selectedAuthor = _.find(vm.currentAuthors, function (a) {
+        return a.name === vm.selectedAuthorName || a.nameZH === vm.selectedAuthorName;
+      });
+
       vm.figureOutItemsToDisplay();
     };
 
