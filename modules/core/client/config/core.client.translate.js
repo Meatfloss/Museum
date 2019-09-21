@@ -259,6 +259,7 @@
       'HIDE': '隐藏',
       'Posted on': '发布于',
       'view all': '显示全部',
+      'years of birth and death are unknown': '生卒年不详',
       VARIABLE_REPLACEMENT: '{{namezh}}',
       BUTTON_LANG_ZH: '中文',
       BUTTON_LANG_EN: '英文'

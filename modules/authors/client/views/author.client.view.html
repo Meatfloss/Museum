@@ -1,16 +1,23 @@
 <section class='grid-view'>
-  <div class="page-header">
+	<div class="page-header">
 		<h1>
-			<h1 translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.author.name}}" translate-value-namezh="{{vm.author.nameZH}}"></h1>
+			<h1 translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.author.name}}"
+				translate-value-namezh="{{vm.author.nameZH}}"></h1>
 		</h1>
-    <div>
-			<!--<h1 translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.author.dynasty}}" translate-value-namezh="{{vm.author.nameZH}}" />-->
-
-			{{(vm.author.dynasty | translate) || ("Unknown" | translate) }} ( {{vm.author.birthYear || "?"}} - {{vm.author.deadYear || "?"}} )
-			</div>
-  </div>
-  <div class="col-md-12">
-		<p class="lead newline-display" translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.description}}" translate-value-namezh="{{vm.descriptionZH}}"></p>
+		<div>
+			{{(vm.author.dynasty | translate) || ("Unknown" | translate) }} (
+			<span ng-if="vm.author.birthYear || vm.author.deadYear">
+				{{vm.author.birthYear || "?"}} -
+				{{vm.author.deadYear || "?"}}
+			</span>
+			<span ng-if="!vm.author.birthYear && !vm.author.deadYear">
+				{{'years of birth and death are unknown' | translate}}
+			</span>)
+		</div>
+	</div>
+	<div class="col-md-12">
+		<p class="lead newline-display" translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.description}}"
+			translate-value-namezh="{{vm.descriptionZH}}"></p>
 		<p class="lead" ng-if="vm.showEnglish && vm.description && vm.descriptionHide">
 			<a ng-click="vm.showDescription()">{{'READ MORE' | translate}}</a>
 		</p>
@@ -23,7 +30,7 @@
 		<p class="lead" ng-if="!vm.showEnglish && vm.descriptionZH && !vm.descriptionZHHide">
 			<a ng-click="vm.hideDescription()">{{ 'HIDE' | translate}}</a>
 		</p>
-  </div>
+	</div>
 
 	<div class="row">
 		<div class="col-md-2 col-sm-4 col-xs-6" data-ng-repeat="painting in vm.pagedItems">
@@ -33,13 +40,16 @@
 				</div>
 				<div class="oneline-text text-center">
 					<strong>
-					<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{painting.name}}" translate-value-namezh="{{painting.nameZH}}">></span>
-				</strong>
+						<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{painting.name}}"
+							translate-value-namezh="{{painting.nameZH}}">></span>
+					</strong>
 				</div>
 				<div class="oneline-text text-center">
 					<small class="list-group-item-text">
-          	<span ng-if="vm.author" translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.author.name}}" translate-value-namezh="{{vm.author.nameZH}}"></span>
-        </small>
+						<span ng-if="vm.author" translate="VARIABLE_REPLACEMENT"
+							translate-value-name="{{vm.author.name}}"
+							translate-value-namezh="{{vm.author.nameZH}}"></span>
+					</small>
 				</div>
 			</a>
 		</div>
@@ -48,7 +58,8 @@
 	<div class="alert alert-warning text-center" data-ng-if="paintings.$resolved && !paintings.length">
 		No painting found, please try to other filters.
 	</div>
-	<uib-pagination previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;" boundary-links="true"
-		max-size="8" items-per-page="vm.itemsPerPage" total-items="vm.filterLength" ng-model="vm.currentPage" ng-change="vm.pageChanged()"></uib-pagination>
+	<uib-pagination previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"
+		boundary-links="true" max-size="8" items-per-page="vm.itemsPerPage" total-items="vm.filterLength"
+		ng-model="vm.currentPage" ng-change="vm.pageChanged()"></uib-pagination>
 
 </section>
