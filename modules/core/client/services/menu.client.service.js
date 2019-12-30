@@ -74,12 +74,12 @@
     // Add submenu item object
     function addSubMenuItem(menuId, parentItemState, options) {
       options = options || {};
-
+      
       // Validate that the menu exists
       service.validateMenuExistence(menuId);
-
       // Search for menu item
       for (var itemIndex in service.menus[menuId].items) {
+        
         if (service.menus[menuId].items[itemIndex].state === parentItemState) {
           // Push new submenu item
           service.menus[menuId].items[itemIndex].items.push({

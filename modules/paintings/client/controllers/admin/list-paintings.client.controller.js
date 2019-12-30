@@ -18,8 +18,12 @@
       translateName = $translate.use() === 'en' ? 'name' : 'nameZH';
       vm.authorList = _.map(vm.currentAuthors, translateName);
       vm.authorList.unshift($translate.use() === 'en' ? 'All' : '全部');
-      if ($translate.use() === 'en') { vm.selectedAuthorName = vm.selectedAuthor ? vm.selectedAuthor.name : 'All'; }
-      else { vm.selectedAuthorName = vm.selectedAuthor ? vm.selectedAuthor.nameZH : '全部'; }
+      if ($translate.use() === 'en') {
+        vm.selectedAuthorName = vm.selectedAuthor ? vm.selectedAuthor.name : 'All';
+      }
+      else {
+        vm.selectedAuthorName = vm.selectedAuthor ? vm.selectedAuthor.nameZH : '全部';
+      }
     });
 
     PaintingsService.query(function (data) {

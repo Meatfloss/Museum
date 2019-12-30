@@ -59,13 +59,6 @@
     });
 
     // Add the dropdown list item
-    // menuService.addSubMenuItem('topbar', 'collections', {
-    //   title: 'Chai Yao Porcelain',
-    //   state: 'cporcelains.list',
-    //   roles: ['*']
-    // });
-
-    // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'collections', {
       title: 'Yuan Dynasty Porcelain',
       state: 'yporcelains.list',
@@ -230,6 +223,41 @@
     menuService.addSubMenuItem('topbar', 'collections', {
       title: 'Buddha Sculptures',
       state: 'sculpture.list',
+      roles: ['*']
+    });
+
+    // Add the dropdown list item
+    menuService.addSubMenuItem('topbar', 'collections', {
+      title: "Monk's-Cap Ewers",
+      state: 'monkcaps.list',
+      roles: ['*']
+    });
+
+    // Add the dropdown list item
+    menuService.addSubMenuItem('topbar', 'collections', {
+      title: 'Neolithic Totem & Three Gui-Bi',
+      state: 'guibi.list',
+      roles: ['*']
+    });
+
+    // Add the dropdown list item
+    menuService.addSubMenuItem('topbar', 'collections', {
+      title: 'Japanese Art Collection',
+      state: 'japanese.landing',
+      roles: ['*']
+    });
+
+    //Add the dropdown list item
+    menuService.addSubMenuItem('topbar', 'collections', {
+      title: 'Korean Art Collection',
+      state: 'korean.landing',
+      roles: ['*']
+    });
+
+    // Add the dropdown list item
+    menuService.addSubMenuItem('topbar', 'collections', {
+      title: 'Thai Art Collection',
+      state: 'thai.list',
       roles: ['*']
     });
   }

@@ -1,0 +1,82 @@
+<section class="item-view">
+	<div class="page-header">
+		<h1 translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.korean.name}}" translate-value-namezh="{{vm.korean.nameZH}}"></h1>
+	</div>
+	<div class="text-center">
+		<img class="img-responsive" src="{{vm.korean.imageURL}}" alt="{{vm.korean.name}}">
+	</div>
+	<br />
+	<div class="img-responsive row lead">
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2">
+				<strong translate="Name"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8">
+				<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.korean.name}}" translate-value-namezh="{{vm.korean.nameZH}}"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.korean.dynasty">
+				<strong translate="Reign"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.korean.dynasty && vm.korean.reignTitle">
+				<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.korean.reignTitle}} {{vm.korean.dynasty}}"
+				 translate-value-namezh="{{vm.korean.dynasty | translate}} {{vm.korean.reignTitle | translate}}"></span>
+			</div>
+			<div class="col-xs-8" ng-if="vm.korean.dynasty && !vm.korean.reignTitle">
+				<span translate="{{vm.korean.dynasty}}"></span>&nbsp;
+				<span translate="{{vm.korean.reignTitle}}"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.korean.topDiameter">
+				<strong translate="Top Diameter"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.korean.topDiameter">
+				<span>{{vm.korean.topDiameter * 2.54 | number:1}}&nbsp;cm</span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.korean.botDiameter">
+				<strong translate="Bottom Diameter"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.korean.botDiameter">
+				<span>{{vm.korean.botDiameter * 2.54 | number:1}}&nbsp;cm</span>
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.korean.length">
+				<strong translate="Length"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.korean.length">
+				<span>{{vm.korean.length * 2.54 | number:1}}&nbsp;cm</span>
+			</div>
+		</div>
+		<div class="row">
+				<div class="col-xs-2 col-xs-offset-2" ng-if="vm.korean.width">
+					<strong translate="Width"></strong><strong>:</strong>
+				</div>
+				<div class="col-xs-8" ng-if="vm.korean.width">
+					<span>{{vm.korean.width * 2.54 | number:1}}&nbsp;cm</span>
+				</div>
+			</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.korean.height">
+				<strong translate="Height"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.korean.height">
+				<span>{{vm.korean.height * 2.54 | number:1}}&nbsp;cm</span>
+			</div>
+		</div>
+		<div class="row" ng-if="vm.korean.description || vm.korean.descriptionZH">
+			<div class="col-xs-2 col-xs-offset-2">
+				<strong translate="Description"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8">
+				<span class="newline-display" translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.korean.description}}" translate-value-namezh="{{vm.korean.descriptionZH}}"></span>
+			</div>
+		</div>
+	</div>
+
+</section>

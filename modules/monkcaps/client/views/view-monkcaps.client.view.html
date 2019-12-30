@@ -1,0 +1,82 @@
+<section class="item-view">
+	<div class="page-header">
+		<h1 translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.monkcap.name}}" translate-value-namezh="{{vm.monkcap.nameZH}}"></h1>
+	</div>
+	<div class="text-center">
+		<img class="img-responsive" src="{{vm.monkcap.imageURL}}" alt="{{vm.monkcap.name}}">
+	</div>
+	<br />
+	<div class="img-responsive row lead">
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2">
+				<strong translate="Name"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8">
+				<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.monkcap.name}}" translate-value-namezh="{{vm.monkcap.nameZH}}"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.monkcap.dynasty">
+				<strong translate="Dynasty"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.monkcap.dynasty && vm.monkcap.reignTitle">
+				<span translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.monkcap.reignTitle}} {{vm.monkcap.dynasty}}"
+				 translate-value-namezh="{{vm.monkcap.dynasty | translate}} {{vm.monkcap.reignTitle | translate}}"></span>
+			</div>
+			<div class="col-xs-8" ng-if="vm.monkcap.dynasty && !vm.monkcap.reignTitle">
+				<span translate="{{vm.monkcap.dynasty}}"></span>&nbsp;
+				<span translate="{{vm.monkcap.reignTitle}}"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.monkcap.topDiameter">
+				<strong translate="Top Diameter"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.monkcap.topDiameter">
+				<span>{{vm.monkcap.topDiameter * 2.54 | number:1}}&nbsp;cm</span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.monkcap.botDiameter">
+				<strong translate="Bottom Diameter"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.monkcap.botDiameter">
+				<span>{{vm.monkcap.botDiameter * 2.54 | number:1}}&nbsp;cm</span>
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.monkcap.length">
+				<strong translate="Length"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.monkcap.length">
+				<span>{{vm.monkcap.length * 2.54 | number:1}}&nbsp;cm</span>
+			</div>
+		</div>
+		<div class="row">
+				<div class="col-xs-2 col-xs-offset-2" ng-if="vm.monkcap.width">
+					<strong translate="Width"></strong><strong>:</strong>
+				</div>
+				<div class="col-xs-8" ng-if="vm.monkcap.width">
+					<span>{{vm.monkcap.width * 2.54 | number:1}}&nbsp;cm</span>
+				</div>
+			</div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-2" ng-if="vm.monkcap.height">
+				<strong translate="Height"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8" ng-if="vm.monkcap.height">
+				<span>{{vm.monkcap.height * 2.54 | number:1}}&nbsp;cm</span>
+			</div>
+		</div>
+		<div class="row" ng-if="vm.monkcap.description || vm.monkcap.descriptionZH">
+			<div class="col-xs-2 col-xs-offset-2">
+				<strong translate="Description"></strong><strong>:</strong>
+			</div>
+			<div class="col-xs-8">
+				<span class="newline-display" translate="VARIABLE_REPLACEMENT" translate-value-name="{{vm.monkcap.description}}" translate-value-namezh="{{vm.monkcap.descriptionZH}}"></span>
+			</div>
+		</div>
+	</div>
+
+</section>
