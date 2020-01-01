@@ -196,7 +196,7 @@
       'Thai Art Collection': '泰国艺术珍藏',
       'Korean Art Collection': '韩国艺术珍藏',
       'Japanese Art Collection': '日本艺术珍藏',
-      'Korean National Treasure Collection': '韩国国宝珍藏',
+      'Korea National Treasure Collection': '韩国国宝珍藏',
       '(17th C - 18th C) Ukiyo-e Woodblock Print': '浮世绘版画',
       'Japanese Porcelain': '日本瓷器',
       'Category': '种类',

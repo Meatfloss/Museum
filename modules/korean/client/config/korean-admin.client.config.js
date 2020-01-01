@@ -10,7 +10,7 @@
 
   function menuConfig(Menus) {
     Menus.addSubMenuItem('topbar', 'admin', {
-      title: 'Manage Koreann Art Collection',
+      title: 'Manage Korean Art Collection',
       state: 'admin.korean.list'
     });
   }

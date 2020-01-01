@@ -250,7 +250,7 @@
     //Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'collections', {
       title: 'Korean Art Collection',
-      state: 'korean.landing',
+      state: 'korean.list',
       roles: ['*']
     });
 
