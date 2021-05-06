@@ -54,7 +54,7 @@
     "gulp-node-inspector": "~0.1.0",
     "helmet": "~1.3.0",
     "jasmine-core": "~2.4.1",
-    "lodash": "^4.6.1",
+    "lodash": "^4.17.21",
     "lusca": "~1.3.0",
     "method-override": "~2.3.5",
     "mocha": "~2.5.0",
